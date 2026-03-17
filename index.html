@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- ═══════════════════════════════════════════════════════
-       SEO + SOCIAL META  — update URLs before deploy
-  ═══════════════════════════════════════════════════════ -->
+  <!-- ═══════════════════════════════════════════════
+       SEO + SOCIAL META
+  ═══════════════════════════════════════════════ -->
   <title>Srikanth Reddy Nandireddy | ML Engineer & Data Scientist</title>
   <meta name="description" content="ML Engineer & Data Scientist specialising in production RAG systems, MLOps, deep learning, and AWS deployments. M.S. Data Science & AI — University of Central Missouri. GPA 4.0. Available June 2026." />
   <meta name="keywords" content="Machine Learning Engineer, Data Scientist, MLOps, RAG, NLP, Deep Learning, AWS, PyTorch, FastAPI, Python" />
@@ -14,20 +14,20 @@
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://srikanthreddynandireddy.me" />
 
-  <!-- Open Graph (LinkedIn / Facebook previews) -->
+  <!-- Open Graph -->
   <meta property="og:title"       content="Srikanth Reddy Nandireddy | ML Engineer & Data Scientist" />
   <meta property="og:description" content="Production-grade ML systems: RAG pipelines, MLOps on AWS, multimodal deep learning. MS Data Science & AI · 4.0 GPA · Available June 2026." />
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://srikanthreddynandireddy.me" />
-  <meta property="og:image"       content="https://srikanthreddynandireddy.me/og-image.png" />
+  <meta property="og:image"       content="https://srikanthreddynandireddy.me/profile.png" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card"        content="summary_large_image" />
   <meta name="twitter:title"       content="Srikanth Reddy Nandireddy | ML Engineer" />
   <meta name="twitter:description" content="Production ML Systems · RAG · MLOps · AWS · PyTorch" />
-  <meta name="twitter:image"       content="https://srikanthreddynandireddy.me/og-image.png" />
+  <meta name="twitter:image"       content="https://srikanthreddynandireddy.me/profile.png" />
 
-  <!-- Structured Data (JSON-LD) — Google rich results -->
+  <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -42,33 +42,34 @@
       { "@type": "CollegeOrUniversity", "name": "CMR College of Engineering & Technology" }
     ],
     "sameAs": [
-      "https://linkedin.com/in/srikanth-reddy-nandireddy",
+      "https://www.linkedin.com/in/srikanth-reddy-nandireddy",
       "https://github.com/GodVilan"
     ]
   }
   </script>
 
-  <!-- Favicon — place favicon.ico in same folder -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <!-- Favicon -->
+  <link rel="icon"             href="images/favicon.ico"          type="image/x-icon" />
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
-  <!-- ═══════════════════════════════════════════════════════
+  <!-- Font Awesome (single import) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- ═══════════════════════════════════════════════
        CSS
-  ═══════════════════════════════════════════════════════ -->
+  ═══════════════════════════════════════════════ -->
   <style>
-    /* CSS Custom Property for conic-gradient Houdini animation */
     @property --angle {
       syntax: "<angle>";
       initial-value: 0deg;
       inherits: false;
     }
 
-    /* ── Reset ── */
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
@@ -270,11 +271,52 @@
     }
 
     /* ══════════════ ABOUT ══════════════ */
+    /*
+      2-column grid: left = text, right = photo stacked above terminal
+    */
     .about-grid {
-      display: grid; grid-template-columns: 1.1fr 1fr; gap: 5rem; align-items: start;
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 5rem;
+      align-items: start;
     }
+    .about-right {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    /* Profile photo */
+    .profile-wrap {
+      text-align: center;
+    }
+    .profile-ring {
+      width: 160px; height: 160px;
+      border-radius: 50%;
+      margin: 0 auto;
+      padding: 3px;
+      background: linear-gradient(135deg, #00d4ff, #00e5a0, #a855f7);
+    }
+    .profile-ring img {
+      width: 100%; height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #070d1a;
+      display: block;
+    }
+    .profile-name {
+      margin-top: .75rem;
+      font-family: 'Chakra Petch', monospace;
+      font-size: .8rem; color: var(--cyan); letter-spacing: .1em;
+    }
+    .profile-sub {
+      font-size: .78rem; color: var(--muted); margin-top: .2rem;
+    }
+
     .about-body p { color: var(--muted); margin-bottom: 1.1rem; font-weight: 300; line-height: 1.9; font-size: 1.02rem; }
     .about-body p strong { color: var(--text); font-weight: 500; }
+
+    /* Terminal */
     .terminal {
       background: #07111f; border: 1px solid rgba(0,212,255,.15);
       border-radius: 14px; overflow: hidden;
@@ -393,6 +435,7 @@
     .edu-school { font-size:.82rem; color:var(--muted); font-weight:300; }
     .edu-bottom { display:flex; justify-content:space-between; align-items:center; margin-top:1.1rem; padding-top:1.1rem; border-top:1px solid rgba(0,212,255,.08); }
     .edu-gpa { font-family:'JetBrains Mono',monospace; font-size:.8rem; color:var(--cyan); }
+
     .cert-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:.9rem; margin-bottom:2.5rem; }
     .cert-card {
       background:rgba(10,22,40,.5); border:1px solid rgba(0,212,255,.07);
@@ -400,10 +443,15 @@
       align-items:flex-start; transition:border-color .3s;
     }
     .cert-card:hover { border-color:rgba(0,212,255,.2); }
-    .cert-ico { width:34px; height:34px; border-radius:8px; background:var(--cb); border:1px solid rgba(0,212,255,.15); display:flex; align-items:center; justify-content:center; font-size:.85rem; flex-shrink:0; }
+    .cert-ico {
+      width:34px; height:34px; border-radius:8px; background:var(--cb);
+      border:1px solid rgba(0,212,255,.15); display:flex; align-items:center;
+      justify-content:center; font-size:.85rem; flex-shrink:0; color:var(--cyan);
+    }
     .cert-name { font-size:.84rem; font-weight:600; color:var(--text); line-height:1.4; margin-bottom:.2rem; }
     .cert-by { font-family:'JetBrains Mono',monospace; font-size:.7rem; color:var(--cyan); }
     .cert-dt { font-size:.7rem; color:var(--muted); margin-top:.15rem; }
+
     .awards-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
     .award-card { background:rgba(10,22,40,.5); border:1px solid rgba(245,158,11,.1); border-radius:12px; padding:1.1rem; text-align:center; transition:all .25s; }
     .award-card:hover { border-color:rgba(245,158,11,.3); transform:translateY(-3px); }
@@ -420,12 +468,44 @@
       font-size:.88rem; transition:all .25s;
     }
     .contact-link:hover { border-color:var(--cyan); color:var(--cyan); transform:translateX(6px); }
-    .cl-ico { width:34px; height:34px; border-radius:8px; background:var(--cb); border:1px solid rgba(0,212,255,.12); display:flex; align-items:center; justify-content:center; font-size:.9rem; flex-shrink:0; }
+    /* Fixed: cl-ico is a wrapper div, icon goes inside */
+    .cl-ico {
+      width:34px; height:34px; border-radius:8px; background:var(--cb);
+      border:1px solid rgba(0,212,255,.12); display:flex; align-items:center;
+      justify-content:center; font-size:.9rem; flex-shrink:0; color:var(--cyan);
+    }
+
     .contact-cta { background:rgba(10,22,40,.85); border:1px solid rgba(0,212,255,.15); border-radius:20px; padding:2.5rem; text-align:center; }
-    .cta-ring { width:80px; height:80px; border-radius:50%; border:2px solid rgba(0,212,255,.3); margin:0 auto 1.5rem; display:flex; align-items:center; justify-content:center; font-family:'Chakra Petch',monospace; font-size:1.3rem; font-weight:700; color:var(--cyan); position:relative; }
-    .cta-ring::before { content:''; position:absolute; inset:-8px; border-radius:50%; border:1px solid rgba(0,212,255,.1); animation:ring-spin 6s linear infinite; }
+    .cta-ring {
+      width: 110px; height: 110px;
+      border-radius: 50%;
+      margin: 0 auto 1.5rem;
+      padding: 3px;
+      background: linear-gradient(135deg, #00d4ff, #00e5a0, #a855f7);
+      position: relative;
+    }
+    .cta-ring::before {
+      content: '';
+      position: absolute;
+      inset: -8px;
+      border-radius: 50%;
+      border: 1px solid rgba(0,212,255,.15);
+      animation: ring-spin 6s linear infinite;
+    }
+    .cta-ring img {
+      width: 100%; height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #0a1628;
+      display: block;
+    }
     @keyframes ring-spin { to { transform:rotate(360deg); } }
-    .cta-avail { display:inline-flex; align-items:center; gap:7px; background:rgba(0,229,160,.08); border:1px solid rgba(0,229,160,.2); color:var(--em); font-size:.75rem; padding:5px 14px; border-radius:100px; margin-bottom:1.2rem; font-family:'JetBrains Mono',monospace; }
+    .cta-avail {
+      display:inline-flex; align-items:center; gap:7px; background:rgba(0,229,160,.08);
+      border:1px solid rgba(0,229,160,.2); color:var(--em); font-size:.75rem;
+      padding:5px 14px; border-radius:100px; margin-bottom:1.2rem;
+      font-family:'JetBrains Mono',monospace;
+    }
 
     /* ══════════════ FOOTER ══════════════ */
     footer { background:#050d1a; border-top:1px solid rgba(0,212,255,.06); padding:2rem; text-align:center; font-size:.8rem; color:var(--muted); position:relative; z-index:1; }
@@ -477,6 +557,7 @@
       </button>
     </div>
   </nav>
+
   <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
     <ul>
       <li><a href="#about"      onclick="closeMobile()">about</a></li>
@@ -493,7 +574,7 @@
     <div class="hero-c">
       <div class="avail-pill" role="status">
         <span class="live-dot" aria-hidden="true"></span>
-        available &middot; full-time &middot; june 2026 &middot; usa
+        available &middot; full-time &middot; internships &middot; usa
       </div>
       <h1 class="hero-name">
         <span class="line1" id="l1" aria-label="Srikanth Reddy"></span>
@@ -513,61 +594,171 @@
         <a href="#contact"  class="btn btn-ghost">Get In Touch</a>
       </div>
       <div class="hero-stats" role="list">
-        <div class="stat-card reveal" role="listitem"><span class="stat-num" data-target="5" data-suffix="+">0</span><span class="stat-label">Production Projects</span></div>
-        <div class="stat-card reveal" role="listitem"><span class="stat-num" data-target="4" data-suffix=".0">0</span><span class="stat-label">GPA &middot; MS AI</span></div>
-        <div class="stat-card reveal" role="listitem"><span class="stat-num" data-target="120" data-suffix="">0</span><span class="stat-label">arXiv Papers RAG'd</span></div>
-        <div class="stat-card reveal" role="listitem"><span class="stat-num" data-target="62" data-suffix="K+">0</span><span class="stat-label">Articles Analyzed</span></div>
+        <div class="stat-card reveal" role="listitem">
+          <span class="stat-num" data-target="5" data-suffix="+">0</span>
+          <span class="stat-label">Production Projects</span>
+        </div>
+        <div class="stat-card reveal" role="listitem">
+          <span class="stat-num" data-target="4" data-suffix=".0">0</span>
+          <span class="stat-label">GPA &middot; MS AI</span>
+        </div>
+        <div class="stat-card reveal" role="listitem">
+          <span class="stat-num" data-target="120" data-suffix="">0</span>
+          <span class="stat-label">arXiv Papers RAG'd</span>
+        </div>
+        <div class="stat-card reveal" role="listitem">
+          <span class="stat-num" data-target="62" data-suffix="K+">0</span>
+          <span class="stat-label">Articles Analyzed</span>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ══ ABOUT ══ -->
+  <!--
+    STRUCTURE: 2-column grid
+    Left  col → .about-left  (text)
+    Right col → .about-right (photo stacked above terminal)
+  -->
   <section id="about" class="bg-alt">
     <div class="section-inner about-grid reveal">
-      <div>
+
+      <!-- LEFT: Text -->
+      <div class="about-left">
         <div class="s-eyebrow">01 &middot; about</div>
         <h2 class="s-title">ML Engineer &amp;<br><span>Data Scientist</span></h2>
         <div class="about-body">
           <p>I don't just build models — I <strong>ship ML systems</strong>. My work spans the full stack: statistical research through model training, containerized deployment, REST APIs, and CI/CD automation on AWS.</p>
           <p>Currently an M.S. student in Data Science &amp; AI at the University of Central Missouri with a <strong>perfect 4.0 GPA</strong>, I spend my time building production RAG pipelines, multimodal deep learning systems, and real-time fraud detection APIs you can actually hit with a curl command.</p>
-          <p>I'm looking for full-time roles in <strong>Data Science, ML Engineering, or Applied AI</strong> in the United States — available June 2026.</p>
+          <p>I'm looking for full-time &amp; internship roles in <strong>Data Science, ML Engineering, or Applied AI</strong> in the United States — available immediately.</p>
         </div>
       </div>
-      <div class="terminal" role="complementary" aria-label="Profile summary">
-        <div class="term-bar" aria-hidden="true"><div class="dot d-r"></div><div class="dot d-y"></div><div class="dot d-g"></div></div>
-        <div class="term-body">
-          <div class="term-line" style="color:var(--muted)"># ~/srikanth_reddy_profile.json</div>
-          <div class="term-line">{</div>
-          <div class="term-line">&nbsp;&nbsp;<span class="term-key">"name"</span>: <span class="term-str">"Srikanth Reddy Nandireddy"</span>,</div>
-          <div class="term-line">&nbsp;&nbsp;<span class="term-key">"role"</span>: <span class="term-str">"ML Engineer / Data Scientist"</span>,</div>
-          <div class="term-line">&nbsp;&nbsp;<span class="term-key">"gpa"</span>: <span class="term-num">4.0</span>,</div>
-          <div class="term-line">&nbsp;&nbsp;<span class="term-key">"location"</span>: <span class="term-str">"Warrensburg, MO"</span>,</div>
-          <div class="term-line">&nbsp;&nbsp;<span class="term-key">"open_to_work"</span>: <span class="term-bool">true</span>,</div>
-          <div class="term-line">&nbsp;&nbsp;<span class="term-key">"available"</span>: <span class="term-str">"June 2026"</span>,</div>
-          <div class="term-line">&nbsp;&nbsp;<span class="term-key">"stack"</span>: [</div>
-          <div class="term-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="term-str">"PyTorch"</span>, <span class="term-str">"AWS"</span>, <span class="term-str">"MLflow"</span>,</div>
-          <div class="term-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="term-str">"Docker"</span>, <span class="term-str">"FastAPI"</span>, <span class="term-str">"FAISS"</span></div>
-          <div class="term-line">&nbsp;&nbsp;],</div>
-          <div class="term-line">&nbsp;&nbsp;<span class="term-key">"interests"</span>: [<span class="term-str">"LLMs"</span>, <span class="term-str">"RAG"</span>, <span class="term-str">"MLOps"</span>],</div>
-          <div class="term-line">&nbsp;&nbsp;<span class="term-key">"codechef_rank"</span>: <span class="term-str">"Global #1"</span>,</div>
-          <div class="term-line">&nbsp;&nbsp;<span class="term-key">"streak"</span>: <span class="term-num">255</span> <span style="color:var(--muted)">// consecutive days</span></div>
-          <div class="term-line">}</div>
+
+      <!-- RIGHT: Photo + Terminal stacked vertically -->
+      <div class="about-right">
+
+        <!-- Profile photo -->
+        <div class="profile-wrap">
+          <div class="profile-ring">
+            <img src="images/profile.png" alt="Srikanth Reddy Nandireddy" />
+          </div>
+          <p class="profile-name">SRIKANTH REDDY N.</p>
+          <p class="profile-sub">M.S. Data Science &amp; AI &middot; UCM</p>
         </div>
-      </div>
+
+        <!-- Terminal JSON -->
+        <div class="terminal" role="complementary" aria-label="Profile summary">
+          <div class="term-bar" aria-hidden="true">
+            <div class="dot d-r"></div>
+            <div class="dot d-y"></div>
+            <div class="dot d-g"></div>
+          </div>
+          <div class="term-body">
+            <div class="term-line" style="color:var(--muted)"># ~/srikanth_reddy_profile.json</div>
+            <div class="term-line">{</div>
+            <div class="term-line">&nbsp;&nbsp;<span class="term-key">"name"</span>: <span class="term-str">"Srikanth Reddy Nandireddy"</span>,</div>
+            <div class="term-line">&nbsp;&nbsp;<span class="term-key">"role"</span>: <span class="term-str">"ML Engineer / Data Scientist"</span>,</div>
+            <div class="term-line">&nbsp;&nbsp;<span class="term-key">"gpa"</span>: <span class="term-num">4.0</span>,</div>
+            <div class="term-line">&nbsp;&nbsp;<span class="term-key">"location"</span>: <span class="term-str">"Warrensburg, MO"</span>,</div>
+            <div class="term-line">&nbsp;&nbsp;<span class="term-key">"open_to_work"</span>: <span class="term-bool">true</span>,</div>
+            <div class="term-line">&nbsp;&nbsp;<span class="term-key">"available"</span>: <span class="term-str">"Immediately"</span>,</div>
+            <div class="term-line">&nbsp;&nbsp;<span class="term-key">"stack"</span>: [</div>
+            <div class="term-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="term-str">"PyTorch"</span>, <span class="term-str">"AWS"</span>, <span class="term-str">"MLflow"</span>,</div>
+            <div class="term-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="term-str">"Docker"</span>, <span class="term-str">"FastAPI"</span>, <span class="term-str">"FAISS"</span></div>
+            <div class="term-line">&nbsp;&nbsp;],</div>
+            <div class="term-line">&nbsp;&nbsp;<span class="term-key">"interests"</span>: [<span class="term-str">"LLMs"</span>, <span class="term-str">"RAG"</span>, <span class="term-str">"MLOps"</span>],</div>
+            <div class="term-line">&nbsp;&nbsp;<span class="term-key">"codechef_rank"</span>: <span class="term-str">"Global #1"</span>,</div>
+            <div class="term-line">&nbsp;&nbsp;<span class="term-key">"streak"</span>: <span class="term-num">255</span> <span style="color:var(--muted)">// consecutive days</span></div>
+            <div class="term-line">}</div>
+          </div>
+        </div>
+
+      </div><!-- /about-right -->
     </div>
   </section>
 
   <!-- ══ SKILLS ══ -->
   <section id="skills">
     <div class="section-inner">
-      <div class="reveal"><div class="s-eyebrow">02 &middot; arsenal</div><h2 class="s-title">Tech <span>Stack</span></h2></div>
+      <div class="reveal">
+        <div class="s-eyebrow">02 &middot; arsenal</div>
+        <h2 class="s-title">Tech <span>Stack</span></h2>
+      </div>
       <div class="skills-layout">
-        <div class="skill-group reveal"><div class="sg-head">Languages</div><div class="tags"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">R</span><span class="tag">C++</span><span class="tag">Java</span><span class="tag">MySQL</span><span class="tag">PostgreSQL</span></div></div>
-        <div class="skill-group reveal"><div class="sg-head">Machine Learning</div><div class="tags"><span class="tag">Scikit-learn</span><span class="tag">XGBoost</span><span class="tag">Random Forest</span><span class="tag">SMOTE</span><span class="tag">Feature Eng.</span><span class="tag">ROC-AUC</span></div></div>
-        <div class="skill-group reveal"><div class="sg-head">Deep Learning &amp; NLP</div><div class="tags"><span class="tag">PyTorch</span><span class="tag">TensorFlow</span><span class="tag">HuggingFace</span><span class="tag">BERT</span><span class="tag">DistilBERT</span><span class="tag">Wav2Vec2</span><span class="tag">ViT</span><span class="tag">FAISS</span></div></div>
-        <div class="skill-group reveal"><div class="sg-head">Data &amp; Statistics</div><div class="tags"><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">SciPy</span><span class="tag">SARIMAX</span><span class="tag">Prophet</span><span class="tag">EDA</span><span class="tag">A/B Testing</span></div></div>
-        <div class="skill-group reveal"><div class="sg-head">Cloud &amp; MLOps</div><div class="tags"><span class="tag">AWS EC2</span><span class="tag">S3</span><span class="tag">SageMaker</span><span class="tag">Athena</span><span class="tag">MLflow</span><span class="tag">Docker</span><span class="tag">FastAPI</span><span class="tag">GitHub Actions</span></div></div>
-        <div class="skill-group reveal"><div class="sg-head">Visualization</div><div class="tags"><span class="tag">Plotly</span><span class="tag">Dash</span><span class="tag">Streamlit</span><span class="tag">Matplotlib</span><span class="tag">Seaborn</span><span class="tag">Bokeh</span></div></div>
+
+        <div class="skill-group reveal">
+          <div class="sg-head">Languages</div>
+          <div class="tags">
+            <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">R</span>
+            <span class="tag">C++</span><span class="tag">Java</span><span class="tag">Bash</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <div class="sg-head">Machine Learning</div>
+          <div class="tags">
+            <span class="tag">Scikit-learn</span><span class="tag">XGBoost</span>
+            <span class="tag">Random Forest</span><span class="tag">Logistic Regression</span>
+            <span class="tag">Decision Trees</span><span class="tag">KMeans</span>
+            <span class="tag">SMOTE</span><span class="tag">Feature Engineering</span>
+            <span class="tag">ROC-AUC</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <div class="sg-head">Deep Learning &amp; NLP</div>
+          <div class="tags">
+            <span class="tag">PyTorch</span><span class="tag">TensorFlow</span>
+            <span class="tag">Keras</span><span class="tag">CNNs</span>
+            <span class="tag">Transformers</span><span class="tag">HuggingFace</span>
+            <span class="tag">BERT</span><span class="tag">DistilBERT</span>
+            <span class="tag">Wav2Vec2</span><span class="tag">ViT</span>
+            <span class="tag">TF-IDF</span><span class="tag">Word Embeddings</span>
+            <span class="tag">FAISS</span><span class="tag">Sentence Transformers</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <div class="sg-head">Generative AI &amp; LLMs</div>
+          <div class="tags">
+            <span class="tag">RAG Pipelines</span><span class="tag">LLMs</span>
+            <span class="tag">Gemini API</span><span class="tag">Vector Databases</span>
+            <span class="tag">BM25</span><span class="tag">Prompt Engineering</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <div class="sg-head">Data &amp; Statistics</div>
+          <div class="tags">
+            <span class="tag">Pandas</span><span class="tag">NumPy</span>
+            <span class="tag">SciPy</span><span class="tag">Statsmodels</span>
+            <span class="tag">SARIMAX</span><span class="tag">Prophet</span>
+            <span class="tag">EDA</span><span class="tag">Hypothesis Testing</span>
+            <span class="tag">A/B Testing</span><span class="tag">Time Series</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <div class="sg-head">Cloud &amp; MLOps</div>
+          <div class="tags">
+            <span class="tag">AWS EC2</span><span class="tag">S3</span>
+            <span class="tag">SageMaker</span><span class="tag">Athena</span>
+            <span class="tag">Glue</span><span class="tag">Redshift</span>
+            <span class="tag">MLflow</span><span class="tag">Docker</span>
+            <span class="tag">FastAPI</span><span class="tag">Nginx</span>
+            <span class="tag">GitHub Actions</span><span class="tag">CI/CD</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <div class="sg-head">Visualization</div>
+          <div class="tags">
+            <span class="tag">Plotly</span><span class="tag">Dash</span>
+            <span class="tag">Streamlit</span><span class="tag">Matplotlib</span>
+            <span class="tag">Seaborn</span><span class="tag">Bokeh</span>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -575,27 +766,51 @@
   <!-- ══ PROJECTS ══ -->
   <section id="projects" class="bg-alt">
     <div class="section-inner">
-      <div class="reveal"><div class="s-eyebrow">03 &middot; work</div><h2 class="s-title">Featured <span>Projects</span></h2></div>
+      <div class="reveal">
+        <div class="s-eyebrow">03 &middot; work</div>
+        <h2 class="s-title">Featured <span>Projects</span></h2>
+      </div>
       <div class="proj-grid">
 
         <article class="project-card featured reveal">
           <div class="feat-badge"><span class="live-dot" aria-hidden="true"></span>Featured &middot; RAG + LLM Pipeline</div>
           <h3 class="pc-title">arXiv RAG — Semantic Research Q&amp;A System</h3>
           <p class="pc-desc">Production-structured RAG pipeline answering questions over 120 arXiv ML papers. Rigorously benchmarks BGE, MPNet, MiniLM vs BM25 across chunk sizes and generation quality. BGE achieves perfect MRR 1.000 — 7.7&times; Answer Relevance over BM25 (0.910 vs 0.118).</p>
-          <div class="metrics"><span class="met">MRR 1.000 (BGE)</span><span class="met">Precision@5 &middot; 97.5%</span><span class="met">Faithfulness &middot; 97.8%</span><span class="met">120 arXiv Papers</span></div>
-          <div class="stack"><span class="st">Python</span><span class="st">FAISS</span><span class="st">SentenceTransformers</span><span class="st">Gemini 2.5 Flash</span><span class="st">BM25</span><span class="st">Streamlit</span><span class="st">PyMuPDF</span></div>
-          <div class="proj-links"><a href="https://github.com/GodVilan/arXiv-rag" target="_blank" rel="noopener noreferrer" class="pl">&#9083; GitHub</a></div>
+          <div class="metrics">
+            <span class="met">MRR 1.000 (BGE)</span><span class="met">Precision@5 &middot; 97.5%</span>
+            <span class="met">Faithfulness &middot; 97.8%</span><span class="met">120 arXiv Papers</span>
+          </div>
+          <div class="stack">
+            <span class="st">Python</span><span class="st">FAISS</span><span class="st">SentenceTransformers</span>
+            <span class="st">Gemini 2.5 Flash</span><span class="st">BM25</span><span class="st">Streamlit</span><span class="st">PyMuPDF</span>
+          </div>
+          <div class="proj-links">
+            <a href="https://github.com/GodVilan/arXiv-rag" target="_blank" rel="noopener noreferrer" class="pl">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+          </div>
         </article>
 
         <article class="project-card featured reveal">
           <div class="feat-badge"><span class="live-dot" aria-hidden="true"></span>Featured &middot; Production MLOps &middot; AWS</div>
           <h3 class="pc-title">Real-Time Credit Card Fraud Detection</h3>
           <p class="pc-desc">End-to-end production ML system. Automated GitHub Actions CI/CD trains, evaluates, and promotes models to MLflow Model Registry (PostgreSQL RDS). Dockerized FastAPI inference API behind Nginx on AWS EC2. XGBoost &amp; Random Forest hit ROC-AUC 1.000 with SMOTE-balanced pipeline.</p>
-          <div class="metrics"><span class="met">ROC-AUC 1.000</span><span class="met">MLflow Registry</span><span class="met">CI/CD Automated</span><span class="met">AWS Deployed</span></div>
-          <div class="stack"><span class="st">XGBoost</span><span class="st">MLflow</span><span class="st">FastAPI</span><span class="st">Docker</span><span class="st">AWS EC2</span><span class="st">RDS</span><span class="st">S3</span><span class="st">GitHub Actions</span><span class="st">Nginx</span></div>
+          <div class="metrics">
+            <span class="met">ROC-AUC 1.000</span><span class="met">MLflow Registry</span>
+            <span class="met">CI/CD Automated</span><span class="met">AWS Deployed</span>
+          </div>
+          <div class="stack">
+            <span class="st">XGBoost</span><span class="st">MLflow</span><span class="st">FastAPI</span>
+            <span class="st">Docker</span><span class="st">AWS EC2</span><span class="st">RDS</span>
+            <span class="st">S3</span><span class="st">GitHub Actions</span><span class="st">Nginx</span>
+          </div>
           <div class="proj-links">
-            <a href="https://github.com/GodVilan/Real-Time-CCFDS-With-MLOPs" target="_blank" rel="noopener noreferrer" class="pl">&#9083; GitHub</a>
-            <a href="http://18.189.20.189/docs" target="_blank" rel="noopener noreferrer" class="pl live-link">&#8599; Live API</a>
+            <a href="https://github.com/GodVilan/Real-Time-CCFDS-With-MLOPs" target="_blank" rel="noopener noreferrer" class="pl">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="http://18.189.20.189/docs" target="_blank" rel="noopener noreferrer" class="pl live-link">
+              <i class="fas fa-external-link-alt"></i> Live API
+            </a>
           </div>
         </article>
 
@@ -603,29 +818,64 @@
           <div class="feat-badge">&#127917; Deep Learning &middot; Multimodal Fusion</div>
           <h3 class="pc-title">Multimodal Emotion Recognition via Cross-Modal Transformers</h3>
           <p class="pc-desc">Fuses text (BERT), audio (Wav2Vec2), and video (ViT) using a custom 4-layer Transformer Encoder (8 attention heads) for 7-class emotion classification on MELD. Mixed-precision AMP training, staged fine-tuning, cached tensor preprocessing, and class-weighted loss for minority emotion handling.</p>
-          <div class="metrics"><span class="met">Accuracy &middot; 59.96%</span><span class="met">Weighted F1 &middot; 60.66%</span><span class="met">3 Modalities Fused</span></div>
-          <div class="stack"><span class="st">PyTorch</span><span class="st">BERT</span><span class="st">Wav2Vec2</span><span class="st">ViT</span><span class="st">HuggingFace</span><span class="st">AMP</span><span class="st">OpenCV</span><span class="st">Librosa</span></div>
-          <div class="proj-links"><a href="https://github.com/GodVilan/Multimodal-Emotion-Recognition-MELD-via-Cross-Modal-Transformers" target="_blank" rel="noopener noreferrer" class="pl">&#9083; GitHub</a></div>
+          <div class="metrics">
+            <span class="met">Accuracy &middot; 59.96%</span>
+            <span class="met">Weighted F1 &middot; 60.66%</span>
+            <span class="met">3 Modalities Fused</span>
+          </div>
+          <div class="stack">
+            <span class="st">PyTorch</span><span class="st">BERT</span><span class="st">Wav2Vec2</span>
+            <span class="st">ViT</span><span class="st">HuggingFace</span><span class="st">AMP</span>
+            <span class="st">OpenCV</span><span class="st">Librosa</span>
+          </div>
+          <div class="proj-links">
+            <a href="https://github.com/GodVilan/Multimodal-Emotion-Recognition-MELD-via-Cross-Modal-Transformers" target="_blank" rel="noopener noreferrer" class="pl">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+          </div>
         </article>
 
         <article class="project-card reveal">
           <div class="feat-badge">&#128240; NLP &middot; Transformers vs Classical</div>
           <h3 class="pc-title">Fake News Detection — Classical NLP vs Transformers</h3>
           <p class="pc-desc">Systematic comparison of TF-IDF + Logistic Regression vs fine-tuned DistilBERT on 62K+ articles. Dynamic F1-threshold optimization, NLTK preprocessing, feature explainability from TF-IDF weights, and real-time NewsAPI integration for live article classification via Streamlit.</p>
-          <div class="metrics"><span class="met">62K+ Articles</span><span class="met">DistilBERT Fine-tuned</span><span class="met">Dynamic Threshold</span></div>
-          <div class="stack"><span class="st">PyTorch</span><span class="st">DistilBERT</span><span class="st">TF-IDF</span><span class="st">Scikit-learn</span><span class="st">NLTK</span><span class="st">Streamlit</span><span class="st">NewsAPI</span></div>
-          <div class="proj-links"><a href="https://github.com/GodVilan/Fake-News-Detection-Using-TF-IDF-Logistic-Regression-and-DistilBERT-Transformer-Models" target="_blank" rel="noopener noreferrer" class="pl">&#9083; GitHub</a></div>
+          <div class="metrics">
+            <span class="met">62K+ Articles</span>
+            <span class="met">DistilBERT Fine-tuned</span>
+            <span class="met">Dynamic Threshold</span>
+          </div>
+          <div class="stack">
+            <span class="st">PyTorch</span><span class="st">DistilBERT</span><span class="st">TF-IDF</span>
+            <span class="st">Scikit-learn</span><span class="st">NLTK</span><span class="st">Streamlit</span><span class="st">NewsAPI</span>
+          </div>
+          <div class="proj-links">
+            <a href="https://github.com/GodVilan/Fake-News-Detection-Using-TF-IDF-Logistic-Regression-and-DistilBERT-Transformer-Models" target="_blank" rel="noopener noreferrer" class="pl">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+          </div>
         </article>
 
         <article class="project-card wide reveal">
           <div class="feat-badge"><span class="live-dot" aria-hidden="true"></span>Live &middot; Time Series &middot; Deployed on Render</div>
           <h3 class="pc-title">US COVID-19 Mortality Intelligence &amp; Forecasting System</h3>
           <p class="pc-desc">End-to-end epidemiological forecasting: live JHU data ingestion &rarr; preprocessing &rarr; feature engineering &rarr; multi-model benchmarking (SARIMAX, Prophet, XGBoost) &rarr; interactive Plotly Dash dashboard with 30-day forecasts and 95% CI bands. Seasonal SARIMAX(1,1,1)(1,1,1,7) wins with Holdout MAE 138.14 &asymp; CV MAE 137.86 — near-zero overfitting confirmed across 5-fold rolling cross-validation.</p>
-          <div class="metrics"><span class="met">Holdout MAE &middot; 138.14</span><span class="met">CV MAE &middot; 137.86</span><span class="met">30-Day Forecast &middot; 95% CI</span><span class="met">3,300+ Records</span><span class="met">5-Fold Rolling CV</span></div>
-          <div class="stack"><span class="st">Python</span><span class="st">SARIMAX</span><span class="st">Prophet</span><span class="st">XGBoost</span><span class="st">Plotly Dash</span><span class="st">Statsmodels</span><span class="st">Docker</span><span class="st">Render</span></div>
+          <div class="metrics">
+            <span class="met">Holdout MAE &middot; 138.14</span><span class="met">CV MAE &middot; 137.86</span>
+            <span class="met">30-Day Forecast &middot; 95% CI</span><span class="met">3,300+ Records</span>
+            <span class="met">5-Fold Rolling CV</span>
+          </div>
+          <div class="stack">
+            <span class="st">Python</span><span class="st">SARIMAX</span><span class="st">Prophet</span>
+            <span class="st">XGBoost</span><span class="st">Plotly Dash</span><span class="st">Statsmodels</span>
+            <span class="st">Docker</span><span class="st">Render</span>
+          </div>
           <div class="proj-links">
-            <a href="https://github.com/GodVilan/US-COVID-19-Mortality-Intelligence-Forecasting-System" target="_blank" rel="noopener noreferrer" class="pl">&#9083; GitHub</a>
-            <a href="https://us-covid-19-mortality-intelligence.onrender.com/" target="_blank" rel="noopener noreferrer" class="pl live-link">&#8599; Live Dashboard</a>
+            <a href="https://github.com/GodVilan/US-COVID-19-Mortality-Intelligence-Forecasting-System" target="_blank" rel="noopener noreferrer" class="pl">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://us-covid-19-mortality-intelligence.onrender.com/" target="_blank" rel="noopener noreferrer" class="pl live-link">
+              <i class="fas fa-external-link-alt"></i> Live Dashboard
+            </a>
           </div>
         </article>
 
@@ -636,8 +886,12 @@
   <!-- ══ EXPERIENCE ══ -->
   <section id="experience">
     <div class="section-inner">
-      <div class="reveal"><div class="s-eyebrow">04 &middot; experience</div><h2 class="s-title">Professional <span>History</span></h2></div>
+      <div class="reveal">
+        <div class="s-eyebrow">04 &middot; experience</div>
+        <h2 class="s-title">Professional <span>History</span></h2>
+      </div>
       <div class="timeline reveal">
+
         <div class="tl-item">
           <div class="tl-dot" aria-hidden="true"></div>
           <div class="tl-date">Feb 2025 — Present</div>
@@ -648,6 +902,7 @@
             <li>Guide students through data preprocessing, EDA, and visualization workflows using Pandas, NumPy, and Matplotlib</li>
           </ul>
         </div>
+
         <div class="tl-item">
           <div class="tl-dot" aria-hidden="true"></div>
           <div class="tl-date">May 2023 — Jul 2023</div>
@@ -659,6 +914,7 @@
             <li>Conducted EDA and predictive modeling using Python, Jupyter, and Amazon SageMaker</li>
           </ul>
         </div>
+
         <div class="tl-item">
           <div class="tl-dot" aria-hidden="true"></div>
           <div class="tl-date">May 2022 — Jun 2022</div>
@@ -669,6 +925,7 @@
             <li>Performed EDA using Matplotlib and Seaborn; trained and evaluated scikit-learn models with feature engineering</li>
           </ul>
         </div>
+
       </div>
     </div>
   </section>
@@ -676,36 +933,77 @@
   <!-- ══ EDUCATION ══ -->
   <section id="education" class="bg-alt">
     <div class="section-inner">
-      <div class="reveal"><div class="s-eyebrow">05 &middot; education</div><h2 class="s-title">Academic <span>Background</span></h2></div>
+      <div class="reveal">
+        <div class="s-eyebrow">05 &middot; education</div>
+        <h2 class="s-title">Academic <span>Background</span></h2>
+      </div>
+
       <div class="edu-grid reveal">
         <div class="edu-card">
           <div class="edu-yr">Aug 2024 — May 2026</div>
           <div class="edu-deg">Master of Science</div>
           <div class="edu-field">Data Science &amp; Artificial Intelligence</div>
           <div class="edu-school">University of Central Missouri &middot; Warrensburg, MO</div>
-          <div class="edu-bottom"><span class="edu-gpa">GPA: 4.0 / 4.0 &#11088;</span><span style="font-size:.75rem;color:var(--muted)">In Progress</span></div>
+          <div class="edu-bottom">
+            <span class="edu-gpa">GPA: 4.0 / 4.0 &#11088;</span>
+            <span style="font-size:.75rem;color:var(--muted)">In Progress</span>
+          </div>
         </div>
         <div class="edu-card">
           <div class="edu-yr">Nov 2020 — Apr 2024</div>
           <div class="edu-deg">Bachelor of Technology (Hons.)</div>
           <div class="edu-field">Computer Science &amp; Engineering</div>
           <div class="edu-school">CMR College of Engineering &amp; Technology &middot; Hyderabad, India</div>
-          <div class="edu-bottom"><span class="edu-gpa">GPA: 9.06 / 10.0 &#127885;</span><span style="font-size:.75rem;color:var(--muted)">First Class &middot; Distinction</span></div>
+          <div class="edu-bottom">
+            <!-- FIXED: Correct Indian 10-point scale GPA -->
+            <span class="edu-gpa">GPA: 9.06 / 10.0 &#127885;</span>
+            <span style="font-size:.75rem;color:var(--muted)">First Class &middot; Distinction</span>
+          </div>
         </div>
       </div>
+
       <h3 class="sub-heading reveal">Certifications</h3>
       <div class="cert-grid reveal">
-        <div class="cert-card"><div class="cert-ico">&#9729;&#65039;</div><div><div class="cert-name">AWS Academy Graduate — Data Analytics</div><div class="cert-by">Amazon Web Services</div><div class="cert-dt">Jun 2023</div></div></div>
-        <div class="cert-card"><div class="cert-ico">&#9729;&#65039;</div><div><div class="cert-name">AWS Academy Graduate — Cloud Foundations</div><div class="cert-by">Amazon Web Services</div><div class="cert-dt">Jun 2023</div></div></div>
-        <div class="cert-card"><div class="cert-ico">&#128202;</div><div><div class="cert-name">Foundations: Data, Data, Everywhere</div><div class="cert-by">Google / Coursera</div><div class="cert-dt">Feb 2023</div></div></div>
-        <div class="cert-card"><div class="cert-ico">&#129302;</div><div><div class="cert-name">Artificial Intelligence &amp; Machine Learning</div><div class="cert-by">Blackbuck Engineers</div><div class="cert-dt">Dec 2021</div></div></div>
+        <div class="cert-card">
+          <div class="cert-ico"><i class="fab fa-aws"></i></div>
+          <div>
+            <div class="cert-name">AWS Academy Graduate — Data Analytics</div>
+            <div class="cert-by">Amazon Web Services</div>
+            <div class="cert-dt">Jun 2023</div>
+          </div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-ico"><i class="fab fa-aws"></i></div>
+          <div>
+            <div class="cert-name">AWS Academy Graduate — Cloud Foundations</div>
+            <div class="cert-by">Amazon Web Services</div>
+            <div class="cert-dt">Jun 2023</div>
+          </div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-ico"><i class="fab fa-google"></i></div>
+          <div>
+            <div class="cert-name">Foundations: Data, Data, Everywhere</div>
+            <div class="cert-by">Google / Coursera</div>
+            <div class="cert-dt">Feb 2023</div>
+          </div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-ico"><i class="fas fa-robot"></i></div>
+          <div>
+            <div class="cert-name">Artificial Intelligence &amp; Machine Learning</div>
+            <div class="cert-by">Blackbuck Engineers</div>
+            <div class="cert-dt">Dec 2021</div>
+          </div>
+        </div>
       </div>
+
       <h3 class="sub-heading reveal" style="margin-top:2rem">Honors &amp; Awards</h3>
       <div class="awards-grid reveal">
         <div class="award-card"><div class="award-ico">&#129351;</div><div class="award-txt">Global Rank 1 — CodeChef May Long Two (Division 4 Rated)</div></div>
         <div class="award-card"><div class="award-ico">&#127942;</div><div class="award-txt">Finalist — IICC National Coding Competition (Top 1% &middot; 100,000+ participants)</div></div>
         <div class="award-card"><div class="award-ico">&#129353;</div><div class="award-txt">Bronze Medal in Academics — Ranked Top 3 in B.Tech Program</div></div>
-        <div class="award-card"><div class="award-ico">&#11088;</div><div class="award-txt">5&#9733; HackerRank &middot; 4&#9733; CodeChef in Data Structures &amp; Algorithms</div></div>
+        <div class="award-card"><div class="award-ico">&#11088;</div><div class="award-txt">5&#9733; HackerRank &middot; 4&#9733; CodeChef — Data Structures &amp; Algorithms</div></div>
         <div class="award-card"><div class="award-ico">&#128293;</div><div class="award-txt">GeeksforGeeks POTD Streak — 255 Consecutive Days Solved</div></div>
         <div class="award-card"><div class="award-ico">&#127894;&#65039;</div><div class="award-txt">District Rank 4 — SAST Olympiad</div></div>
       </div>
@@ -715,30 +1013,57 @@
   <!-- ══ CONTACT ══ -->
   <section id="contact">
     <div class="section-inner">
-      <div class="reveal"><div class="s-eyebrow">06 &middot; contact</div><h2 class="s-title">Let's <span>Connect</span></h2></div>
+      <div class="reveal">
+        <div class="s-eyebrow">06 &middot; contact</div>
+        <h2 class="s-title">Let's <span>Connect</span></h2>
+      </div>
       <div class="contact-grid reveal">
+
         <div>
           <p style="color:var(--muted);font-weight:300;font-size:1.02rem;line-height:1.9;margin-bottom:1.5rem">
-            Actively seeking full-time <strong style="color:var(--text);font-weight:500">Data Science, ML Engineering, and Applied AI</strong>
-            roles in the United States. Available to start June 2026. Let's build something that matters.
+            Actively seeking full-time &amp; internship
+            <strong style="color:var(--text);font-weight:500">Data Science, ML Engineering, and Applied AI</strong>
+            roles in the United States. Available immediately. Let's build something that matters.
           </p>
           <div class="contact-links">
-            <a href="mailto:srikanthreddynandireddy@gmail.com" class="contact-link"><div class="cl-ico" aria-hidden="true">&#9993;&#65039;</div>srikanthreddynandireddy@gmail.com</a>
-            <a href="https://linkedin.com/in/srikanth-reddy-nandireddy" target="_blank" rel="noopener noreferrer" class="contact-link"><div class="cl-ico" aria-hidden="true">&#128188;</div>linkedin.com/in/srikanth-reddy-nandireddy</a>
-            <a href="https://github.com/GodVilan" target="_blank" rel="noopener noreferrer" class="contact-link"><div class="cl-ico" aria-hidden="true">&#9083;</div>github.com/GodVilan</a>
-            <a href="tel:+16602389582" class="contact-link"><div class="cl-ico" aria-hidden="true">&#128241;</div>+1 660-238-9582</a>
+            <!-- FIXED: cl-ico is a wrapper div; Font Awesome <i> goes inside it -->
+            <a href="mailto:srikanthreddynandireddy@gmail.com" class="contact-link">
+              <div class="cl-ico"><i class="fas fa-envelope"></i></div>
+              srikanthreddynandireddy@gmail.com
+            </a>
+            <a href="https://www.linkedin.com/in/srikanth-reddy-nandireddy" target="_blank" rel="noopener noreferrer" class="contact-link">
+              <div class="cl-ico"><i class="fab fa-linkedin"></i></div>
+              linkedin.com/in/srikanth-reddy-nandireddy
+            </a>
+            <a href="https://github.com/GodVilan" target="_blank" rel="noopener noreferrer" class="contact-link">
+              <div class="cl-ico"><i class="fab fa-github"></i></div>
+              github.com/GodVilan
+            </a>
+            <a href="tel:+16602389582" class="contact-link">
+              <div class="cl-ico"><i class="fas fa-phone"></i></div>
+              +1 660-238-9582
+            </a>
           </div>
         </div>
+
         <div class="contact-cta">
-          <div class="cta-ring" aria-hidden="true">SRN</div>
+          <div class="cta-ring">
+            <img src="images/profile.png" alt="Srikanth Reddy Nandireddy" />
+          </div>
           <div class="cta-avail"><span class="live-dot" aria-hidden="true"></span>Open to Opportunities</div>
-          <p style="color:var(--muted);font-size:.85rem;margin-bottom:1.5rem;font-weight:300">Data Science &amp; AI &middot; MS &middot; University of Central Missouri</p>
+          <p style="color:var(--muted);font-size:.85rem;margin-bottom:1.5rem;font-weight:300">
+            Data Science &amp; AI &middot; MS &middot; University of Central Missouri
+          </p>
           <div class="tags" style="justify-content:center;margin-bottom:1.75rem">
-            <span class="tag">Machine Learning</span><span class="tag">MLOps</span><span class="tag">NLP</span>
+            <span class="tag">Data Science</span><span class="tag">Machine Learning</span>
+            <span class="tag">MLOps</span><span class="tag">NLP</span>
             <span class="tag">Deep Learning</span><span class="tag">AWS</span><span class="tag">RAG</span>
           </div>
-          <a href="mailto:srikanthreddynandireddy@gmail.com" class="btn btn-primary" style="width:100%;justify-content:center;text-decoration:none">Send a Message &#8599;</a>
+          <a href="/cdn-cgi/l/email-protection#7704051e1c1619031f051213130e191619131e051213130e37101a161e1b5914181a" class="btn btn-primary" style="width:100%;justify-content:center;text-decoration:none">
+            Send a Message <i class="fas fa-arrow-up-right-from-square" style="font-size:.75rem"></i>
+          </a>
         </div>
+
       </div>
     </div>
   </section>
@@ -746,13 +1071,16 @@
   <!-- ══ FOOTER ══ -->
   <footer>
     <p>Designed &amp; Built by <span>Srikanth Reddy Nandireddy</span> &middot; 2026</p>
-    <p style="margin-top:.5rem"><a href="mailto:srikanthreddynandireddy@gmail.com">srikanthreddynandireddy@gmail.com</a> &middot; Warrensburg, MO</p>
+    <p style="margin-top:.5rem">
+      <a href="mailto:srikanthreddynandireddy@gmail.com">srikanthreddynandireddy@gmail.com</a>
+      &middot; Warrensburg, MO
+    </p>
   </footer>
 
-  <!-- ═══════════════════════════════════════════════════════
+  <!-- ═══════════════════════════════════════════════
        JAVASCRIPT
-  ═══════════════════════════════════════════════════════ -->
-  <script>
+  ═══════════════════════════════════════════════ -->
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   /* ── 1. SCROLL PROGRESS ── */
   const scrollBar = document.getElementById('scroll-bar');
   window.addEventListener('scroll', () => {
@@ -774,30 +1102,37 @@
 
     class Particle {
       constructor() { this.reset(); }
-      reset() { this.x=Math.random()*W; this.y=Math.random()*H; this.vx=(Math.random()-.5)*.4; this.vy=(Math.random()-.5)*.4; this.r=Math.random()*1.5+.5; }
-      update() {
-        this.x+=this.vx; this.y+=this.vy;
-        if(this.x<0||this.x>W) this.vx*=-1;
-        if(this.y<0||this.y>H) this.vy*=-1;
-        const dx=this.x-mouse.x, dy=this.y-mouse.y, d=Math.hypot(dx,dy);
-        if(d<MDIST){const f=(MDIST-d)/MDIST*.8; this.vx+=(dx/d)*f*.05; this.vy+=(dy/d)*f*.05;}
-        const spd=Math.hypot(this.vx,this.vy);
-        if(spd>.8){this.vx/=spd*.8; this.vy/=spd*.8;}
+      reset() {
+        this.x  = Math.random() * W;
+        this.y  = Math.random() * H;
+        this.vx = (Math.random() - .5) * .4;
+        this.vy = (Math.random() - .5) * .4;
+        this.r  = Math.random() * 1.5 + .5;
       }
-      draw() { ctx.beginPath(); ctx.arc(this.x,this.y,this.r,0,Math.PI*2); ctx.fillStyle='rgba(0,212,255,0.45)'; ctx.fill(); }
+      update() {
+        this.x += this.vx; this.y += this.vy;
+        if (this.x < 0 || this.x > W) this.vx *= -1;
+        if (this.y < 0 || this.y > H) this.vy *= -1;
+        const dx = this.x - mouse.x, dy = this.y - mouse.y, d = Math.hypot(dx, dy);
+        if (d < MDIST) { const f = (MDIST - d) / MDIST * .8; this.vx += (dx / d) * f * .05; this.vy += (dy / d) * f * .05; }
+        const spd = Math.hypot(this.vx, this.vy);
+        if (spd > .8) { this.vx /= spd * .8; this.vy /= spd * .8; }
+      }
+      draw() { ctx.beginPath(); ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2); ctx.fillStyle = 'rgba(0,212,255,0.45)'; ctx.fill(); }
     }
-    for(let i=0;i<N;i++) particles.push(new Particle());
+    for (let i = 0; i < N; i++) particles.push(new Particle());
 
-    function loop(){
-      ctx.clearRect(0,0,W,H);
-      for(let i=0;i<N;i++){
+    function loop() {
+      ctx.clearRect(0, 0, W, H);
+      for (let i = 0; i < N; i++) {
         particles[i].update(); particles[i].draw();
-        for(let j=i+1;j<N;j++){
-          const dx=particles[i].x-particles[j].x, dy=particles[i].y-particles[j].y;
-          const d=Math.hypot(dx,dy);
-          if(d<DIST){
-            ctx.beginPath(); ctx.moveTo(particles[i].x,particles[i].y); ctx.lineTo(particles[j].x,particles[j].y);
-            ctx.strokeStyle=`rgba(0,212,255,${(1-d/DIST)*.35})`; ctx.lineWidth=.5; ctx.stroke();
+        for (let j = i + 1; j < N; j++) {
+          const dx = particles[i].x - particles[j].x, dy = particles[i].y - particles[j].y;
+          const d = Math.hypot(dx, dy);
+          if (d < DIST) {
+            ctx.beginPath(); ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.strokeStyle = `rgba(0,212,255,${(1 - d / DIST) * .35})`; ctx.lineWidth = .5; ctx.stroke();
           }
         }
       }
@@ -808,94 +1143,94 @@
 
   /* ── 3. HERO NAME 3D CHAR REVEAL ── */
   function buildName(id, text, startDelay) {
-    const el = document.getElementById(id); el.innerHTML='';
-    [...text].forEach((ch,i)=>{
-      const s=document.createElement('span'); s.className='char';
-      s.textContent=ch===' '?'\u00a0':ch;
-      s.style.animationDelay=(startDelay+i*.045)+'s';
+    const el = document.getElementById(id); el.innerHTML = '';
+    [...text].forEach((ch, i) => {
+      const s = document.createElement('span'); s.className = 'char';
+      s.textContent = ch === ' ' ? '\u00a0' : ch;
+      s.style.animationDelay = (startDelay + i * .045) + 's';
       el.appendChild(s);
     });
   }
-  buildName('l1','SRIKANTH REDDY',0.3);
-  buildName('l2','NANDIREDDY',1.2);
+  buildName('l1', 'SRIKANTH REDDY', 0.3);
+  buildName('l2', 'NANDIREDDY',     1.2);
 
   /* ── 4. TYPEWRITER ── */
-  (function typewriter(){
-    const roles=['Data Scientist','ML Engineer','MLOps Practitioner','NLP Engineer','Applied AI Researcher'];
-    let ri=0,ci=0,deleting=false;
-    const el=document.getElementById('typed');
-    function type(){
-      const cur=roles[ri];
-      el.textContent=deleting?cur.slice(0,ci--):cur.slice(0,ci++);
-      if(!deleting&&ci>cur.length){setTimeout(()=>{deleting=true;},1800);setTimeout(type,80);return;}
-      if(deleting&&ci<0){deleting=false;ri=(ri+1)%roles.length;ci=0;}
-      setTimeout(type,deleting?35:85);
+  (function typewriter() {
+    const roles = ['Data Scientist', 'ML Engineer', 'MLOps Practitioner', 'NLP Engineer', 'Applied AI Researcher'];
+    let ri = 0, ci = 0, deleting = false;
+    const el = document.getElementById('typed');
+    function type() {
+      const cur = roles[ri];
+      el.textContent = deleting ? cur.slice(0, ci--) : cur.slice(0, ci++);
+      if (!deleting && ci > cur.length) { setTimeout(() => { deleting = true; }, 1800); setTimeout(type, 80); return; }
+      if (deleting && ci < 0) { deleting = false; ri = (ri + 1) % roles.length; ci = 0; }
+      setTimeout(type, deleting ? 35 : 85);
     }
-    setTimeout(type,2000);
+    setTimeout(type, 2000);
   })();
 
   /* ── 5. SCROLL REVEAL + COUNT-UP ── */
-  function easeOutQuart(t){return 1-Math.pow(1-t,4);}
-  function countUp(el,target,suffix,duration){
-    duration=duration||1800; const start=performance.now();
-    function step(now){
-      const p=Math.min((now-start)/duration,1);
-      el.textContent=Math.round(easeOutQuart(p)*target)+(p>=1?suffix:'');
-      if(p<1) requestAnimationFrame(step);
+  function easeOutQuart(t) { return 1 - Math.pow(1 - t, 4); }
+  function countUp(el, target, suffix, duration) {
+    duration = duration || 1800; const start = performance.now();
+    function step(now) {
+      const p = Math.min((now - start) / duration, 1);
+      el.textContent = Math.round(easeOutQuart(p) * target) + (p >= 1 ? suffix : '');
+      if (p < 1) requestAnimationFrame(step);
     }
     requestAnimationFrame(step);
   }
-  const revealObs=new IntersectionObserver(entries=>{
-    entries.forEach(entry=>{
-      if(entry.isIntersecting){
+  const revealObs = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
         entry.target.classList.add('on');
-        entry.target.querySelectorAll('[data-target]').forEach(el=>{
-          countUp(el,+el.dataset.target,el.dataset.suffix||'');
+        entry.target.querySelectorAll('[data-target]').forEach(el => {
+          countUp(el, +el.dataset.target, el.dataset.suffix || '');
         });
         revealObs.unobserve(entry.target);
       }
     });
-  },{threshold:.12});
-  document.querySelectorAll('.reveal').forEach(el=>revealObs.observe(el));
+  }, { threshold: .12 });
+  document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
 
   /* ── 6. 3D CARD TILT ── */
-  document.querySelectorAll('.project-card').forEach(card=>{
-    card.addEventListener('mousemove',e=>{
-      const r=card.getBoundingClientRect();
-      const x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;
-      card.style.transform=`translateY(-6px) rotateX(${-y*8}deg) rotateY(${x*8}deg)`;
+  document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const r = card.getBoundingClientRect();
+      const x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+      card.style.transform = `translateY(-6px) rotateX(${-y * 8}deg) rotateY(${x * 8}deg)`;
     });
-    card.addEventListener('mouseleave',()=>{card.style.transform='';});
+    card.addEventListener('mouseleave', () => { card.style.transform = ''; });
   });
 
   /* ── 7. ACTIVE NAV ── */
-  const sections=document.querySelectorAll('section[id]');
-  const navLinks=document.querySelectorAll('.nav-links a');
-  const navObs=new IntersectionObserver(entries=>{
-    entries.forEach(entry=>{
-      if(entry.isIntersecting){
-        navLinks.forEach(a=>a.classList.remove('active'));
-        const active=document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
-        if(active) active.classList.add('active');
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  const navObs = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(a => a.classList.remove('active'));
+        const active = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
+        if (active) active.classList.add('active');
       }
     });
-  },{rootMargin:'-40% 0px -55% 0px'});
-  sections.forEach(s=>navObs.observe(s));
+  }, { rootMargin: '-40% 0px -55% 0px' });
+  sections.forEach(s => navObs.observe(s));
 
   /* ── 8. MOBILE HAMBURGER ── */
-  const ham=document.getElementById('ham'), mobileMenu=document.getElementById('mobile-menu');
-  ham.addEventListener('click',()=>{
-    const isOpen=mobileMenu.classList.toggle('open');
-    ham.setAttribute('aria-expanded',isOpen);
-    mobileMenu.setAttribute('aria-hidden',!isOpen);
+  const ham = document.getElementById('ham'), mobileMenu = document.getElementById('mobile-menu');
+  ham.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    ham.setAttribute('aria-expanded', isOpen);
+    mobileMenu.setAttribute('aria-hidden', !isOpen);
   });
-  function closeMobile(){
+  function closeMobile() {
     mobileMenu.classList.remove('open');
-    ham.setAttribute('aria-expanded',false);
-    mobileMenu.setAttribute('aria-hidden',true);
+    ham.setAttribute('aria-expanded', false);
+    mobileMenu.setAttribute('aria-hidden', true);
   }
-  document.addEventListener('click',e=>{
-    if(!ham.contains(e.target)&&!mobileMenu.contains(e.target)) closeMobile();
+  document.addEventListener('click', e => {
+    if (!ham.contains(e.target) && !mobileMenu.contains(e.target)) closeMobile();
   });
   </script>
 </body>
