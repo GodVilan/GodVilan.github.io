@@ -8,7 +8,7 @@
        SEO + SOCIAL META
   ═══════════════════════════════════════════════ -->
   <title>Srikanth Reddy Nandireddy | ML Engineer & Data Scientist</title>
-  <meta name="description" content="ML Engineer & Data Scientist specialising in production RAG systems, MLOps, deep learning, and AWS deployments. M.S. Data Science & AI — University of Central Missouri. GPA 4.0. Available June 2026." />
+  <meta name="description" content="ML Engineer & Data Scientist specialising in production RAG systems, MLOps, deep learning, and AWS deployments. M.S. Data Science & AI — University of Central Missouri. GPA 4.0. Available immediately." />
   <meta name="keywords" content="Machine Learning Engineer, Data Scientist, MLOps, RAG, NLP, Deep Learning, AWS, PyTorch, FastAPI, Python" />
   <meta name="author" content="Srikanth Reddy Nandireddy" />
   <meta name="robots" content="index, follow" />
@@ -16,16 +16,16 @@
 
   <!-- Open Graph -->
   <meta property="og:title"       content="Srikanth Reddy Nandireddy | ML Engineer & Data Scientist" />
-  <meta property="og:description" content="Production-grade ML systems: RAG pipelines, MLOps on AWS, multimodal deep learning. MS Data Science & AI · 4.0 GPA · Available June 2026." />
+  <meta property="og:description" content="Production-grade ML systems: RAG pipelines, MLOps on AWS, multimodal deep learning. MS Data Science & AI · 4.0 GPA · Available immediately." />
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://srikanthreddynandireddy.me" />
-  <meta property="og:image"       content="https://srikanthreddynandireddy.me/profile.png" />
+  <meta property="og:image"       content="https://srikanthreddynandireddy.me/og-image.png" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card"        content="summary_large_image" />
   <meta name="twitter:title"       content="Srikanth Reddy Nandireddy | ML Engineer" />
   <meta name="twitter:description" content="Production ML Systems · RAG · MLOps · AWS · PyTorch" />
-  <meta name="twitter:image"       content="https://srikanthreddynandireddy.me/profile.png" />
+  <meta name="twitter:image"       content="https://srikanthreddynandireddy.me/og-image.png" />
 
   <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
@@ -104,7 +104,6 @@
       z-index: 999;
     }
 
-    /* ── Canvas ── */
     canvas#bg { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
 
     /* ══════════════ NAV ══════════════ */
@@ -227,6 +226,17 @@
     .btn-primary:hover { background: #33dcff; transform: translateY(-3px); box-shadow: 0 0 50px rgba(0,212,255,.5); }
     .btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--dim); }
     .btn-ghost:hover { border-color: var(--cyan); color: var(--cyan); }
+
+    /* Resume button — emerald accent */
+    .btn-resume {
+      background: transparent; color: var(--em);
+      border: 1px solid rgba(0,229,160,.4);
+    }
+    .btn-resume:hover {
+      background: rgba(0,229,160,.08); border-color: var(--em);
+      transform: translateY(-3px);
+    }
+
     .hero-stats {
       display: grid; grid-template-columns: repeat(4,1fr);
       gap: 1rem; max-width: 700px; margin: 0 auto;
@@ -271,48 +281,25 @@
     }
 
     /* ══════════════ ABOUT ══════════════ */
-    /*
-      2-column grid: left = text, right = photo stacked above terminal
-    */
     .about-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 1fr;
-      gap: 5rem;
-      align-items: start;
+      display: grid; grid-template-columns: 1.1fr 1fr; gap: 5rem; align-items: start;
     }
-    .about-right {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
-
-    /* Profile photo */
-    .profile-wrap {
-      text-align: center;
-    }
+    .about-right { display: flex; flex-direction: column; gap: 2rem; }
+    .profile-wrap { text-align: center; }
     .profile-ring {
-      width: 160px; height: 160px;
-      border-radius: 50%;
-      margin: 0 auto;
-      padding: 3px;
+      width: 160px; height: 160px; border-radius: 50%;
+      margin: 0 auto; padding: 3px;
       background: linear-gradient(135deg, #00d4ff, #00e5a0, #a855f7);
     }
     .profile-ring img {
-      width: 100%; height: 100%;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid #070d1a;
-      display: block;
+      width: 100%; height: 100%; border-radius: 50%;
+      object-fit: cover; border: 3px solid #070d1a; display: block;
     }
     .profile-name {
-      margin-top: .75rem;
-      font-family: 'Chakra Petch', monospace;
+      margin-top: .75rem; font-family: 'Chakra Petch', monospace;
       font-size: .8rem; color: var(--cyan); letter-spacing: .1em;
     }
-    .profile-sub {
-      font-size: .78rem; color: var(--muted); margin-top: .2rem;
-    }
-
+    .profile-sub { font-size: .78rem; color: var(--muted); margin-top: .2rem; }
     .about-body p { color: var(--muted); margin-bottom: 1.1rem; font-weight: 300; line-height: 1.9; font-size: 1.02rem; }
     .about-body p strong { color: var(--text); font-weight: 500; }
 
@@ -468,36 +455,26 @@
       font-size:.88rem; transition:all .25s;
     }
     .contact-link:hover { border-color:var(--cyan); color:var(--cyan); transform:translateX(6px); }
-    /* Fixed: cl-ico is a wrapper div, icon goes inside */
     .cl-ico {
       width:34px; height:34px; border-radius:8px; background:var(--cb);
       border:1px solid rgba(0,212,255,.12); display:flex; align-items:center;
       justify-content:center; font-size:.9rem; flex-shrink:0; color:var(--cyan);
     }
-
     .contact-cta { background:rgba(10,22,40,.85); border:1px solid rgba(0,212,255,.15); border-radius:20px; padding:2.5rem; text-align:center; }
     .cta-ring {
-      width: 110px; height: 110px;
-      border-radius: 50%;
-      margin: 0 auto 1.5rem;
-      padding: 3px;
+      width: 110px; height: 110px; border-radius: 50%;
+      margin: 0 auto 1.5rem; padding: 3px;
       background: linear-gradient(135deg, #00d4ff, #00e5a0, #a855f7);
       position: relative;
     }
     .cta-ring::before {
-      content: '';
-      position: absolute;
-      inset: -8px;
-      border-radius: 50%;
+      content: ''; position: absolute; inset: -8px; border-radius: 50%;
       border: 1px solid rgba(0,212,255,.15);
       animation: ring-spin 6s linear infinite;
     }
     .cta-ring img {
-      width: 100%; height: 100%;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid #0a1628;
-      display: block;
+      width: 100%; height: 100%; border-radius: 50%;
+      object-fit: cover; border: 3px solid #0a1628; display: block;
     }
     @keyframes ring-spin { to { transform:rotate(360deg); } }
     .cta-avail {
@@ -589,10 +566,16 @@
         and RAG pipelines to real-time AWS inference APIs.
         M.S. Data Science &amp; AI &middot; UCM &middot; <strong>4.0 GPA</strong>.
       </p>
+
+      <!-- ══ HERO BUTTONS — resume button added ══ -->
       <div class="hero-btns">
         <a href="#projects" class="btn btn-primary">View Projects &rarr;</a>
-        <a href="#contact"  class="btn btn-ghost">Get In Touch</a>
+        <a href="resume.pdf" download class="btn btn-resume">
+          <i class="fas fa-download"></i> Resume
+        </a>
+        <a href="#contact" class="btn btn-ghost">Get In Touch</a>
       </div>
+
       <div class="hero-stats" role="list">
         <div class="stat-card reveal" role="listitem">
           <span class="stat-num" data-target="5" data-suffix="+">0</span>
@@ -615,11 +598,6 @@
   </section>
 
   <!-- ══ ABOUT ══ -->
-  <!--
-    STRUCTURE: 2-column grid
-    Left  col → .about-left  (text)
-    Right col → .about-right (photo stacked above terminal)
-  -->
   <section id="about" class="bg-alt">
     <div class="section-inner about-grid reveal">
 
@@ -634,10 +612,8 @@
         </div>
       </div>
 
-      <!-- RIGHT: Photo + Terminal stacked vertically -->
+      <!-- RIGHT: Photo + Terminal -->
       <div class="about-right">
-
-        <!-- Profile photo -->
         <div class="profile-wrap">
           <div class="profile-ring">
             <img src="images/profile.png" alt="Srikanth Reddy Nandireddy" />
@@ -646,12 +622,9 @@
           <p class="profile-sub">M.S. Data Science &amp; AI &middot; UCM</p>
         </div>
 
-        <!-- Terminal JSON -->
         <div class="terminal" role="complementary" aria-label="Profile summary">
           <div class="term-bar" aria-hidden="true">
-            <div class="dot d-r"></div>
-            <div class="dot d-y"></div>
-            <div class="dot d-g"></div>
+            <div class="dot d-r"></div><div class="dot d-y"></div><div class="dot d-g"></div>
           </div>
           <div class="term-body">
             <div class="term-line" style="color:var(--muted)"># ~/srikanth_reddy_profile.json</div>
@@ -672,8 +645,7 @@
             <div class="term-line">}</div>
           </div>
         </div>
-
-      </div><!-- /about-right -->
+      </div>
     </div>
   </section>
 
@@ -685,7 +657,6 @@
         <h2 class="s-title">Tech <span>Stack</span></h2>
       </div>
       <div class="skills-layout">
-
         <div class="skill-group reveal">
           <div class="sg-head">Languages</div>
           <div class="tags">
@@ -693,31 +664,25 @@
             <span class="tag">C++</span><span class="tag">Java</span><span class="tag">Bash</span>
           </div>
         </div>
-
         <div class="skill-group reveal">
           <div class="sg-head">Machine Learning</div>
           <div class="tags">
             <span class="tag">Scikit-learn</span><span class="tag">XGBoost</span>
             <span class="tag">Random Forest</span><span class="tag">Logistic Regression</span>
             <span class="tag">Decision Trees</span><span class="tag">KMeans</span>
-            <span class="tag">SMOTE</span><span class="tag">Feature Engineering</span>
-            <span class="tag">ROC-AUC</span>
+            <span class="tag">SMOTE</span><span class="tag">Feature Engineering</span><span class="tag">ROC-AUC</span>
           </div>
         </div>
-
         <div class="skill-group reveal">
           <div class="sg-head">Deep Learning &amp; NLP</div>
           <div class="tags">
-            <span class="tag">PyTorch</span><span class="tag">TensorFlow</span>
-            <span class="tag">Keras</span><span class="tag">CNNs</span>
-            <span class="tag">Transformers</span><span class="tag">HuggingFace</span>
-            <span class="tag">BERT</span><span class="tag">DistilBERT</span>
-            <span class="tag">Wav2Vec2</span><span class="tag">ViT</span>
-            <span class="tag">TF-IDF</span><span class="tag">Word Embeddings</span>
+            <span class="tag">PyTorch</span><span class="tag">TensorFlow</span><span class="tag">Keras</span>
+            <span class="tag">CNNs</span><span class="tag">Transformers</span><span class="tag">HuggingFace</span>
+            <span class="tag">BERT</span><span class="tag">DistilBERT</span><span class="tag">Wav2Vec2</span>
+            <span class="tag">ViT</span><span class="tag">TF-IDF</span><span class="tag">Word Embeddings</span>
             <span class="tag">FAISS</span><span class="tag">Sentence Transformers</span>
           </div>
         </div>
-
         <div class="skill-group reveal">
           <div class="sg-head">Generative AI &amp; LLMs</div>
           <div class="tags">
@@ -726,39 +691,31 @@
             <span class="tag">BM25</span><span class="tag">Prompt Engineering</span>
           </div>
         </div>
-
         <div class="skill-group reveal">
           <div class="sg-head">Data &amp; Statistics</div>
           <div class="tags">
-            <span class="tag">Pandas</span><span class="tag">NumPy</span>
-            <span class="tag">SciPy</span><span class="tag">Statsmodels</span>
-            <span class="tag">SARIMAX</span><span class="tag">Prophet</span>
+            <span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">SciPy</span>
+            <span class="tag">Statsmodels</span><span class="tag">SARIMAX</span><span class="tag">Prophet</span>
             <span class="tag">EDA</span><span class="tag">Hypothesis Testing</span>
             <span class="tag">A/B Testing</span><span class="tag">Time Series</span>
           </div>
         </div>
-
         <div class="skill-group reveal">
           <div class="sg-head">Cloud &amp; MLOps</div>
           <div class="tags">
-            <span class="tag">AWS EC2</span><span class="tag">S3</span>
-            <span class="tag">SageMaker</span><span class="tag">Athena</span>
-            <span class="tag">Glue</span><span class="tag">Redshift</span>
-            <span class="tag">MLflow</span><span class="tag">Docker</span>
-            <span class="tag">FastAPI</span><span class="tag">Nginx</span>
-            <span class="tag">GitHub Actions</span><span class="tag">CI/CD</span>
+            <span class="tag">AWS EC2</span><span class="tag">S3</span><span class="tag">SageMaker</span>
+            <span class="tag">Athena</span><span class="tag">Glue</span><span class="tag">Redshift</span>
+            <span class="tag">MLflow</span><span class="tag">Docker</span><span class="tag">FastAPI</span>
+            <span class="tag">Nginx</span><span class="tag">GitHub Actions</span><span class="tag">CI/CD</span>
           </div>
         </div>
-
         <div class="skill-group reveal">
           <div class="sg-head">Visualization</div>
           <div class="tags">
-            <span class="tag">Plotly</span><span class="tag">Dash</span>
-            <span class="tag">Streamlit</span><span class="tag">Matplotlib</span>
-            <span class="tag">Seaborn</span><span class="tag">Bokeh</span>
+            <span class="tag">Plotly</span><span class="tag">Dash</span><span class="tag">Streamlit</span>
+            <span class="tag">Matplotlib</span><span class="tag">Seaborn</span><span class="tag">Bokeh</span>
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -888,7 +845,6 @@
         <h2 class="s-title">Professional <span>History</span></h2>
       </div>
       <div class="timeline reveal">
-
         <div class="tl-item">
           <div class="tl-dot" aria-hidden="true"></div>
           <div class="tl-date">Feb 2025 — Present</div>
@@ -899,7 +855,6 @@
             <li>Guide students through data preprocessing, EDA, and visualization workflows using Pandas, NumPy, and Matplotlib</li>
           </ul>
         </div>
-
         <div class="tl-item">
           <div class="tl-dot" aria-hidden="true"></div>
           <div class="tl-date">May 2023 — Jul 2023</div>
@@ -911,7 +866,6 @@
             <li>Conducted EDA and predictive modeling using Python, Jupyter, and Amazon SageMaker</li>
           </ul>
         </div>
-
         <div class="tl-item">
           <div class="tl-dot" aria-hidden="true"></div>
           <div class="tl-date">May 2022 — Jun 2022</div>
@@ -922,7 +876,6 @@
             <li>Performed EDA using Matplotlib and Seaborn; trained and evaluated scikit-learn models with feature engineering</li>
           </ul>
         </div>
-
       </div>
     </div>
   </section>
@@ -934,7 +887,6 @@
         <div class="s-eyebrow">05 &middot; education</div>
         <h2 class="s-title">Academic <span>Background</span></h2>
       </div>
-
       <div class="edu-grid reveal">
         <div class="edu-card">
           <div class="edu-yr">Aug 2024 — May 2026</div>
@@ -952,7 +904,6 @@
           <div class="edu-field">Computer Science &amp; Engineering</div>
           <div class="edu-school">CMR College of Engineering &amp; Technology &middot; Hyderabad, India</div>
           <div class="edu-bottom">
-            <!-- FIXED: Correct Indian 10-point scale GPA -->
             <span class="edu-gpa">GPA: 9.06 / 10.0 &#127885;</span>
             <span style="font-size:.75rem;color:var(--muted)">First Class &middot; Distinction</span>
           </div>
@@ -963,35 +914,19 @@
       <div class="cert-grid reveal">
         <div class="cert-card">
           <div class="cert-ico"><i class="fab fa-aws"></i></div>
-          <div>
-            <div class="cert-name">AWS Academy Graduate — Data Analytics</div>
-            <div class="cert-by">Amazon Web Services</div>
-            <div class="cert-dt">Jun 2023</div>
-          </div>
+          <div><div class="cert-name">AWS Academy Graduate — Data Analytics</div><div class="cert-by">Amazon Web Services</div><div class="cert-dt">Jun 2023</div></div>
         </div>
         <div class="cert-card">
           <div class="cert-ico"><i class="fab fa-aws"></i></div>
-          <div>
-            <div class="cert-name">AWS Academy Graduate — Cloud Foundations</div>
-            <div class="cert-by">Amazon Web Services</div>
-            <div class="cert-dt">Jun 2023</div>
-          </div>
+          <div><div class="cert-name">AWS Academy Graduate — Cloud Foundations</div><div class="cert-by">Amazon Web Services</div><div class="cert-dt">Jun 2023</div></div>
         </div>
         <div class="cert-card">
           <div class="cert-ico"><i class="fab fa-google"></i></div>
-          <div>
-            <div class="cert-name">Foundations: Data, Data, Everywhere</div>
-            <div class="cert-by">Google / Coursera</div>
-            <div class="cert-dt">Feb 2023</div>
-          </div>
+          <div><div class="cert-name">Foundations: Data, Data, Everywhere</div><div class="cert-by">Google / Coursera</div><div class="cert-dt">Feb 2023</div></div>
         </div>
         <div class="cert-card">
           <div class="cert-ico"><i class="fas fa-robot"></i></div>
-          <div>
-            <div class="cert-name">Artificial Intelligence &amp; Machine Learning</div>
-            <div class="cert-by">Blackbuck Engineers</div>
-            <div class="cert-dt">Dec 2021</div>
-          </div>
+          <div><div class="cert-name">Artificial Intelligence &amp; Machine Learning</div><div class="cert-by">Blackbuck Engineers</div><div class="cert-dt">Dec 2021</div></div>
         </div>
       </div>
 
@@ -1015,7 +950,6 @@
         <h2 class="s-title">Let's <span>Connect</span></h2>
       </div>
       <div class="contact-grid reveal">
-
         <div>
           <p style="color:var(--muted);font-weight:300;font-size:1.02rem;line-height:1.9;margin-bottom:1.5rem">
             Actively seeking full-time &amp; internship
@@ -1023,10 +957,9 @@
             roles in the United States. Available immediately. Let's build something that matters.
           </p>
           <div class="contact-links">
-            <!-- FIXED: cl-ico is a wrapper div; Font Awesome <i> goes inside it -->
-            <a href="mailto:srikanthreddynandireddy@gmail.com" class="contact-link">
+            <a href="mailto:srikanthreddynandireddy&#64;gmail&#46;com" class="contact-link">
               <div class="cl-ico"><i class="fas fa-envelope"></i></div>
-              srikanthreddynandireddy@gmail.com
+              srikanthreddynandireddy&#64;gmail&#46;com
             </a>
             <a href="https://www.linkedin.com/in/srikanth-reddy-nandireddy" target="_blank" rel="noopener noreferrer" class="contact-link">
               <div class="cl-ico"><i class="fab fa-linkedin"></i></div>
@@ -1056,11 +989,13 @@
             <span class="tag">MLOps</span><span class="tag">NLP</span>
             <span class="tag">Deep Learning</span><span class="tag">AWS</span><span class="tag">RAG</span>
           </div>
-          <a href="/cdn-cgi/l/email-protection#7704051e1c1619031f051213130e191619131e051213130e37101a161e1b5914181a" class="btn btn-primary" style="width:100%;justify-content:center;text-decoration:none">
+          <!-- FIXED: email as HTML entities — bypasses Cloudflare obfuscation -->
+          <a href="mailto:srikanthreddynandireddy&#64;gmail&#46;com"
+             class="btn btn-primary"
+             style="width:100%;justify-content:center;text-decoration:none">
             Send a Message <i class="fas fa-arrow-up-right-from-square" style="font-size:.75rem"></i>
           </a>
         </div>
-
       </div>
     </div>
   </section>
@@ -1069,7 +1004,7 @@
   <footer>
     <p>Designed &amp; Built by <span>Srikanth Reddy Nandireddy</span> &middot; 2026</p>
     <p style="margin-top:.5rem">
-      <a href="mailto:srikanthreddynandireddy@gmail.com">srikanthreddynandireddy@gmail.com</a>
+      <a href="mailto:srikanthreddynandireddy&#64;gmail&#46;com">srikanthreddynandireddy&#64;gmail&#46;com</a>
       &middot; Warrensburg, MO
     </p>
   </footer>
@@ -1077,7 +1012,7 @@
   <!-- ═══════════════════════════════════════════════
        JAVASCRIPT
   ═══════════════════════════════════════════════ -->
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <script>
   /* ── 1. SCROLL PROGRESS ── */
   const scrollBar = document.getElementById('scroll-bar');
   window.addEventListener('scroll', () => {
