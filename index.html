@@ -543,42 +543,6 @@
       gap: 2rem;
     }
 
-    .profile-wrap {
-      text-align: center;
-    }
-
-    .profile-ring {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      margin: 0 auto;
-      padding: 3px;
-      background: linear-gradient(135deg, #00d4ff, #00e5a0, #a855f7);
-    }
-
-    .profile-ring img {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid #070d1a;
-      display: block;
-    }
-
-    .profile-name {
-      margin-top: .75rem;
-      font-family: 'Chakra Petch', monospace;
-      font-size: .8rem;
-      color: var(--cyan);
-      letter-spacing: .1em;
-    }
-
-    .profile-sub {
-      font-size: .78rem;
-      color: var(--muted);
-      margin-top: .2rem;
-    }
-
     .about-body p {
       color: var(--muted);
       margin-bottom: 1.1rem;
@@ -1190,15 +1154,6 @@
       animation: ring-spin 6s linear infinite;
     }
 
-    .cta-ring img {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid #0a1628;
-      display: block;
-    }
-
     @keyframes ring-spin {
       to {
         transform: rotate(360deg);
@@ -1436,16 +1391,8 @@
         </div>
       </div>
 
-      <!-- RIGHT: Photo + Terminal -->
+      <!-- RIGHT: Terminal -->
       <div class="about-right">
-        <div class="profile-wrap">
-          <div class="profile-ring">
-            <img src="images/profile.png" alt="Srikanth Reddy Nandireddy" />
-          </div>
-          <p class="profile-name">SRIKANTH REDDY N.</p>
-          <p class="profile-sub">M.S. Data Science &amp; AI &middot; UCM</p>
-        </div>
-
         <div class="terminal" role="complementary" aria-label="Profile summary">
           <div class="term-bar" aria-hidden="true">
             <div class="dot d-r"></div>
@@ -1874,9 +1821,6 @@
         </div>
 
         <div class="contact-cta">
-          <div class="cta-ring">
-            <img src="images/profile.png" alt="Srikanth Reddy Nandireddy" />
-          </div>
           <div class="cta-avail"><span class="live-dot" aria-hidden="true"></span>Open to Opportunities</div>
           <p style="color:var(--muted);font-size:.85rem;margin-bottom:1.5rem;font-weight:300">
             Data Science &amp; AI &middot; MS &middot; University of Central Missouri
