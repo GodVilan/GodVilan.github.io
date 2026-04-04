@@ -1052,6 +1052,19 @@
       gap: 1rem;
     }
 
+    .awards-grid .award-card:first-child {
+      grid-column: 1 / -1;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    .awards-grid .award-card:first-child .award-ico {
+      font-size: 2rem;
+      flex-shrink: 0;
+    }
+
     .award-card {
       background: rgba(10, 22, 40, .5);
       border: 1px solid rgba(245, 158, 11, .1);
@@ -1259,9 +1272,16 @@
 
       .skills-layout,
       .edu-grid,
-      .cert-grid,
+      .cert-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
       .awards-grid {
         grid-template-columns: repeat(2, 1fr);
+      }
+
+      .awards-grid .award-card:first-child {
+        grid-column: 1 / -1;
       }
 
       .nav-links {
@@ -1385,7 +1405,8 @@
             research through model training, containerized deployment, REST APIs, and CI/CD automation on AWS.</p>
           <p>Currently an M.S. student in Data Science &amp; AI at the University of Central Missouri with a
             <strong>perfect 4.0 GPA</strong>, I spend my time building production RAG pipelines, multimodal deep
-            learning systems, and real-time fraud detection APIs you can actually hit with a curl command.</p>
+            learning systems, and real-time fraud detection APIs you can actually hit with a curl command.
+          </p>
           <p>I'm looking for full-time &amp; internship roles in <strong>Data Science, ML Engineering, or Applied
               AI</strong> in the United States — available immediately.</p>
         </div>
@@ -1408,8 +1429,8 @@
                 / Data Scientist"</span>,</div>
             <div class="term-line">&nbsp;&nbsp;<span class="term-key">"gpa"</span>: <span class="term-num">4.0</span>,
             </div>
-            <div class="term-line">&nbsp;&nbsp;<span class="term-key">"location"</span>: <span
-                class="term-str">"United States"</span>,</div>
+            <div class="term-line">&nbsp;&nbsp;<span class="term-key">"location"</span>: <span class="term-str">"United
+                States"</span>,</div>
             <div class="term-line">&nbsp;&nbsp;<span class="term-key">"open_to_work"</span>: <span
                 class="term-bool">true</span>,</div>
             <div class="term-line">&nbsp;&nbsp;<span class="term-key">"available"</span>: <span
@@ -1426,7 +1447,8 @@
             <div class="term-line">&nbsp;&nbsp;<span class="term-key">"codechef_rank"</span>: <span
                 class="term-str">"Global #1"</span>,</div>
             <div class="term-line">&nbsp;&nbsp;<span class="term-key">"streak"</span>: <span class="term-num">255</span>
-              <span style="color:var(--muted)">// consecutive days</span></div>
+              <span style="color:var(--muted)">// consecutive days</span>
+            </div>
             <div class="term-line">}</div>
           </div>
         </div>
@@ -1760,6 +1782,15 @@
 
       <h3 class="sub-heading reveal" style="margin-top:2rem">Honors &amp; Awards</h3>
       <div class="awards-grid reveal">
+        <div class="award-card"
+          style="background:rgba(168,85,247,.08);border-color:rgba(168,85,247,.3);grid-column:1/-1;flex-direction:column;align-items:center;">
+          <div class="award-ico">&#127942;</div>
+          <div class="award-txt" style="color:var(--text);font-weight:500;font-size:.9rem;margin-bottom:.3rem;">Graduate
+            Student Achievement Award 2025&ndash;2026</div>
+          <div class="award-txt" style="font-size:.78rem;">University of Central Missouri Graduate Studies &mdash; <span
+              style="color:var(--pu);">Recognized for exceptional scholastic achievement, exemplary contributions to
+              Data Science &amp; AI, and outstanding character and leadership</span></div>
+        </div>
         <div class="award-card">
           <div class="award-ico">&#129351;</div>
           <div class="award-txt">Global Rank 1 — CodeChef May Long Two (Division 4 Rated)</div>
