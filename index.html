@@ -32,7 +32,7 @@
   <meta name="twitter:description" content="Production ML Systems · RAG · MLOps · AWS · PyTorch" />
   <meta name="twitter:image" content="https://srikanthreddynandireddy.me/og-image.png" />
 
-  <!-- Structured Data (JSON-LD) — telephone removed -->
+  <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -41,9 +41,30 @@
     "url": "https://srikanthreddynandireddy.me",
     "email": "srikanthreddynandireddy@gmail.com",
     "jobTitle": "ML Engineer / Data Scientist",
+    "description": "ML Engineer and Data Scientist specializing in production RAG systems, MLOps, deep learning, and AWS deployments. M.S. Data Science & AI, University of Central Missouri. GPA 4.0.",
+    "award": "Graduate Student Achievement Award 2025-2026, University of Central Missouri Graduate Studies — Recognized for exceptional scholastic achievement, exemplary contributions to Data Science & Artificial Intelligence, and outstanding character and leadership",
     "alumniOf": [
-      { "@type": "CollegeOrUniversity", "name": "University of Central Missouri" },
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "University of Central Missouri",
+        "department": "Graduate Studies — Data Science & Artificial Intelligence"
+      },
       { "@type": "CollegeOrUniversity", "name": "CMR College of Engineering & Technology" }
+    ],
+    "hasCredential": {
+      "@type": "EducationalOccupationalCredential",
+      "name": "Graduate Student Achievement Award 2025-2026",
+      "description": "Awarded by UCM Graduate Studies for exceptional scholastic achievement, exemplary contributions to Data Science & Artificial Intelligence, and outstanding character and leadership",
+      "recognizedBy": {
+        "@type": "CollegeOrUniversity",
+        "name": "University of Central Missouri Graduate Studies"
+      },
+      "dateCreated": "2026"
+    },
+    "knowsAbout": [
+      "Machine Learning", "Data Science", "Artificial Intelligence",
+      "RAG Pipelines", "MLOps", "Deep Learning", "Natural Language Processing",
+      "PyTorch", "AWS", "MLflow", "Docker", "FastAPI"
     ],
     "sameAs": [
       "https://www.linkedin.com/in/srikanth-reddy-nandireddy",
@@ -111,7 +132,6 @@
       overflow-x: hidden;
     }
 
-    /* ── Scroll-progress bar ── */
     #scroll-bar {
       position: fixed;
       top: 0;
@@ -129,7 +149,6 @@
       pointer-events: none;
     }
 
-    /* ══════════════ NAV ══════════════ */
     nav {
       position: fixed;
       top: 0;
@@ -198,7 +217,6 @@
       color: var(--cyan);
     }
 
-    /* Hamburger */
     .hamburger {
       display: none;
       flex-direction: column;
@@ -255,7 +273,6 @@
       color: var(--cyan);
     }
 
-    /* ══════════════ HERO ══════════════ */
     .hero {
       min-height: 100vh;
       display: flex;
@@ -467,7 +484,6 @@
       display: block;
     }
 
-    /* ══════════════ SECTION BASE ══════════════ */
     section {
       position: relative;
       z-index: 1;
@@ -529,7 +545,6 @@
       margin-bottom: 1.2rem;
     }
 
-    /* ══════════════ ABOUT ══════════════ */
     .about-grid {
       display: grid;
       grid-template-columns: 1.1fr 1fr;
@@ -556,7 +571,6 @@
       font-weight: 500;
     }
 
-    /* Terminal */
     .terminal {
       background: #07111f;
       border: 1px solid rgba(0, 212, 255, .15);
@@ -575,51 +589,17 @@
       border-bottom: 1px solid rgba(0, 212, 255, .08);
     }
 
-    .dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-    }
+    .dot { width: 10px; height: 10px; border-radius: 50%; }
+    .d-r { background: #ff5f57 }
+    .d-y { background: #febc2e }
+    .d-g { background: #28c840 }
+    .term-body { padding: 1.4rem; line-height: 1.9; color: #8aadcf; }
+    .term-key { color: var(--em) }
+    .term-str { color: var(--cyan) }
+    .term-num { color: var(--am) }
+    .term-bool { color: #ff7eb3 }
+    .term-line { margin: .1rem 0; }
 
-    .d-r {
-      background: #ff5f57
-    }
-
-    .d-y {
-      background: #febc2e
-    }
-
-    .d-g {
-      background: #28c840
-    }
-
-    .term-body {
-      padding: 1.4rem;
-      line-height: 1.9;
-      color: #8aadcf;
-    }
-
-    .term-key {
-      color: var(--em)
-    }
-
-    .term-str {
-      color: var(--cyan)
-    }
-
-    .term-num {
-      color: var(--am)
-    }
-
-    .term-bool {
-      color: #ff7eb3
-    }
-
-    .term-line {
-      margin: .1rem 0;
-    }
-
-    /* ══════════════ SKILLS ══════════════ */
     .skills-layout {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -634,9 +614,7 @@
       transition: border-color .3s;
     }
 
-    .skill-group:hover {
-      border-color: rgba(0, 212, 255, .2);
-    }
+    .skill-group:hover { border-color: rgba(0, 212, 255, .2); }
 
     .sg-head {
       font-family: 'JetBrains Mono', monospace;
@@ -659,11 +637,7 @@
       flex-shrink: 0;
     }
 
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-    }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; }
 
     .tag {
       background: rgba(255, 255, 255, .03);
@@ -683,16 +657,13 @@
       background: var(--cb);
     }
 
-    /* ══════════════ PROJECTS ══════════════ */
     .proj-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 1.5rem;
     }
 
-    .proj-grid .wide {
-      grid-column: 1/-1;
-    }
+    .proj-grid .wide { grid-column: 1/-1; }
 
     .project-card {
       position: relative;
@@ -718,30 +689,11 @@
       animation: spin-angle 4s linear infinite;
     }
 
-    @keyframes spin-angle {
-      to {
-        --angle: 360deg;
-      }
-    }
-
-    /* All cards: show effect on hover */
-    .project-card:hover::before {
-      opacity: .4;
-    }
-
-    .project-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 30px 80px rgba(0, 0, 0, .4), 0 0 40px rgba(0, 212, 255, .08);
-    }
-
-    /* Featured cards: no glow at rest, but DO show on hover (explicit override) */
-    .project-card.featured::before {
-      opacity: 0;
-    }
-
-    .project-card.featured:hover::before {
-      opacity: .4;
-    }
+    @keyframes spin-angle { to { --angle: 360deg; } }
+    .project-card:hover::before { opacity: .4; }
+    .project-card:hover { transform: translateY(-6px); box-shadow: 0 30px 80px rgba(0, 0, 0, .4), 0 0 40px rgba(0, 212, 255, .08); }
+    .project-card.featured::before { opacity: 0; }
+    .project-card.featured:hover::before { opacity: .4; }
 
     .feat-badge {
       display: inline-flex;
@@ -775,12 +727,7 @@
       font-weight: 300;
     }
 
-    .metrics {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 7px;
-      margin-bottom: 1.1rem;
-    }
+    .metrics { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 1.1rem; }
 
     .met {
       background: rgba(0, 212, 255, .06);
@@ -792,12 +739,7 @@
       border-radius: 6px;
     }
 
-    .stack {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 5px;
-      margin-bottom: 1.3rem;
-    }
+    .stack { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 1.3rem; }
 
     .st {
       background: rgba(255, 255, 255, .03);
@@ -809,11 +751,7 @@
       font-family: 'JetBrains Mono', monospace;
     }
 
-    .proj-links {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
+    .proj-links { display: flex; gap: 8px; flex-wrap: wrap; }
 
     .pl {
       display: inline-flex;
@@ -830,27 +768,11 @@
       font-family: 'Outfit', sans-serif;
     }
 
-    .pl:hover {
-      border-color: var(--cyan);
-      color: var(--cyan);
-    }
+    .pl:hover { border-color: var(--cyan); color: var(--cyan); }
+    .pl.live-link { background: rgba(0, 229, 160, .08); border-color: rgba(0, 229, 160, .3); color: var(--em); }
+    .pl.live-link:hover { background: rgba(0, 229, 160, .15); }
 
-    .pl.live-link {
-      background: rgba(0, 229, 160, .08);
-      border-color: rgba(0, 229, 160, .3);
-      color: var(--em);
-    }
-
-    .pl.live-link:hover {
-      background: rgba(0, 229, 160, .15);
-    }
-
-    /* ══════════════ EXPERIENCE ══════════════ */
-    .timeline {
-      position: relative;
-      padding-left: 2.5rem;
-    }
-
+    .timeline { position: relative; padding-left: 2.5rem; }
     .timeline::before {
       content: '';
       position: absolute;
@@ -861,11 +783,7 @@
       background: linear-gradient(180deg, var(--cyan), rgba(0, 212, 255, .1));
     }
 
-    .tl-item {
-      position: relative;
-      margin-bottom: 3rem;
-    }
-
+    .tl-item { position: relative; margin-bottom: 3rem; }
     .tl-dot {
       position: absolute;
       left: -2.5rem;
@@ -887,28 +805,9 @@
       margin-bottom: .2rem;
     }
 
-    .tl-co {
-      font-size: .85rem;
-      color: var(--em);
-      font-weight: 500;
-      margin-bottom: .2rem;
-    }
-
-    .tl-role {
-      font-family: 'Chakra Petch', monospace;
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin-bottom: .75rem;
-      color: var(--text);
-    }
-
-    .tl-pts {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: .4rem;
-    }
-
+    .tl-co { font-size: .85rem; color: var(--em); font-weight: 500; margin-bottom: .2rem; }
+    .tl-role { font-family: 'Chakra Petch', monospace; font-size: 1.1rem; font-weight: 600; margin-bottom: .75rem; color: var(--text); }
+    .tl-pts { list-style: none; display: flex; flex-direction: column; gap: .4rem; }
     .tl-pts li {
       font-size: .875rem;
       color: var(--muted);
@@ -917,16 +816,8 @@
       font-weight: 300;
       line-height: 1.65;
     }
+    .tl-pts li::before { content: '▹'; position: absolute; left: 0; color: var(--cyan); font-size: .8rem; }
 
-    .tl-pts li::before {
-      content: '▹';
-      position: absolute;
-      left: 0;
-      color: var(--cyan);
-      font-size: .8rem;
-    }
-
-    /* ══════════════ EDUCATION ══════════════ */
     .edu-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -941,54 +832,13 @@
       padding: 1.75rem;
       transition: border-color .3s;
     }
-
-    .edu-card:hover {
-      border-color: rgba(0, 229, 160, .3);
-    }
-
-    .edu-yr {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: .68rem;
-      color: var(--em);
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      margin-bottom: .4rem;
-    }
-
-    .edu-deg {
-      font-family: 'Chakra Petch', monospace;
-      font-size: 1rem;
-      font-weight: 700;
-      margin-bottom: .2rem;
-    }
-
-    .edu-field {
-      color: var(--em);
-      font-size: .88rem;
-      font-weight: 500;
-      margin-bottom: .2rem;
-    }
-
-    .edu-school {
-      font-size: .82rem;
-      color: var(--muted);
-      font-weight: 300;
-    }
-
-    .edu-bottom {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 1.1rem;
-      padding-top: 1.1rem;
-      border-top: 1px solid rgba(0, 212, 255, .08);
-    }
-
-    .edu-gpa {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: .8rem;
-      color: var(--cyan);
-    }
+    .edu-card:hover { border-color: rgba(0, 229, 160, .3); }
+    .edu-yr { font-family: 'JetBrains Mono', monospace; font-size: .68rem; color: var(--em); letter-spacing: .12em; text-transform: uppercase; margin-bottom: .4rem; }
+    .edu-deg { font-family: 'Chakra Petch', monospace; font-size: 1rem; font-weight: 700; margin-bottom: .2rem; }
+    .edu-field { color: var(--em); font-size: .88rem; font-weight: 500; margin-bottom: .2rem; }
+    .edu-school { font-size: .82rem; color: var(--muted); font-weight: 300; }
+    .edu-bottom { display: flex; justify-content: space-between; align-items: center; margin-top: 1.1rem; padding-top: 1.1rem; border-top: 1px solid rgba(0, 212, 255, .08); }
+    .edu-gpa { font-family: 'JetBrains Mono', monospace; font-size: .8rem; color: var(--cyan); }
 
     .cert-grid {
       display: grid;
@@ -1007,11 +857,7 @@
       align-items: flex-start;
       transition: border-color .3s;
     }
-
-    .cert-card:hover {
-      border-color: rgba(0, 212, 255, .2);
-    }
-
+    .cert-card:hover { border-color: rgba(0, 212, 255, .2); }
     .cert-ico {
       width: 34px;
       height: 34px;
@@ -1025,26 +871,9 @@
       flex-shrink: 0;
       color: var(--cyan);
     }
-
-    .cert-name {
-      font-size: .84rem;
-      font-weight: 600;
-      color: var(--text);
-      line-height: 1.4;
-      margin-bottom: .2rem;
-    }
-
-    .cert-by {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: .7rem;
-      color: var(--cyan);
-    }
-
-    .cert-dt {
-      font-size: .7rem;
-      color: var(--muted);
-      margin-top: .15rem;
-    }
+    .cert-name { font-size: .84rem; font-weight: 600; color: var(--text); line-height: 1.4; margin-bottom: .2rem; }
+    .cert-by { font-family: 'JetBrains Mono', monospace; font-size: .7rem; color: var(--cyan); }
+    .cert-dt { font-size: .7rem; color: var(--muted); margin-top: .15rem; }
 
     .awards-grid {
       display: grid;
@@ -1073,25 +902,10 @@
       text-align: center;
       transition: all .25s;
     }
+    .award-card:hover { border-color: rgba(245, 158, 11, .3); transform: translateY(-3px); }
+    .award-ico { font-size: 1.4rem; margin-bottom: .5rem; }
+    .award-txt { font-size: .8rem; color: var(--muted); line-height: 1.5; font-weight: 300; }
 
-    .award-card:hover {
-      border-color: rgba(245, 158, 11, .3);
-      transform: translateY(-3px);
-    }
-
-    .award-ico {
-      font-size: 1.4rem;
-      margin-bottom: .5rem;
-    }
-
-    .award-txt {
-      font-size: .8rem;
-      color: var(--muted);
-      line-height: 1.5;
-      font-weight: 300;
-    }
-
-    /* ══════════════ CONTACT ══════════════ */
     .contact-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -1099,13 +913,7 @@
       align-items: center;
     }
 
-    .contact-links {
-      display: flex;
-      flex-direction: column;
-      gap: .8rem;
-      margin-top: 1.5rem;
-    }
-
+    .contact-links { display: flex; flex-direction: column; gap: .8rem; margin-top: 1.5rem; }
     .contact-link {
       display: flex;
       align-items: center;
@@ -1119,13 +927,7 @@
       font-size: .88rem;
       transition: all .25s;
     }
-
-    .contact-link:hover {
-      border-color: var(--cyan);
-      color: var(--cyan);
-      transform: translateX(6px);
-    }
-
+    .contact-link:hover { border-color: var(--cyan); color: var(--cyan); transform: translateX(6px); }
     .cl-ico {
       width: 34px;
       height: 34px;
@@ -1148,46 +950,6 @@
       text-align: center;
     }
 
-    .cta-ring {
-      width: 110px;
-      height: 110px;
-      border-radius: 50%;
-      margin: 0 auto 1.5rem;
-      padding: 3px;
-      background: linear-gradient(135deg, #00d4ff, #00e5a0, #a855f7);
-      position: relative;
-    }
-
-    .cta-ring::before {
-      content: '';
-      position: absolute;
-      inset: -8px;
-      border-radius: 50%;
-      border: 1px solid rgba(0, 212, 255, .15);
-      animation: ring-spin 6s linear infinite;
-    }
-
-    @keyframes ring-spin {
-      to {
-        transform: rotate(360deg);
-      }
-    }
-
-    .cta-avail {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      background: rgba(0, 229, 160, .08);
-      border: 1px solid rgba(0, 229, 160, .2);
-      color: var(--em);
-      font-size: .75rem;
-      padding: 5px 14px;
-      border-radius: 100px;
-      margin-bottom: 1.2rem;
-      font-family: 'JetBrains Mono', monospace;
-    }
-
-    /* ══════════════ FOOTER ══════════════ */
     footer {
       background: #050d1a;
       border-top: 1px solid rgba(0, 212, 255, .06);
@@ -1198,124 +960,38 @@
       position: relative;
       z-index: 1;
     }
+    footer span { color: var(--cyan); }
+    footer a { color: var(--muted); text-decoration: none; transition: color .2s; }
+    footer a:hover { color: var(--cyan); }
 
-    footer span {
-      color: var(--cyan);
-    }
+    @keyframes pulse { 0%,100% { opacity:1; transform:scale(1) } 50% { opacity:.5; transform:scale(1.3) } }
+    @keyframes blink { 0%,100% { opacity:1 } 50% { opacity:0 } }
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.on { opacity: 1; transform: none; }
 
-    footer a {
-      color: var(--muted);
-      text-decoration: none;
-      transition: color .2s;
-    }
-
-    footer a:hover {
-      color: var(--cyan);
-    }
-
-    /* ══════════════ UTILITY ══════════════ */
-    @keyframes pulse {
-
-      0%,
-      100% {
-        opacity: 1;
-        transform: scale(1)
-      }
-
-      50% {
-        opacity: .5;
-        transform: scale(1.3)
-      }
-    }
-
-    @keyframes blink {
-
-      0%,
-      100% {
-        opacity: 1
-      }
-
-      50% {
-        opacity: 0
-      }
-    }
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(28px);
-      transition: opacity .7s ease, transform .7s ease;
-    }
-
-    .reveal.on {
-      opacity: 1;
-      transform: none;
-    }
-
-    /* ══════════════ RESPONSIVE ══════════════ */
     @media (max-width:900px) {
-      .hero-stats {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .about-grid,
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .proj-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .proj-grid .wide {
-        grid-column: auto;
-      }
-
-      .skills-layout,
-      .edu-grid,
-      .cert-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .awards-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .awards-grid .award-card:first-child {
-        grid-column: 1 / -1;
-      }
-
-      .nav-links {
-        display: none;
-      }
-
-      .hamburger {
-        display: flex;
-      }
+      .hero-stats { grid-template-columns: repeat(2, 1fr); }
+      .about-grid, .contact-grid { grid-template-columns: 1fr; }
+      .proj-grid { grid-template-columns: 1fr; }
+      .proj-grid .wide { grid-column: auto; }
+      .skills-layout, .edu-grid, .cert-grid { grid-template-columns: repeat(2, 1fr); }
+      .awards-grid { grid-template-columns: repeat(2, 1fr); }
+      .awards-grid .award-card:first-child { grid-column: 1 / -1; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
     }
 
     @media (max-width:600px) {
-
-      .hero-stats,
-      .skills-layout,
-      .edu-grid,
-      .cert-grid,
-      .awards-grid {
-        grid-template-columns: 1fr;
-      }
-
-      section {
-        padding: 4rem 1.25rem;
-      }
+      .hero-stats, .skills-layout, .edu-grid, .cert-grid, .awards-grid { grid-template-columns: 1fr; }
+      section { padding: 4rem 1.25rem; }
     }
   </style>
 </head>
 
 <body>
-
   <div id="scroll-bar" aria-hidden="true"></div>
   <canvas id="bg" aria-hidden="true"></canvas>
 
-  <!-- ══ NAV ══ -->
   <nav role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
       <a class="logo" href="#top" aria-label="Home">SRN<em>.</em><span class="nav-dot" aria-hidden="true"></span></a>
@@ -1344,7 +1020,6 @@
     </ul>
   </div>
 
-  <!-- ══ HERO ══ -->
   <section class="hero" id="top" aria-label="Introduction">
     <div class="hero-c">
       <div class="avail-pill" role="status">
@@ -1360,95 +1035,53 @@
         <span class="cursor-blink" aria-hidden="true"></span>
       </div>
       <p class="hero-desc">
-        Building <strong>production-grade ML systems</strong> that ship — from multimodal transformers
-        and RAG pipelines to real-time AWS inference APIs.
+        Building <strong>production-grade ML systems</strong> that ship — from multimodal transformers and RAG pipelines to real-time AWS inference APIs.
         M.S. Data Science &amp; AI &middot; UCM &middot; <strong>4.0 GPA</strong>.
       </p>
       <div class="hero-btns">
         <a href="#projects" class="btn btn-primary">View Projects &rarr;</a>
-        <a href="SRIKANTH_REDDY_NANDIREDDY.pdf" download class="btn btn-resume">
-          <i class="fas fa-download"></i> Resume
-        </a>
+        <a href="SRIKANTH_REDDY_NANDIREDDY.pdf" download class="btn btn-resume"><i class="fas fa-download"></i> Resume</a>
         <a href="#contact" class="btn btn-ghost">Get In Touch</a>
       </div>
       <div class="hero-stats" role="list">
-        <div class="stat-card reveal" role="listitem">
-          <span class="stat-num" data-target="5" data-suffix="+">0</span>
-          <span class="stat-label">Production Projects</span>
-        </div>
-        <div class="stat-card reveal" role="listitem">
-          <span class="stat-num" data-target="4" data-suffix=".0">0</span>
-          <span class="stat-label">GPA &middot; MS AI</span>
-        </div>
-        <div class="stat-card reveal" role="listitem">
-          <span class="stat-num" data-target="120" data-suffix="">0</span>
-          <span class="stat-label">arXiv Papers RAG'd</span>
-        </div>
-        <div class="stat-card reveal" role="listitem">
-          <span class="stat-num" data-target="62" data-suffix="K+">0</span>
-          <span class="stat-label">Articles Analyzed</span>
-        </div>
+        <div class="stat-card reveal" role="listitem"><span class="stat-num" data-target="5" data-suffix="+">0</span><span class="stat-label">Production Projects</span></div>
+        <div class="stat-card reveal" role="listitem"><span class="stat-num" data-target="4" data-suffix=".0">0</span><span class="stat-label">GPA &middot; MS AI</span></div>
+        <div class="stat-card reveal" role="listitem"><span class="stat-num" data-target="120" data-suffix="">0</span><span class="stat-label">arXiv Papers RAG'd</span></div>
+        <div class="stat-card reveal" role="listitem"><span class="stat-num" data-target="62" data-suffix="K+">0</span><span class="stat-label">Articles Analyzed</span></div>
       </div>
     </div>
   </section>
 
-  <!-- ══ ABOUT ══ -->
   <section id="about" class="bg-alt">
     <div class="section-inner about-grid reveal">
-
-      <!-- LEFT: Text -->
       <div class="about-left">
         <div class="s-eyebrow">01 &middot; about</div>
         <h2 class="s-title">ML Engineer &amp;<br><span>Data Scientist</span></h2>
         <div class="about-body">
-          <p>I don't just build models — I <strong>ship ML systems</strong>. My work spans the full stack: statistical
-            research through model training, containerized deployment, REST APIs, and CI/CD automation on AWS.</p>
-          <p>Currently an M.S. student in Data Science &amp; AI at the University of Central Missouri with a
-            <strong>perfect 4.0 GPA</strong>, I spend my time building production RAG pipelines, multimodal deep
-            learning systems, and real-time fraud detection APIs you can actually hit with a curl command.
-          </p>
-          <p>I'm looking for full-time &amp; internship roles in <strong>Data Science, ML Engineering, or Applied
-              AI</strong> in the United States — available immediately.</p>
+          <p>I don't just build models — I <strong>ship ML systems</strong>. My work spans the full stack: statistical research through model training, containerized deployment, REST APIs, and CI/CD automation on AWS.</p>
+          <p>Currently an M.S. student in Data Science &amp; AI at the University of Central Missouri with a <strong>perfect 4.0 GPA</strong>, I spend my time building production RAG pipelines, multimodal deep learning systems, and real-time fraud detection APIs you can actually hit with a curl command.</p>
+          <p>I'm looking for full-time &amp; internship roles in <strong>Data Science, ML Engineering, or Applied AI</strong> in the United States — available immediately.</p>
         </div>
       </div>
-
-      <!-- RIGHT: Terminal -->
       <div class="about-right">
         <div class="terminal" role="complementary" aria-label="Profile summary">
-          <div class="term-bar" aria-hidden="true">
-            <div class="dot d-r"></div>
-            <div class="dot d-y"></div>
-            <div class="dot d-g"></div>
-          </div>
+          <div class="term-bar" aria-hidden="true"><div class="dot d-r"></div><div class="dot d-y"></div><div class="dot d-g"></div></div>
           <div class="term-body">
             <div class="term-line" style="color:var(--muted)"># ~/srikanth_reddy_profile.json</div>
             <div class="term-line">{</div>
-            <div class="term-line">&nbsp;&nbsp;<span class="term-key">"name"</span>: <span class="term-str">"Srikanth
-                Reddy Nandireddy"</span>,</div>
-            <div class="term-line">&nbsp;&nbsp;<span class="term-key">"role"</span>: <span class="term-str">"ML Engineer
-                / Data Scientist"</span>,</div>
-            <div class="term-line">&nbsp;&nbsp;<span class="term-key">"gpa"</span>: <span class="term-num">4.0</span>,
-            </div>
-            <div class="term-line">&nbsp;&nbsp;<span class="term-key">"location"</span>: <span class="term-str">"United
-                States"</span>,</div>
-            <div class="term-line">&nbsp;&nbsp;<span class="term-key">"open_to_work"</span>: <span
-                class="term-bool">true</span>,</div>
-            <div class="term-line">&nbsp;&nbsp;<span class="term-key">"available"</span>: <span
-                class="term-str">"Immediately"</span>,</div>
+            <div class="term-line">&nbsp;&nbsp;<span class="term-key">"name"</span>: <span class="term-str">"Srikanth Reddy Nandireddy"</span>,</div>
+            <div class="term-line">&nbsp;&nbsp;<span class="term-key">"role"</span>: <span class="term-str">"ML Engineer / Data Scientist"</span>,</div>
+            <div class="term-line">&nbsp;&nbsp;<span class="term-key">"gpa"</span>: <span class="term-num">4.0</span>,</div>
+            <div class="term-line">&nbsp;&nbsp;<span class="term-key">"location"</span>: <span class="term-str">"United States"</span>,</div>
+            <div class="term-line">&nbsp;&nbsp;<span class="term-key">"open_to_work"</span>: <span class="term-bool">true</span>,</div>
+            <div class="term-line">&nbsp;&nbsp;<span class="term-key">"available"</span>: <span class="term-str">"Immediately"</span>,</div>
             <div class="term-line">&nbsp;&nbsp;<span class="term-key">"stack"</span>: [</div>
-            <div class="term-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="term-str">"PyTorch"</span>, <span
-                class="term-str">"AWS"</span>, <span class="term-str">"MLflow"</span>,</div>
-            <div class="term-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="term-str">"Docker"</span>, <span
-                class="term-str">"FastAPI"</span>, <span class="term-str">"FAISS"</span></div>
+            <div class="term-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="term-str">"PyTorch"</span>, <span class="term-str">"AWS"</span>, <span class="term-str">"MLflow"</span>,</div>
+            <div class="term-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="term-str">"Docker"</span>, <span class="term-str">"FastAPI"</span>, <span class="term-str">"FAISS"</span></div>
             <div class="term-line">&nbsp;&nbsp;],</div>
-            <div class="term-line">&nbsp;&nbsp;<span class="term-key">"interests"</span>: [<span
-                class="term-str">"LLMs"</span>, <span class="term-str">"RAG"</span>, <span
-                class="term-str">"MLOps"</span>],</div>
-            <div class="term-line">&nbsp;&nbsp;<span class="term-key">"codechef_rank"</span>: <span
-                class="term-str">"Global #1"</span>,</div>
-            <div class="term-line">&nbsp;&nbsp;<span class="term-key">"streak"</span>: <span class="term-num">255</span>
-              <span style="color:var(--muted)">// consecutive days</span>
-            </div>
+            <div class="term-line">&nbsp;&nbsp;<span class="term-key">"interests"</span>: [<span class="term-str">"LLMs"</span>, <span class="term-str">"RAG"</span>, <span class="term-str">"MLOps"</span>],</div>
+            <div class="term-line">&nbsp;&nbsp;<span class="term-key">"codechef_rank"</span>: <span class="term-str">"Global #1"</span>,</div>
+            <div class="term-line">&nbsp;&nbsp;<span class="term-key">"streak"</span>: <span class="term-num">255</span> <span style="color:var(--muted)">// consecutive days</span></div>
             <div class="term-line">}</div>
           </div>
         </div>
@@ -1456,7 +1089,6 @@
     </div>
   </section>
 
-  <!-- ══ SKILLS ══ -->
   <section id="skills">
     <div class="section-inner">
       <div class="reveal">
@@ -1464,453 +1096,46 @@
         <h2 class="s-title">Tech <span>Stack</span></h2>
       </div>
       <div class="skills-layout">
-        <div class="skill-group reveal">
-          <div class="sg-head">Languages</div>
-          <div class="tags">
-            <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">R</span>
-            <span class="tag">C++</span><span class="tag">Java</span><span class="tag">Bash</span>
-          </div>
-        </div>
-        <div class="skill-group reveal">
-          <div class="sg-head">Machine Learning</div>
-          <div class="tags">
-            <span class="tag">Scikit-learn</span><span class="tag">XGBoost</span>
-            <span class="tag">Random Forest</span><span class="tag">Logistic Regression</span>
-            <span class="tag">Decision Trees</span><span class="tag">KMeans</span>
-            <span class="tag">SMOTE</span><span class="tag">Feature Engineering</span><span class="tag">ROC-AUC</span>
-          </div>
-        </div>
-        <div class="skill-group reveal">
-          <div class="sg-head">Deep Learning &amp; NLP</div>
-          <div class="tags">
-            <span class="tag">PyTorch</span><span class="tag">TensorFlow</span><span class="tag">Keras</span>
-            <span class="tag">CNNs</span><span class="tag">Transformers</span><span class="tag">HuggingFace</span>
-            <span class="tag">BERT</span><span class="tag">DistilBERT</span><span class="tag">Wav2Vec2</span>
-            <span class="tag">ViT</span><span class="tag">TF-IDF</span><span class="tag">Word Embeddings</span>
-            <span class="tag">FAISS</span><span class="tag">Sentence Transformers</span>
-          </div>
-        </div>
-        <div class="skill-group reveal">
-          <div class="sg-head">Generative AI &amp; LLMs</div>
-          <div class="tags">
-            <span class="tag">RAG Pipelines</span><span class="tag">LLMs</span>
-            <span class="tag">Gemini API</span><span class="tag">Vector Databases</span>
-            <span class="tag">BM25</span><span class="tag">Prompt Engineering</span>
-          </div>
-        </div>
-        <div class="skill-group reveal">
-          <div class="sg-head">Data &amp; Statistics</div>
-          <div class="tags">
-            <span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">SciPy</span>
-            <span class="tag">Statsmodels</span><span class="tag">SARIMAX</span><span class="tag">Prophet</span>
-            <span class="tag">EDA</span><span class="tag">Hypothesis Testing</span>
-            <span class="tag">A/B Testing</span><span class="tag">Time Series</span>
-          </div>
-        </div>
-        <div class="skill-group reveal">
-          <div class="sg-head">Cloud &amp; MLOps</div>
-          <div class="tags">
-            <span class="tag">AWS EC2</span><span class="tag">S3</span><span class="tag">SageMaker</span>
-            <span class="tag">Athena</span><span class="tag">Glue</span><span class="tag">Redshift</span>
-            <span class="tag">MLflow</span><span class="tag">Docker</span><span class="tag">FastAPI</span>
-            <span class="tag">Nginx</span><span class="tag">GitHub Actions</span><span class="tag">CI/CD</span>
-          </div>
-        </div>
-        <div class="skill-group reveal">
-          <div class="sg-head">Visualization</div>
-          <div class="tags">
-            <span class="tag">Plotly</span><span class="tag">Dash</span><span class="tag">Streamlit</span>
-            <span class="tag">Matplotlib</span><span class="tag">Seaborn</span><span class="tag">Bokeh</span>
-          </div>
-        </div>
+        <div class="skill-group reveal"><div class="sg-head">Languages</div><div class="tags"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">R</span><span class="tag">C++</span><span class="tag">Java</span><span class="tag">Bash</span></div></div>
+        <div class="skill-group reveal"><div class="sg-head">Machine Learning</div><div class="tags"><span class="tag">Scikit-learn</span><span class="tag">XGBoost</span><span class="tag">Random Forest</span><span class="tag">Logistic Regression</span><span class="tag">Decision Trees</span><span class="tag">KMeans</span><span class="tag">SMOTE</span><span class="tag">Feature Engineering</span><span class="tag">ROC-AUC</span></div></div>
+        <div class="skill-group reveal"><div class="sg-head">Deep Learning &amp; NLP</div><div class="tags"><span class="tag">PyTorch</span><span class="tag">TensorFlow</span><span class="tag">Keras</span><span class="tag">CNNs</span><span class="tag">Transformers</span><span class="tag">HuggingFace</span><span class="tag">BERT</span><span class="tag">DistilBERT</span><span class="tag">Wav2Vec2</span><span class="tag">ViT</span><span class="tag">TF-IDF</span><span class="tag">Word Embeddings</span><span class="tag">FAISS</span><span class="tag">Sentence Transformers</span></div></div>
+        <div class="skill-group reveal"><div class="sg-head">Generative AI &amp; LLMs</div><div class="tags"><span class="tag">RAG Pipelines</span><span class="tag">LLMs</span><span class="tag">Gemini API</span><span class="tag">Vector Databases</span><span class="tag">BM25</span><span class="tag">Prompt Engineering</span></div></div>
+        <div class="skill-group reveal"><div class="sg-head">Data &amp; Statistics</div><div class="tags"><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">SciPy</span><span class="tag">Statsmodels</span><span class="tag">SARIMAX</span><span class="tag">Prophet</span><span class="tag">EDA</span><span class="tag">Hypothesis Testing</span><span class="tag">A/B Testing</span><span class="tag">Time Series</span></div></div>
+        <div class="skill-group reveal"><div class="sg-head">Cloud &amp; MLOps</div><div class="tags"><span class="tag">AWS EC2</span><span class="tag">S3</span><span class="tag">SageMaker</span><span class="tag">Athena</span><span class="tag">Glue</span><span class="tag">Redshift</span><span class="tag">MLflow</span><span class="tag">Docker</span><span class="tag">FastAPI</span><span class="tag">Nginx</span><span class="tag">GitHub Actions</span><span class="tag">CI/CD</span></div></div>
+        <div class="skill-group reveal"><div class="sg-head">Visualization</div><div class="tags"><span class="tag">Plotly</span><span class="tag">Dash</span><span class="tag">Streamlit</span><span class="tag">Matplotlib</span><span class="tag">Seaborn</span><span class="tag">Bokeh</span></div></div>
       </div>
     </div>
   </section>
 
-  <!-- ══ PROJECTS ══ -->
-  <section id="projects" class="bg-alt">
-    <div class="section-inner">
-      <div class="reveal">
-        <div class="s-eyebrow">03 &middot; work</div>
-        <h2 class="s-title">Featured <span>Projects</span></h2>
-      </div>
-      <div class="proj-grid">
+  <section id="projects" class="bg-alt"><div class="section-inner"><div class="reveal"><div class="s-eyebrow">03 &middot; work</div><h2 class="s-title">Featured <span>Projects</span></h2></div><div class="proj-grid"><article class="project-card featured reveal"><div class="feat-badge"><span class="live-dot" aria-hidden="true"></span>Featured &middot; RAG + LLM Pipeline</div><h3 class="pc-title">arXiv RAG — Semantic Research Q&amp;A System</h3><p class="pc-desc">Production-structured RAG pipeline answering questions over 120 arXiv ML papers. Rigorously benchmarks BGE, MPNet, MiniLM vs BM25 across chunk sizes and generation quality. BGE achieves perfect MRR 1.000 — 7.7&times; Answer Relevance over BM25 (0.910 vs 0.118).</p><div class="metrics"><span class="met">MRR 1.000 (BGE)</span><span class="met">Precision@5 &middot; 97.5%</span><span class="met">Faithfulness &middot; 97.8%</span><span class="met">120 arXiv Papers</span></div><div class="stack"><span class="st">Python</span><span class="st">FAISS</span><span class="st">SentenceTransformers</span><span class="st">Gemini 2.5 Flash</span><span class="st">BM25</span><span class="st">Streamlit</span><span class="st">PyMuPDF</span></div><div class="proj-links"><a href="https://github.com/GodVilan/arXiv-rag" target="_blank" rel="noopener noreferrer" class="pl"><i class="fab fa-github"></i> GitHub</a></div></article><article class="project-card featured reveal"><div class="feat-badge"><span class="live-dot" aria-hidden="true"></span>Featured &middot; Production MLOps &middot; AWS</div><h3 class="pc-title">Real-Time Credit Card Fraud Detection</h3><p class="pc-desc">End-to-end production ML system. Automated GitHub Actions CI/CD trains, evaluates, and promotes models to MLflow Model Registry (PostgreSQL RDS). Dockerized FastAPI inference API behind Nginx on AWS EC2. XGBoost &amp; Random Forest hit ROC-AUC 1.000 with SMOTE-balanced pipeline.</p><div class="metrics"><span class="met">ROC-AUC 1.000</span><span class="met">MLflow Registry</span><span class="met">CI/CD Automated</span><span class="met">AWS Deployed</span></div><div class="stack"><span class="st">XGBoost</span><span class="st">MLflow</span><span class="st">FastAPI</span><span class="st">Docker</span><span class="st">AWS EC2</span><span class="st">RDS</span><span class="st">S3</span><span class="st">GitHub Actions</span><span class="st">Nginx</span></div><div class="proj-links"><a href="https://github.com/GodVilan/Real-Time-CCFDS-With-MLOPs" target="_blank" rel="noopener noreferrer" class="pl"><i class="fab fa-github"></i> GitHub</a></div></article><article class="project-card reveal"><div class="feat-badge">&#127917; Deep Learning &middot; Multimodal Fusion</div><h3 class="pc-title">Multimodal Emotion Recognition via Cross-Modal Transformers</h3><p class="pc-desc">Fuses text (BERT), audio (Wav2Vec2), and video (ViT) using a custom 4-layer Transformer Encoder (8 attention heads) for 7-class emotion classification on MELD. Mixed-precision AMP training, staged fine-tuning, cached tensor preprocessing, and class-weighted loss for minority emotion handling.</p><div class="metrics"><span class="met">Accuracy &middot; 59.96%</span><span class="met">Weighted F1 &middot; 60.66%</span><span class="met">3 Modalities Fused</span></div><div class="stack"><span class="st">PyTorch</span><span class="st">BERT</span><span class="st">Wav2Vec2</span><span class="st">ViT</span><span class="st">HuggingFace</span><span class="st">AMP</span><span class="st">OpenCV</span><span class="st">Librosa</span></div><div class="proj-links"><a href="https://github.com/GodVilan/Multimodal-Emotion-Recognition-MELD-via-Cross-Modal-Transformers" target="_blank" rel="noopener noreferrer" class="pl"><i class="fab fa-github"></i> GitHub</a></div></article><article class="project-card reveal"><div class="feat-badge">&#128240; NLP &middot; Transformers vs Classical</div><h3 class="pc-title">Fake News Detection — Classical NLP vs Transformers</h3><p class="pc-desc">Systematic comparison of TF-IDF + Logistic Regression vs fine-tuned DistilBERT on 62K+ articles. Dynamic F1-threshold optimization, NLTK preprocessing, feature explainability from TF-IDF weights, and real-time NewsAPI integration for live article classification via Streamlit.</p><div class="metrics"><span class="met">62K+ Articles</span><span class="met">DistilBERT Fine-tuned</span><span class="met">Dynamic Threshold</span></div><div class="stack"><span class="st">PyTorch</span><span class="st">DistilBERT</span><span class="st">TF-IDF</span><span class="st">Scikit-learn</span><span class="st">NLTK</span><span class="st">Streamlit</span><span class="st">NewsAPI</span></div><div class="proj-links"><a href="https://github.com/GodVilan/Fake-News-Detection-Using-TF-IDF-Logistic-Regression-and-DistilBERT-Transformer-Models" target="_blank" rel="noopener noreferrer" class="pl"><i class="fab fa-github"></i> GitHub</a></div></article><article class="project-card wide reveal"><div class="feat-badge"><span class="live-dot" aria-hidden="true"></span>Live &middot; Time Series &middot; Deployed on Render</div><h3 class="pc-title">US COVID-19 Mortality Intelligence &amp; Forecasting System</h3><p class="pc-desc">End-to-end epidemiological forecasting: live JHU data ingestion &rarr; preprocessing &rarr; feature engineering &rarr; multi-model benchmarking (SARIMAX, Prophet, XGBoost) &rarr; interactive Plotly Dash dashboard with 30-day forecasts and 95% CI bands. Seasonal SARIMAX(1,1,1)(1,1,1,7) wins with Holdout MAE 138.14 &asymp; CV MAE 137.86 — near-zero overfitting confirmed across 5-fold rolling cross-validation.</p><div class="metrics"><span class="met">Holdout MAE &middot; 138.14</span><span class="met">CV MAE &middot; 137.86</span><span class="met">30-Day Forecast &middot; 95% CI</span><span class="met">3,300+ Records</span><span class="met">5-Fold Rolling CV</span></div><div class="stack"><span class="st">Python</span><span class="st">SARIMAX</span><span class="st">Prophet</span><span class="st">XGBoost</span><span class="st">Plotly Dash</span><span class="st">Statsmodels</span><span class="st">Docker</span><span class="st">Render</span></div><div class="proj-links"><a href="https://github.com/GodVilan/US-COVID-19-Mortality-Intelligence-Forecasting-System" target="_blank" rel="noopener noreferrer" class="pl"><i class="fab fa-github"></i> GitHub</a><a href="https://us-covid-19-mortality-intelligence.onrender.com/" target="_blank" rel="noopener noreferrer" class="pl live-link"><i class="fas fa-external-link-alt"></i> Live Dashboard</a></div></article></div></div></section>
 
-        <article class="project-card featured reveal">
-          <div class="feat-badge"><span class="live-dot" aria-hidden="true"></span>Featured &middot; RAG + LLM Pipeline
-          </div>
-          <h3 class="pc-title">arXiv RAG — Semantic Research Q&amp;A System</h3>
-          <p class="pc-desc">Production-structured RAG pipeline answering questions over 120 arXiv ML papers. Rigorously
-            benchmarks BGE, MPNet, MiniLM vs BM25 across chunk sizes and generation quality. BGE achieves perfect MRR
-            1.000 — 7.7&times; Answer Relevance over BM25 (0.910 vs 0.118).</p>
-          <div class="metrics">
-            <span class="met">MRR 1.000 (BGE)</span><span class="met">Precision@5 &middot; 97.5%</span>
-            <span class="met">Faithfulness &middot; 97.8%</span><span class="met">120 arXiv Papers</span>
-          </div>
-          <div class="stack">
-            <span class="st">Python</span><span class="st">FAISS</span><span class="st">SentenceTransformers</span>
-            <span class="st">Gemini 2.5 Flash</span><span class="st">BM25</span><span class="st">Streamlit</span><span
-              class="st">PyMuPDF</span>
-          </div>
-          <div class="proj-links">
-            <a href="https://github.com/GodVilan/arXiv-rag" target="_blank" rel="noopener noreferrer" class="pl">
-              <i class="fab fa-github"></i> GitHub
-            </a>
-          </div>
-        </article>
+  <section id="experience"><div class="section-inner"><div class="reveal"><div class="s-eyebrow">04 &middot; experience</div><h2 class="s-title">Professional <span>History</span></h2></div><div class="timeline reveal"><div class="tl-item"><div class="tl-dot" aria-hidden="true"></div><div class="tl-date">Feb 2025 — May 2026</div><div class="tl-co">University of Central Missouri &middot; Warrensburg, MO</div><div class="tl-role">Graduate Laboratory Assistant</div><ul class="tl-pts"><li>Support 40+ students per semester in data science labs — Python programming, data analysis, and ML algorithm implementation</li><li>Guide students through data preprocessing, EDA, and visualization workflows using Pandas, NumPy, and Matplotlib</li></ul></div><div class="tl-item"><div class="tl-dot" aria-hidden="true"></div><div class="tl-date">May 2023 — Jul 2023</div><div class="tl-co">AWS Academy – AICTE EduSkills &middot; Virtual</div><div class="tl-role">Data Analytics Virtual Intern</div><ul class="tl-pts"><li>Designed analytics pipelines on AWS to ingest and process datasets using Amazon S3, AWS Glue, and Amazon Athena</li><li>Queried large semi-structured datasets (10K+ records) using Athena SQL; maintained metadata in AWS Glue Data Catalog</li><li>Conducted EDA and predictive modeling using Python, Jupyter, and Amazon SageMaker</li></ul></div><div class="tl-item"><div class="tl-dot" aria-hidden="true"></div><div class="tl-date">May 2022 — Jun 2022</div><div class="tl-co">Swecha &middot; Hyderabad, Telangana</div><div class="tl-role">Data Scientist Intern</div><ul class="tl-pts"><li>Processed structured and semi-structured datasets using Python (Pandas, NumPy) for ML workflows</li><li>Performed EDA using Matplotlib and Seaborn; trained and evaluated scikit-learn models with feature engineering</li></ul></div></div></div></section>
 
-        <article class="project-card featured reveal">
-          <div class="feat-badge"><span class="live-dot" aria-hidden="true"></span>Featured &middot; Production MLOps
-            &middot; AWS</div>
-          <h3 class="pc-title">Real-Time Credit Card Fraud Detection</h3>
-          <p class="pc-desc">End-to-end production ML system. Automated GitHub Actions CI/CD trains, evaluates, and
-            promotes models to MLflow Model Registry (PostgreSQL RDS). Dockerized FastAPI inference API behind Nginx on
-            AWS EC2. XGBoost &amp; Random Forest hit ROC-AUC 1.000 with SMOTE-balanced pipeline.</p>
-          <div class="metrics">
-            <span class="met">ROC-AUC 1.000</span><span class="met">MLflow Registry</span>
-            <span class="met">CI/CD Automated</span><span class="met">AWS Deployed</span>
-          </div>
-          <div class="stack">
-            <span class="st">XGBoost</span><span class="st">MLflow</span><span class="st">FastAPI</span>
-            <span class="st">Docker</span><span class="st">AWS EC2</span><span class="st">RDS</span>
-            <span class="st">S3</span><span class="st">GitHub Actions</span><span class="st">Nginx</span>
-          </div>
-          <div class="proj-links">
-            <a href="https://github.com/GodVilan/Real-Time-CCFDS-With-MLOPs" target="_blank" rel="noopener noreferrer"
-              class="pl">
-              <i class="fab fa-github"></i> GitHub
-            </a>
-          </div>
-        </article>
+  <section id="education" class="bg-alt"><div class="section-inner"><div class="reveal"><div class="s-eyebrow">05 &middot; education</div><h2 class="s-title">Academic <span>Background</span></h2></div><div class="edu-grid reveal"><div class="edu-card"><div class="edu-yr">Aug 2024 — May 2026</div><div class="edu-deg">Master of Science</div><div class="edu-field">Data Science &amp; Artificial Intelligence</div><div class="edu-school">University of Central Missouri &middot; Warrensburg, MO</div><div class="edu-bottom"><span class="edu-gpa">GPA: 4.0 / 4.0 &#11088;</span><span style="font-size:.75rem;color:var(--muted)">In Progress</span></div></div><div class="edu-card"><div class="edu-yr">Nov 2020 — Apr 2024</div><div class="edu-deg">Bachelor of Technology (Hons.)</div><div class="edu-field">Computer Science &amp; Engineering</div><div class="edu-school">CMR College of Engineering &amp; Technology &middot; Hyderabad, India</div><div class="edu-bottom"><span class="edu-gpa">GPA: 9.06 / 10.0 &#127885;</span><span style="font-size:.75rem;color:var(--muted)">First Class &middot; Distinction</span></div></div></div><h3 class="sub-heading reveal">Certifications</h3><div class="cert-grid reveal"><div class="cert-card"><div class="cert-ico"><i class="fab fa-aws"></i></div><div><div class="cert-name">AWS Academy Graduate — Data Analytics</div><div class="cert-by">Amazon Web Services</div><div class="cert-dt">Jun 2023</div></div></div><div class="cert-card"><div class="cert-ico"><i class="fab fa-aws"></i></div><div><div class="cert-name">AWS Academy Graduate — Cloud Foundations</div><div class="cert-by">Amazon Web Services</div><div class="cert-dt">Jun 2023</div></div></div><div class="cert-card"><div class="cert-ico"><i class="fab fa-google"></i></div><div><div class="cert-name">Foundations: Data, Data, Everywhere</div><div class="cert-by">Google / Coursera</div><div class="cert-dt">Feb 2023</div></div></div><div class="cert-card"><div class="cert-ico"><i class="fas fa-robot"></i></div><div><div class="cert-name">Artificial Intelligence &amp; Machine Learning</div><div class="cert-by">Blackbuck Engineers</div><div class="cert-dt">Dec 2021</div></div></div></div><h3 class="sub-heading reveal" style="margin-top:2rem">Honors &amp; Awards</h3><div class="awards-grid reveal"><div class="award-card" style="background:rgba(168,85,247,.08);border-color:rgba(168,85,247,.3);grid-column:1/-1;flex-direction:column;align-items:center;"><div class="award-ico">&#127942;</div><div class="award-txt" style="color:var(--text);font-weight:500;font-size:.9rem;margin-bottom:.3rem;">Graduate Student Achievement Award 2025&ndash;2026</div><div class="award-txt" style="font-size:.78rem;">University of Central Missouri Graduate Studies &mdash; <span style="color:var(--pu);">Recognized for exceptional scholastic achievement, exemplary contributions to Data Science &amp; AI, and outstanding character and leadership</span></div></div><div class="award-card"><div class="award-ico">&#129351;</div><div class="award-txt">Global Rank 1 — CodeChef May Long Two (Division 4 Rated)</div></div><div class="award-card"><div class="award-ico">&#127942;</div><div class="award-txt">Finalist — IICC National Coding Competition (Top 1% &middot; 100,000+ participants)</div></div><div class="award-card"><div class="award-ico">&#129353;</div><div class="award-txt">Bronze Medal in Academics — Ranked Top 3 in B.Tech Program</div></div><div class="award-card"><div class="award-ico">&#11088;</div><div class="award-txt">5&#9733; HackerRank &middot; 4&#9733; CodeChef — Data Structures &amp; Algorithms</div></div><div class="award-card"><div class="award-ico">&#128293;</div><div class="award-txt">GeeksforGeeks POTD Streak — 255 Consecutive Days Solved</div></div><div class="award-card"><div class="award-ico">&#127894;&#65039;</div><div class="award-txt">District Rank 4 — SAST Olympiad</div></div></div></div></section>
 
-        <article class="project-card reveal">
-          <div class="feat-badge">&#127917; Deep Learning &middot; Multimodal Fusion</div>
-          <h3 class="pc-title">Multimodal Emotion Recognition via Cross-Modal Transformers</h3>
-          <p class="pc-desc">Fuses text (BERT), audio (Wav2Vec2), and video (ViT) using a custom 4-layer Transformer
-            Encoder (8 attention heads) for 7-class emotion classification on MELD. Mixed-precision AMP training, staged
-            fine-tuning, cached tensor preprocessing, and class-weighted loss for minority emotion handling.</p>
-          <div class="metrics">
-            <span class="met">Accuracy &middot; 59.96%</span>
-            <span class="met">Weighted F1 &middot; 60.66%</span>
-            <span class="met">3 Modalities Fused</span>
-          </div>
-          <div class="stack">
-            <span class="st">PyTorch</span><span class="st">BERT</span><span class="st">Wav2Vec2</span>
-            <span class="st">ViT</span><span class="st">HuggingFace</span><span class="st">AMP</span>
-            <span class="st">OpenCV</span><span class="st">Librosa</span>
-          </div>
-          <div class="proj-links">
-            <a href="https://github.com/GodVilan/Multimodal-Emotion-Recognition-MELD-via-Cross-Modal-Transformers"
-              target="_blank" rel="noopener noreferrer" class="pl">
-              <i class="fab fa-github"></i> GitHub
-            </a>
-          </div>
-        </article>
+  <section id="contact"><div class="section-inner"><div class="reveal"><div class="s-eyebrow">06 &middot; contact</div><h2 class="s-title">Let's <span>Connect</span></h2></div><div class="contact-grid reveal"><div><p style="color:var(--muted);font-weight:300;font-size:1.02rem;line-height:1.9;margin-bottom:1.5rem">Actively seeking full-time &amp; internship <strong style="color:var(--text);font-weight:500">Data Science, ML Engineering, and Applied AI</strong> roles in the United States. Available immediately. Let's build something that matters.</p><div class="contact-links"><a href="mailto:srikanthreddynandireddy&#64;gmail&#46;com" class="contact-link"><div class="cl-ico"><i class="fas fa-envelope"></i></div>srikanthreddynandireddy&#64;gmail&#46;com</a><a href="https://www.linkedin.com/in/srikanth-reddy-nandireddy" target="_blank" rel="noopener noreferrer" class="contact-link"><div class="cl-ico"><i class="fab fa-linkedin"></i></div>linkedin.com/in/srikanth-reddy-nandireddy</a><a href="https://github.com/GodVilan" target="_blank" rel="noopener noreferrer" class="contact-link"><div class="cl-ico"><i class="fab fa-github"></i></div>github.com/GodVilan</a></div></div><div class="contact-cta"><div class="cta-avail"><span class="live-dot" aria-hidden="true"></span>Open to Opportunities</div><p style="color:var(--muted);font-size:.85rem;margin-bottom:1.5rem;font-weight:300">Data Science &amp; AI &middot; MS &middot; University of Central Missouri</p><div class="tags" style="justify-content:center;margin-bottom:1.75rem"><span class="tag">Data Science</span><span class="tag">Machine Learning</span><span class="tag">MLOps</span><span class="tag">NLP</span><span class="tag">Deep Learning</span><span class="tag">AWS</span><span class="tag">RAG</span></div><a href="mailto:srikanthreddynandireddy&#64;gmail&#46;com" class="btn btn-primary" style="width:100%;justify-content:center;text-decoration:none">Send a Message <i class="fas fa-arrow-up-right-from-square" style="font-size:.75rem"></i></a></div></div></div></section>
 
-        <article class="project-card reveal">
-          <div class="feat-badge">&#128240; NLP &middot; Transformers vs Classical</div>
-          <h3 class="pc-title">Fake News Detection — Classical NLP vs Transformers</h3>
-          <p class="pc-desc">Systematic comparison of TF-IDF + Logistic Regression vs fine-tuned DistilBERT on 62K+
-            articles. Dynamic F1-threshold optimization, NLTK preprocessing, feature explainability from TF-IDF weights,
-            and real-time NewsAPI integration for live article classification via Streamlit.</p>
-          <div class="metrics">
-            <span class="met">62K+ Articles</span>
-            <span class="met">DistilBERT Fine-tuned</span>
-            <span class="met">Dynamic Threshold</span>
-          </div>
-          <div class="stack">
-            <span class="st">PyTorch</span><span class="st">DistilBERT</span><span class="st">TF-IDF</span>
-            <span class="st">Scikit-learn</span><span class="st">NLTK</span><span class="st">Streamlit</span><span
-              class="st">NewsAPI</span>
-          </div>
-          <div class="proj-links">
-            <a href="https://github.com/GodVilan/Fake-News-Detection-Using-TF-IDF-Logistic-Regression-and-DistilBERT-Transformer-Models"
-              target="_blank" rel="noopener noreferrer" class="pl">
-              <i class="fab fa-github"></i> GitHub
-            </a>
-          </div>
-        </article>
+  <footer><p>Designed &amp; Built by <span>Srikanth Reddy Nandireddy</span> &middot; 2026</p><p style="margin-top:.5rem"><a href="mailto:srikanthreddynandireddy&#64;gmail&#46;com">srikanthreddynandireddy&#64;gmail&#46;com</a> &middot; United States</p></footer>
 
-        <article class="project-card wide reveal">
-          <div class="feat-badge"><span class="live-dot" aria-hidden="true"></span>Live &middot; Time Series &middot;
-            Deployed on Render</div>
-          <h3 class="pc-title">US COVID-19 Mortality Intelligence &amp; Forecasting System</h3>
-          <p class="pc-desc">End-to-end epidemiological forecasting: live JHU data ingestion &rarr; preprocessing &rarr;
-            feature engineering &rarr; multi-model benchmarking (SARIMAX, Prophet, XGBoost) &rarr; interactive Plotly
-            Dash dashboard with 30-day forecasts and 95% CI bands. Seasonal SARIMAX(1,1,1)(1,1,1,7) wins with Holdout
-            MAE 138.14 &asymp; CV MAE 137.86 — near-zero overfitting confirmed across 5-fold rolling cross-validation.
-          </p>
-          <div class="metrics">
-            <span class="met">Holdout MAE &middot; 138.14</span><span class="met">CV MAE &middot; 137.86</span>
-            <span class="met">30-Day Forecast &middot; 95% CI</span><span class="met">3,300+ Records</span>
-            <span class="met">5-Fold Rolling CV</span>
-          </div>
-          <div class="stack">
-            <span class="st">Python</span><span class="st">SARIMAX</span><span class="st">Prophet</span>
-            <span class="st">XGBoost</span><span class="st">Plotly Dash</span><span class="st">Statsmodels</span>
-            <span class="st">Docker</span><span class="st">Render</span>
-          </div>
-          <div class="proj-links">
-            <a href="https://github.com/GodVilan/US-COVID-19-Mortality-Intelligence-Forecasting-System" target="_blank"
-              rel="noopener noreferrer" class="pl">
-              <i class="fab fa-github"></i> GitHub
-            </a>
-            <a href="https://us-covid-19-mortality-intelligence.onrender.com/" target="_blank" rel="noopener noreferrer"
-              class="pl live-link">
-              <i class="fas fa-external-link-alt"></i> Live Dashboard
-            </a>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ══ EXPERIENCE ══ -->
-  <section id="experience">
-    <div class="section-inner">
-      <div class="reveal">
-        <div class="s-eyebrow">04 &middot; experience</div>
-        <h2 class="s-title">Professional <span>History</span></h2>
-      </div>
-      <div class="timeline reveal">
-        <div class="tl-item">
-          <div class="tl-dot" aria-hidden="true"></div>
-          <div class="tl-date">Feb 2025 — May 2026</div>
-          <div class="tl-co">University of Central Missouri &middot; Warrensburg, MO</div>
-          <div class="tl-role">Graduate Laboratory Assistant</div>
-          <ul class="tl-pts">
-            <li>Support 40+ students per semester in data science labs — Python programming, data analysis, and ML
-              algorithm implementation</li>
-            <li>Guide students through data preprocessing, EDA, and visualization workflows using Pandas, NumPy, and
-              Matplotlib</li>
-          </ul>
-        </div>
-        <div class="tl-item">
-          <div class="tl-dot" aria-hidden="true"></div>
-          <div class="tl-date">May 2023 — Jul 2023</div>
-          <div class="tl-co">AWS Academy – AICTE EduSkills &middot; Virtual</div>
-          <div class="tl-role">Data Analytics Virtual Intern</div>
-          <ul class="tl-pts">
-            <li>Designed analytics pipelines on AWS to ingest and process datasets using Amazon S3, AWS Glue, and Amazon
-              Athena</li>
-            <li>Queried large semi-structured datasets (10K+ records) using Athena SQL; maintained metadata in AWS Glue
-              Data Catalog</li>
-            <li>Conducted EDA and predictive modeling using Python, Jupyter, and Amazon SageMaker</li>
-          </ul>
-        </div>
-        <div class="tl-item">
-          <div class="tl-dot" aria-hidden="true"></div>
-          <div class="tl-date">May 2022 — Jun 2022</div>
-          <div class="tl-co">Swecha &middot; Hyderabad, Telangana</div>
-          <div class="tl-role">Data Scientist Intern</div>
-          <ul class="tl-pts">
-            <li>Processed structured and semi-structured datasets using Python (Pandas, NumPy) for ML workflows</li>
-            <li>Performed EDA using Matplotlib and Seaborn; trained and evaluated scikit-learn models with feature
-              engineering</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══ EDUCATION ══ -->
-  <section id="education" class="bg-alt">
-    <div class="section-inner">
-      <div class="reveal">
-        <div class="s-eyebrow">05 &middot; education</div>
-        <h2 class="s-title">Academic <span>Background</span></h2>
-      </div>
-      <div class="edu-grid reveal">
-        <div class="edu-card">
-          <div class="edu-yr">Aug 2024 — May 2026</div>
-          <div class="edu-deg">Master of Science</div>
-          <div class="edu-field">Data Science &amp; Artificial Intelligence</div>
-          <div class="edu-school">University of Central Missouri &middot; Warrensburg, MO</div>
-          <div class="edu-bottom">
-            <span class="edu-gpa">GPA: 4.0 / 4.0 &#11088;</span>
-            <span style="font-size:.75rem;color:var(--muted)">In Progress</span>
-          </div>
-        </div>
-        <div class="edu-card">
-          <div class="edu-yr">Nov 2020 — Apr 2024</div>
-          <div class="edu-deg">Bachelor of Technology (Hons.)</div>
-          <div class="edu-field">Computer Science &amp; Engineering</div>
-          <div class="edu-school">CMR College of Engineering &amp; Technology &middot; Hyderabad, India</div>
-          <div class="edu-bottom">
-            <span class="edu-gpa">GPA: 9.06 / 10.0 &#127885;</span>
-            <span style="font-size:.75rem;color:var(--muted)">First Class &middot; Distinction</span>
-          </div>
-        </div>
-      </div>
-
-      <h3 class="sub-heading reveal">Certifications</h3>
-      <div class="cert-grid reveal">
-        <div class="cert-card">
-          <div class="cert-ico"><i class="fab fa-aws"></i></div>
-          <div>
-            <div class="cert-name">AWS Academy Graduate — Data Analytics</div>
-            <div class="cert-by">Amazon Web Services</div>
-            <div class="cert-dt">Jun 2023</div>
-          </div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-ico"><i class="fab fa-aws"></i></div>
-          <div>
-            <div class="cert-name">AWS Academy Graduate — Cloud Foundations</div>
-            <div class="cert-by">Amazon Web Services</div>
-            <div class="cert-dt">Jun 2023</div>
-          </div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-ico"><i class="fab fa-google"></i></div>
-          <div>
-            <div class="cert-name">Foundations: Data, Data, Everywhere</div>
-            <div class="cert-by">Google / Coursera</div>
-            <div class="cert-dt">Feb 2023</div>
-          </div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-ico"><i class="fas fa-robot"></i></div>
-          <div>
-            <div class="cert-name">Artificial Intelligence &amp; Machine Learning</div>
-            <div class="cert-by">Blackbuck Engineers</div>
-            <div class="cert-dt">Dec 2021</div>
-          </div>
-        </div>
-      </div>
-
-      <h3 class="sub-heading reveal" style="margin-top:2rem">Honors &amp; Awards</h3>
-      <div class="awards-grid reveal">
-        <div class="award-card"
-          style="background:rgba(168,85,247,.08);border-color:rgba(168,85,247,.3);grid-column:1/-1;flex-direction:column;align-items:center;">
-          <div class="award-ico">&#127942;</div>
-          <div class="award-txt" style="color:var(--text);font-weight:500;font-size:.9rem;margin-bottom:.3rem;">Graduate
-            Student Achievement Award 2025&ndash;2026</div>
-          <div class="award-txt" style="font-size:.78rem;">University of Central Missouri Graduate Studies &mdash; <span
-              style="color:var(--pu);">Recognized for exceptional scholastic achievement, exemplary contributions to
-              Data Science &amp; AI, and outstanding character and leadership</span></div>
-        </div>
-        <div class="award-card">
-          <div class="award-ico">&#129351;</div>
-          <div class="award-txt">Global Rank 1 — CodeChef May Long Two (Division 4 Rated)</div>
-        </div>
-        <div class="award-card">
-          <div class="award-ico">&#127942;</div>
-          <div class="award-txt">Finalist — IICC National Coding Competition (Top 1% &middot; 100,000+ participants)
-          </div>
-        </div>
-        <div class="award-card">
-          <div class="award-ico">&#129353;</div>
-          <div class="award-txt">Bronze Medal in Academics — Ranked Top 3 in B.Tech Program</div>
-        </div>
-        <div class="award-card">
-          <div class="award-ico">&#11088;</div>
-          <div class="award-txt">5&#9733; HackerRank &middot; 4&#9733; CodeChef — Data Structures &amp; Algorithms</div>
-        </div>
-        <div class="award-card">
-          <div class="award-ico">&#128293;</div>
-          <div class="award-txt">GeeksforGeeks POTD Streak — 255 Consecutive Days Solved</div>
-        </div>
-        <div class="award-card">
-          <div class="award-ico">&#127894;&#65039;</div>
-          <div class="award-txt">District Rank 4 — SAST Olympiad</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══ CONTACT ══ -->
-  <section id="contact">
-    <div class="section-inner">
-      <div class="reveal">
-        <div class="s-eyebrow">06 &middot; contact</div>
-        <h2 class="s-title">Let's <span>Connect</span></h2>
-      </div>
-      <div class="contact-grid reveal">
-        <div>
-          <p style="color:var(--muted);font-weight:300;font-size:1.02rem;line-height:1.9;margin-bottom:1.5rem">
-            Actively seeking full-time &amp; internship
-            <strong style="color:var(--text);font-weight:500">Data Science, ML Engineering, and Applied AI</strong>
-            roles in the United States. Available immediately. Let's build something that matters.
-          </p>
-          <div class="contact-links">
-            <a href="mailto:srikanthreddynandireddy&#64;gmail&#46;com" class="contact-link">
-              <div class="cl-ico"><i class="fas fa-envelope"></i></div>
-              srikanthreddynandireddy&#64;gmail&#46;com
-            </a>
-            <a href="https://www.linkedin.com/in/srikanth-reddy-nandireddy" target="_blank" rel="noopener noreferrer"
-              class="contact-link">
-              <div class="cl-ico"><i class="fab fa-linkedin"></i></div>
-              linkedin.com/in/srikanth-reddy-nandireddy
-            </a>
-            <a href="https://github.com/GodVilan" target="_blank" rel="noopener noreferrer" class="contact-link">
-              <div class="cl-ico"><i class="fab fa-github"></i></div>
-              github.com/GodVilan
-            </a>
-          </div>
-        </div>
-
-        <div class="contact-cta">
-          <div class="cta-avail"><span class="live-dot" aria-hidden="true"></span>Open to Opportunities</div>
-          <p style="color:var(--muted);font-size:.85rem;margin-bottom:1.5rem;font-weight:300">
-            Data Science &amp; AI &middot; MS &middot; University of Central Missouri
-          </p>
-          <div class="tags" style="justify-content:center;margin-bottom:1.75rem">
-            <span class="tag">Data Science</span><span class="tag">Machine Learning</span>
-            <span class="tag">MLOps</span><span class="tag">NLP</span>
-            <span class="tag">Deep Learning</span><span class="tag">AWS</span><span class="tag">RAG</span>
-          </div>
-          <a href="mailto:srikanthreddynandireddy&#64;gmail&#46;com" class="btn btn-primary"
-            style="width:100%;justify-content:center;text-decoration:none">
-            Send a Message <i class="fas fa-arrow-up-right-from-square" style="font-size:.75rem"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══ FOOTER ══ -->
-  <footer>
-    <p>Designed &amp; Built by <span>Srikanth Reddy Nandireddy</span> &middot; 2026</p>
-    <p style="margin-top:.5rem">
-      <a href="mailto:srikanthreddynandireddy&#64;gmail&#46;com">srikanthreddynandireddy&#64;gmail&#46;com</a>
-      &middot; United States
-    </p>
-  </footer>
-
-  <!-- ═══════════════════════════════════════════════
-       JAVASCRIPT
-  ═══════════════════════════════════════════════ -->
   <script>
-    /* ── 1. SCROLL PROGRESS ── */
     const scrollBar = document.getElementById('scroll-bar');
     window.addEventListener('scroll', () => {
       const pct = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
       scrollBar.style.width = Math.min(pct, 100) + '%';
     }, { passive: true });
 
-    /* ── 2. CANVAS NEURAL PARTICLES ── */
     (function initCanvas() {
       const canvas = document.getElementById('bg');
       const ctx = canvas.getContext('2d');
       const N = 70, DIST = 130, MDIST = 100;
       let W, H, particles = [], mouse = { x: -999, y: -999 };
-
       function resize() { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
       resize();
       window.addEventListener('resize', resize, { passive: true });
       window.addEventListener('mousemove', e => { mouse.x = e.clientX; mouse.y = e.clientY; }, { passive: true });
-
       class Particle {
         constructor() { this.reset(); }
-        reset() {
-          this.x = Math.random() * W;
-          this.y = Math.random() * H;
-          this.vx = (Math.random() - .5) * .4;
-          this.vy = (Math.random() - .5) * .4;
-          this.r = Math.random() * 1.5 + .5;
-        }
+        reset() { this.x = Math.random() * W; this.y = Math.random() * H; this.vx = (Math.random() - .5) * .4; this.vy = (Math.random() - .5) * .4; this.r = Math.random() * 1.5 + .5; }
         update() {
           this.x += this.vx; this.y += this.vy;
           if (this.x < 0 || this.x > W) this.vx *= -1;
@@ -1923,7 +1148,6 @@
         draw() { ctx.beginPath(); ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2); ctx.fillStyle = 'rgba(0,212,255,0.45)'; ctx.fill(); }
       }
       for (let i = 0; i < N; i++) particles.push(new Particle());
-
       function loop() {
         ctx.clearRect(0, 0, W, H);
         for (let i = 0; i < N; i++) {
@@ -1943,7 +1167,6 @@
       loop();
     })();
 
-    /* ── 3. HERO NAME 3D CHAR REVEAL ── */
     function buildName(id, text, startDelay) {
       const el = document.getElementById(id); el.innerHTML = '';
       [...text].forEach((ch, i) => {
@@ -1956,7 +1179,6 @@
     buildName('l1', 'SRIKANTH REDDY', 0.3);
     buildName('l2', 'NANDIREDDY', 1.2);
 
-    /* ── 4. TYPEWRITER ── */
     (function typewriter() {
       const roles = ['Data Scientist', 'ML Engineer', 'MLOps Practitioner', 'NLP Engineer', 'Applied AI Researcher'];
       let ri = 0, ci = 0, deleting = false;
@@ -1971,7 +1193,6 @@
       setTimeout(type, 2000);
     })();
 
-    /* ── 5. SCROLL REVEAL + COUNT-UP ── */
     function easeOutQuart(t) { return 1 - Math.pow(1 - t, 4); }
     function countUp(el, target, suffix, duration) {
       duration = duration || 1800; const start = performance.now();
@@ -1986,16 +1207,13 @@
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('on');
-          entry.target.querySelectorAll('[data-target]').forEach(el => {
-            countUp(el, +el.dataset.target, el.dataset.suffix || '');
-          });
+          entry.target.querySelectorAll('[data-target]').forEach(el => { countUp(el, +el.dataset.target, el.dataset.suffix || ''); });
           revealObs.unobserve(entry.target);
         }
       });
     }, { threshold: .12 });
     document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
 
-    /* ── 6. 3D CARD TILT ── */
     document.querySelectorAll('.project-card').forEach(card => {
       card.addEventListener('mousemove', e => {
         const r = card.getBoundingClientRect();
@@ -2005,7 +1223,6 @@
       card.addEventListener('mouseleave', () => { card.style.transform = ''; });
     });
 
-    /* ── 7. ACTIVE NAV ── */
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-links a');
     const navObs = new IntersectionObserver(entries => {
@@ -2019,7 +1236,6 @@
     }, { rootMargin: '-40% 0px -55% 0px' });
     sections.forEach(s => navObs.observe(s));
 
-    /* ── 8. MOBILE HAMBURGER ── */
     const ham = document.getElementById('ham'), mobileMenu = document.getElementById('mobile-menu');
     ham.addEventListener('click', () => {
       const isOpen = mobileMenu.classList.toggle('open');
@@ -2036,5 +1252,4 @@
     });
   </script>
 </body>
-
 </html>
