@@ -553,42 +553,83 @@
       if (!ham.contains(e.target) && !mobileMenu.contains(e.target)) closeMobile();
     });
 
-    // ── Medium Articles via RSS2JSON ──────────────────────────────
+    // ── Medium Articles — multi-proxy fallback loader ─────────────
     (async function loadMediumArticles() {
       const MEDIUM_USER = 'srikanth2314';
       const container = document.getElementById('medium-articles');
-      try {
-        const rss = `https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@${MEDIUM_USER}&count=6`;
-        const res = await fetch(rss);
-        const data = await res.json();
-        if (!data.items || data.items.length === 0) {
-          container.innerHTML = `<div style="grid-column:1/-1;text-align:center;color:var(--muted);padding:3rem;font-family:'JetBrains Mono',monospace;font-size:.85rem">No articles published yet — check back soon.</div>`;
-          return;
-        }
-        container.innerHTML = data.items.map(item => {
-          const date = new Date(item.pubDate).toLocaleDateString('en-US', { year:'numeric', month:'short', day:'numeric' });
-          const tag = item.categories?.[0] || 'Machine Learning';
-          const imgMatch = item.content?.match(/<img[^>]+src="([^"]+)"/);
-          const thumb = item.thumbnail || (imgMatch ? imgMatch[1] : '');
-          const desc = item.description.replace(/<[^>]*>/g, '').slice(0, 150).trim() + '\u2026';
-          return `<a href="${item.link}" target="_blank" rel="noopener noreferrer" class="medium-card reveal">
-            ${thumb ? `<img src="${thumb}" alt="${item.title}" class="medium-card-thumb" loading="lazy" width="400" height="160">` : ''}
+
+      function renderCards(items) {
+        if (!items || items.length === 0) return false;
+        container.innerHTML = items.map(item => {
+          const title = item.title || 'Untitled';
+          const link  = item.link  || item.url || `https://srikanth2314.medium.com/`;
+          const date  = item.pubDate
+            ? new Date(item.pubDate).toLocaleDateString('en-US', { year:'numeric', month:'short', day:'numeric' })
+            : '';
+          const tag   = (item.categories && item.categories[0]) || 'Machine Learning';
+          const imgMatch = item.content ? item.content.match(/<img[^>]+src="([^"]+)"/) : null;
+          const thumb = item.thumbnail || item.enclosure?.link || (imgMatch ? imgMatch[1] : '');
+          const rawDesc = item.description || item.content || '';
+          const desc  = rawDesc.replace(/<[^>]*>/g, '').slice(0, 150).trim() + '\u2026';
+          return `<a href="${link}" target="_blank" rel="noopener noreferrer" class="medium-card reveal">
+            ${thumb ? `<img src="${thumb}" alt="${title}" class="medium-card-thumb" loading="lazy" width="400" height="160">` : ''}
             <div class="medium-card-tag">${tag}</div>
-            <div class="medium-card-title">${item.title}</div>
+            <div class="medium-card-title">${title}</div>
             <div class="medium-card-desc">${desc}</div>
             <div class="medium-card-meta">
-              <span><i class="fas fa-calendar-alt" style="margin-right:.35rem"></i>${date}</span>
+              ${date ? `<span><i class="fas fa-calendar-alt" style="margin-right:.35rem"></i>${date}</span>` : ''}
               <span style="color:var(--cyan)"><i class="fab fa-medium" style="margin-right:.35rem"></i>Read on Medium</span>
             </div>
           </a>`;
         }).join('');
-        // re-observe newly added cards
         container.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
-      } catch(e) {
+        return true;
+      }
+
+      function showFallback() {
         container.innerHTML = `<div style="grid-column:1/-1;text-align:center;color:var(--muted);padding:2rem">
-          <a href="https://srikanth2314.medium.com/" target="_blank" rel="noopener noreferrer" style="color:var(--cyan)">View articles on Medium →</a>
+          <p style="margin-bottom:1rem;font-family:'JetBrains Mono',monospace;font-size:.82rem">Articles available on Medium</p>
+          <a href="https://srikanth2314.medium.com/" target="_blank" rel="noopener noreferrer" style="color:var(--cyan);font-family:'JetBrains Mono',monospace;font-size:.85rem">srikanth2314.medium.com &rarr;</a>
         </div>`;
       }
+
+      // Proxy 1: rss2json with API key param omitted (free tier, up to 10 items)
+      try {
+        const url1 = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent('https://medium.com/feed/@' + MEDIUM_USER)}&count=6`;
+        const r1 = await fetch(url1, { signal: AbortSignal.timeout(6000) });
+        const d1 = await r1.json();
+        if (d1.status === 'ok' && d1.items && d1.items.length > 0) {
+          renderCards(d1.items); return;
+        }
+      } catch(_) {}
+
+      // Proxy 2: feedparse via allorigins
+      try {
+        const feedUrl = encodeURIComponent('https://medium.com/feed/@' + MEDIUM_USER);
+        const url2 = `https://api.allorigins.win/get?url=${feedUrl}`;
+        const r2 = await fetch(url2, { signal: AbortSignal.timeout(8000) });
+        const d2 = await r2.json();
+        if (d2.contents) {
+          const parser = new DOMParser();
+          const xml = parser.parseFromString(d2.contents, 'text/xml');
+          const entries = Array.from(xml.querySelectorAll('item')).slice(0, 6);
+          if (entries.length > 0) {
+            const items = entries.map(e => ({
+              title: e.querySelector('title')?.textContent || '',
+              link:  e.querySelector('link')?.textContent || e.querySelector('guid')?.textContent || '',
+              pubDate: e.querySelector('pubDate')?.textContent || '',
+              categories: Array.from(e.querySelectorAll('category')).map(c => c.textContent),
+              description: e.querySelector('description')?.textContent || '',
+              content: e.querySelector('encoded')?.textContent || e.querySelector('description')?.textContent || '',
+              thumbnail: e.querySelector('thumbnail')?.getAttribute('url') || ''
+            }));
+            renderCards(items); return;
+          }
+        }
+      } catch(_) {}
+
+      // Final fallback
+      showFallback();
     })();
   </script>
 </body>
