@@ -6,15 +6,15 @@
   <meta name="google-site-verification" content="BnBinc93Ael_yrCM_cb11FwNfyOXU6LM2P7-bOzod1w" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Srikanth Reddy Nandireddy | ML Engineer & Data Scientist</title>
-  <meta name="description" content="ML Engineer & Data Scientist specialising in production RAG systems, MLOps, deep learning, and AWS deployments. M.S. Data Science & AI — University of Central Missouri. GPA 4.0. Graduate Student Achievement Award 2025–2026. Available immediately." />
+  <title>Srikanth Reddy Nandireddy | ML Engineer &amp; Data Scientist</title>
+  <meta name="description" content="ML Engineer &amp; Data Scientist specialising in production RAG systems, MLOps, deep learning, and AWS deployments. M.S. Data Science &amp; AI — University of Central Missouri. GPA 4.0. Graduate Student Achievement Award 2025–2026. Available immediately." />
   <meta name="keywords" content="Machine Learning Engineer, Data Scientist, MLOps, RAG, NLP, Deep Learning, AWS, PyTorch, FastAPI, Python" />
   <meta name="author" content="Srikanth Reddy Nandireddy" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://srikanthreddynandireddy.me" />
 
-  <meta property="og:title" content="Srikanth Reddy Nandireddy | ML Engineer & Data Scientist" />
-  <meta property="og:description" content="Production-grade ML systems: RAG pipelines, MLOps on AWS, multimodal deep learning. MS Data Science & AI · 4.0 GPA · Graduate Student Achievement Award 2025–2026 · Available immediately." />
+  <meta property="og:title" content="Srikanth Reddy Nandireddy | ML Engineer &amp; Data Scientist" />
+  <meta property="og:description" content="Production-grade ML systems: RAG pipelines, MLOps on AWS, multimodal deep learning. MS Data Science &amp; AI · 4.0 GPA · Graduate Student Achievement Award 2025–2026 · Available immediately." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://srikanthreddynandireddy.me" />
   <meta property="og:image" content="https://srikanthreddynandireddy.me/og-image.png" />
@@ -32,16 +32,16 @@
     "url": "https://srikanthreddynandireddy.me",
     "email": "srikanthreddynandireddy@gmail.com",
     "jobTitle": "ML Engineer / Data Scientist",
-    "description": "ML Engineer and Data Scientist specializing in production RAG systems, MLOps, deep learning, and AWS deployments. M.S. Data Science & AI, University of Central Missouri. GPA 4.0.",
-    "award": "Graduate Student Achievement Award 2025-2026, University of Central Missouri Graduate Studies — Recognized for exceptional scholastic achievement, exemplary contributions to Data Science & Artificial Intelligence, and outstanding character and leadership",
+    "description": "ML Engineer and Data Scientist specializing in production RAG systems, MLOps, deep learning, and AWS deployments. M.S. Data Science &amp; AI, University of Central Missouri. GPA 4.0.",
+    "award": "Graduate Student Achievement Award 2025-2026, University of Central Missouri Graduate Studies — Recognized for exceptional scholastic achievement, exemplary contributions to Data Science &amp; Artificial Intelligence, and outstanding character and leadership",
     "alumniOf": [
-      { "@type": "CollegeOrUniversity", "name": "University of Central Missouri", "department": "Graduate Studies — Data Science & Artificial Intelligence" },
-      { "@type": "CollegeOrUniversity", "name": "CMR College of Engineering & Technology" }
+      { "@type": "CollegeOrUniversity", "name": "University of Central Missouri", "department": "Graduate Studies — Data Science &amp; Artificial Intelligence" },
+      { "@type": "CollegeOrUniversity", "name": "CMR College of Engineering &amp; Technology" }
     ],
     "hasCredential": {
       "@type": "EducationalOccupationalCredential",
       "name": "Graduate Student Achievement Award 2025-2026",
-      "description": "Awarded by UCM Graduate Studies for exceptional scholastic achievement, exemplary contributions to Data Science & Artificial Intelligence, and outstanding character and leadership",
+      "description": "Awarded by UCM Graduate Studies for exceptional scholastic achievement, exemplary contributions to Data Science &amp; Artificial Intelligence, and outstanding character and leadership",
       "recognizedBy": { "@type": "CollegeOrUniversity", "name": "University of Central Missouri Graduate Studies" },
       "dateCreated": "2026"
     },
@@ -204,13 +204,19 @@
     .award-txt { font-size:.8rem; color:var(--muted); line-height:1.5; font-weight:300; }
 
     /* ── Medium Articles ── */
-    .medium-card { background:var(--bg1); border:1px solid rgba(0,212,255,.1); border-radius:12px; padding:1.6rem; display:flex; flex-direction:column; gap:.75rem; transition:border-color .25s,transform .25s,box-shadow .25s; text-decoration:none; color:inherit; }
-    .medium-card:hover { border-color:rgba(0,212,255,.4); transform:translateY(-4px); box-shadow:0 12px 32px rgba(0,212,255,.08); }
-    .medium-card-tag { font-family:'JetBrains Mono',monospace; font-size:.7rem; color:var(--em); text-transform:uppercase; letter-spacing:.1em; }
-    .medium-card-title { font-size:1.05rem; font-weight:600; color:var(--text); line-height:1.4; }
-    .medium-card-desc { font-size:.875rem; color:var(--muted); line-height:1.7; flex:1; font-weight:300; }
-    .medium-card-meta { font-family:'JetBrains Mono',monospace; font-size:.72rem; color:var(--dim); display:flex; align-items:center; gap:.75rem; margin-top:.25rem; }
-    .medium-card-thumb { width:100%; height:160px; object-fit:cover; border-radius:8px; margin-bottom:.25rem; }
+    .medium-card { background:rgba(8,16,30,.85); border:1px solid rgba(0,212,255,.1); border-radius:18px; padding:2rem; display:flex; flex-direction:column; gap:.85rem; transition:border-color .3s,transform .4s cubic-bezier(.16,1,.3,1),box-shadow .4s; text-decoration:none; color:inherit; position:relative; overflow:hidden; }
+    .medium-card::before { content:''; position:absolute; inset:-1px; border-radius:19px; background:conic-gradient(from var(--angle),transparent 30%,var(--cyan),var(--em),var(--pu),transparent 70%); z-index:-1; opacity:0; transition:opacity .4s; animation:spin-angle 4s linear infinite; }
+    .medium-card:hover::before { opacity:.35; }
+    .medium-card:hover { border-color:rgba(0,212,255,.4); transform:translateY(-6px); box-shadow:0 30px 80px rgba(0,0,0,.4),0 0 40px rgba(0,212,255,.08); }
+    .medium-card-tag { font-family:'JetBrains Mono',monospace; font-size:.68rem; color:var(--cyan); text-transform:uppercase; letter-spacing:.12em; display:inline-flex; align-items:center; gap:6px; background:rgba(0,212,255,.08); border:1px solid rgba(0,212,255,.2); padding:3px 12px; border-radius:100px; width:fit-content; }
+    .medium-card-title { font-family:'Chakra Petch',monospace; font-size:1.15rem; font-weight:700; color:var(--text); line-height:1.3; }
+    .medium-card-desc { font-size:.875rem; color:var(--muted); line-height:1.8; flex:1; font-weight:300; }
+    .medium-card-chips { display:flex; flex-wrap:wrap; gap:5px; }
+    .medium-card-chip { background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.07); color:#4a6480; font-size:.7rem; padding:3px 8px; border-radius:5px; font-family:'JetBrains Mono',monospace; }
+    .medium-card-footer { display:flex; align-items:center; justify-content:space-between; margin-top:.25rem; padding-top:.9rem; border-top:1px solid rgba(0,212,255,.07); }
+    .medium-card-meta { font-family:'JetBrains Mono',monospace; font-size:.72rem; color:var(--dim); }
+    .medium-card-read { display:inline-flex; align-items:center; gap:6px; padding:7px 16px; border-radius:8px; font-size:.78rem; font-weight:600; border:1px solid var(--dim); color:var(--muted); font-family:'Outfit',sans-serif; transition:all .2s; }
+    .medium-card:hover .medium-card-read { border-color:var(--cyan); color:var(--cyan); }
 
     .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center; }
     .contact-links { display:flex; flex-direction:column; gap:.8rem; margin-top:1.5rem; }
@@ -400,16 +406,70 @@
       <div class="reveal">
         <div class="s-eyebrow">06 &middot; writing</div>
         <h2 class="s-title">Medium <span>Articles</span></h2>
-        <p style="color:var(--muted);font-size:.95rem;margin-top:-.5rem;margin-bottom:2.5rem;font-weight:300;max-width:580px">Thoughts on applied ML, RAG systems, MLOps, and the gap between model accuracy and production reality.</p>
+        <p style="color:var(--muted);font-size:.95rem;margin-top:-.5rem;margin-bottom:2.5rem;font-weight:300;max-width:600px">
+          Long-form breakdowns on applied deep learning and production AI systems — written for practitioners who care about the details.
+        </p>
       </div>
-      <div id="medium-articles" class="proj-grid reveal">
-        <div style="grid-column:1/-1;text-align:center;padding:3rem;color:var(--muted);font-family:'JetBrains Mono',monospace;font-size:.85rem">
-          <span class="live-dot" aria-hidden="true" style="display:inline-block;margin-right:.5rem"></span>Loading articles...
-        </div>
+
+      <div class="proj-grid reveal">
+
+        <!-- Article 1 -->
+        <a
+          href="https://medium.com/@srikanth2314/why-optimizer-choice-matters-more-than-you-think-a-cnn-case-study-on-cifar-10-f05c6887cabf"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="medium-card"
+          aria-label="Read: Why Optimizer Choice Matters More Than You Think"
+        >
+          <div class="medium-card-tag"><i class="fas fa-brain" style="font-size:.65rem"></i> Deep Learning &middot; CNNs</div>
+          <div class="medium-card-title">Why Optimizer Choice Matters More Than You Think: A CNN Case Study on CIFAR-10</div>
+          <div class="medium-card-desc">
+            An empirical deep-dive comparing SGD, Adam, RMSProp, and AdaGrad on a CNN trained over CIFAR-10 — showing how optimizer selection directly drives convergence speed, training stability, and final test accuracy beyond any hyperparameter tuning.
+          </div>
+          <div class="medium-card-chips">
+            <span class="medium-card-chip">PyTorch</span>
+            <span class="medium-card-chip">CNNs</span>
+            <span class="medium-card-chip">CIFAR-10</span>
+            <span class="medium-card-chip">Optimizers</span>
+            <span class="medium-card-chip">Deep Learning</span>
+          </div>
+          <div class="medium-card-footer">
+            <div class="medium-card-meta"><i class="fab fa-medium" style="margin-right:.4rem;color:var(--cyan)"></i>Medium &middot; 2025</div>
+            <div class="medium-card-read"><i class="fas fa-arrow-up-right-from-square" style="font-size:.7rem"></i> Read Article</div>
+          </div>
+        </a>
+
+        <!-- Article 2 -->
+        <a
+          href="https://medium.com/@srikanth2314/building-a-semantic-research-assistant-a-production-rag-pipeline-over-120-arxiv-papers-9ed3073da527"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="medium-card"
+          aria-label="Read: Building a Semantic Research Assistant"
+        >
+          <div class="medium-card-tag"><i class="fas fa-microchip" style="font-size:.65rem"></i> RAG &middot; MLOps</div>
+          <div class="medium-card-title">Building a Semantic Research Assistant: A Production RAG Pipeline Over 120 arXiv Papers</div>
+          <div class="medium-card-desc">
+            A production-grade walkthrough of designing and deploying a retrieval-augmented generation pipeline indexing 120+ arXiv ML papers — covering chunking strategy, embedding model selection, FAISS vector search, Gemini generation, and retrieval quality benchmarking.
+          </div>
+          <div class="medium-card-chips">
+            <span class="medium-card-chip">RAG</span>
+            <span class="medium-card-chip">FAISS</span>
+            <span class="medium-card-chip">arXiv</span>
+            <span class="medium-card-chip">Gemini</span>
+            <span class="medium-card-chip">Production</span>
+          </div>
+          <div class="medium-card-footer">
+            <div class="medium-card-meta"><i class="fab fa-medium" style="margin-right:.4rem;color:var(--cyan)"></i>Medium &middot; 2025</div>
+            <div class="medium-card-read"><i class="fas fa-arrow-up-right-from-square" style="font-size:.7rem"></i> Read Article</div>
+          </div>
+        </a>
+
       </div>
+
       <div style="text-align:center;margin-top:2.5rem" class="reveal">
         <a href="https://srikanth2314.medium.com/" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
-          View All on Medium <i class="fab fa-medium" style="margin-left:.4rem"></i>
+          Follow on Medium <i class="fab fa-medium" style="margin-left:.4rem"></i>
         </a>
       </div>
     </div>
@@ -552,85 +612,6 @@
     document.addEventListener('click', e => {
       if (!ham.contains(e.target) && !mobileMenu.contains(e.target)) closeMobile();
     });
-
-    // ── Medium Articles — multi-proxy fallback loader ─────────────
-    (async function loadMediumArticles() {
-      const MEDIUM_USER = 'srikanth2314';
-      const container = document.getElementById('medium-articles');
-
-      function renderCards(items) {
-        if (!items || items.length === 0) return false;
-        container.innerHTML = items.map(item => {
-          const title = item.title || 'Untitled';
-          const link  = item.link  || item.url || `https://srikanth2314.medium.com/`;
-          const date  = item.pubDate
-            ? new Date(item.pubDate).toLocaleDateString('en-US', { year:'numeric', month:'short', day:'numeric' })
-            : '';
-          const tag   = (item.categories && item.categories[0]) || 'Machine Learning';
-          const imgMatch = item.content ? item.content.match(/<img[^>]+src="([^"]+)"/) : null;
-          const thumb = item.thumbnail || item.enclosure?.link || (imgMatch ? imgMatch[1] : '');
-          const rawDesc = item.description || item.content || '';
-          const desc  = rawDesc.replace(/<[^>]*>/g, '').slice(0, 150).trim() + '\u2026';
-          return `<a href="${link}" target="_blank" rel="noopener noreferrer" class="medium-card reveal">
-            ${thumb ? `<img src="${thumb}" alt="${title}" class="medium-card-thumb" loading="lazy" width="400" height="160">` : ''}
-            <div class="medium-card-tag">${tag}</div>
-            <div class="medium-card-title">${title}</div>
-            <div class="medium-card-desc">${desc}</div>
-            <div class="medium-card-meta">
-              ${date ? `<span><i class="fas fa-calendar-alt" style="margin-right:.35rem"></i>${date}</span>` : ''}
-              <span style="color:var(--cyan)"><i class="fab fa-medium" style="margin-right:.35rem"></i>Read on Medium</span>
-            </div>
-          </a>`;
-        }).join('');
-        container.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
-        return true;
-      }
-
-      function showFallback() {
-        container.innerHTML = `<div style="grid-column:1/-1;text-align:center;color:var(--muted);padding:2rem">
-          <p style="margin-bottom:1rem;font-family:'JetBrains Mono',monospace;font-size:.82rem">Articles available on Medium</p>
-          <a href="https://srikanth2314.medium.com/" target="_blank" rel="noopener noreferrer" style="color:var(--cyan);font-family:'JetBrains Mono',monospace;font-size:.85rem">srikanth2314.medium.com &rarr;</a>
-        </div>`;
-      }
-
-      // Proxy 1: rss2json with API key param omitted (free tier, up to 10 items)
-      try {
-        const url1 = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent('https://medium.com/feed/@' + MEDIUM_USER)}&count=6`;
-        const r1 = await fetch(url1, { signal: AbortSignal.timeout(6000) });
-        const d1 = await r1.json();
-        if (d1.status === 'ok' && d1.items && d1.items.length > 0) {
-          renderCards(d1.items); return;
-        }
-      } catch(_) {}
-
-      // Proxy 2: feedparse via allorigins
-      try {
-        const feedUrl = encodeURIComponent('https://medium.com/feed/@' + MEDIUM_USER);
-        const url2 = `https://api.allorigins.win/get?url=${feedUrl}`;
-        const r2 = await fetch(url2, { signal: AbortSignal.timeout(8000) });
-        const d2 = await r2.json();
-        if (d2.contents) {
-          const parser = new DOMParser();
-          const xml = parser.parseFromString(d2.contents, 'text/xml');
-          const entries = Array.from(xml.querySelectorAll('item')).slice(0, 6);
-          if (entries.length > 0) {
-            const items = entries.map(e => ({
-              title: e.querySelector('title')?.textContent || '',
-              link:  e.querySelector('link')?.textContent || e.querySelector('guid')?.textContent || '',
-              pubDate: e.querySelector('pubDate')?.textContent || '',
-              categories: Array.from(e.querySelectorAll('category')).map(c => c.textContent),
-              description: e.querySelector('description')?.textContent || '',
-              content: e.querySelector('encoded')?.textContent || e.querySelector('description')?.textContent || '',
-              thumbnail: e.querySelector('thumbnail')?.getAttribute('url') || ''
-            }));
-            renderCards(items); return;
-          }
-        }
-      } catch(_) {}
-
-      // Final fallback
-      showFallback();
-    })();
   </script>
 </body>
 </html>
