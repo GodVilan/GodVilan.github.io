@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="google-site-verification" content="BnBinc93Ael_yrCM_cb11FwNfyOXU6LM2P7-bOzod1w" />
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Srikanth Reddy Nandireddy | ML Engineer &amp; Data Scientist</title>
   <meta name="description"
@@ -1142,7 +1142,7 @@
       font-weight: 300;
     }
 
-    /* ARTICLES — editorial list, intentionally different from project cards */
+    /* ARTICLES */
     .article-list {
       display: flex;
       flex-direction: column;
@@ -1275,7 +1275,6 @@
       color: var(--cyan);
     }
 
-    /* Skeleton shimmer for article rows */
     .article-row-skeleton {
       pointer-events: none;
     }
@@ -1326,7 +1325,6 @@
       width: 70%;
     }
 
-    /* Fade-in for dynamically rendered rows */
     @keyframes fadeInUp {
       from {
         opacity: 0;
@@ -1341,6 +1339,70 @@
 
     .article-row-dynamic {
       animation: fadeInUp .5s cubic-bezier(.16, 1, .3, 1) both;
+    }
+
+    /* ── DEBUG BANNER ── */
+    #date-debug-banner {
+      position: fixed;
+      bottom: 1rem;
+      right: 1rem;
+      z-index: 9999;
+      background: #07111f;
+      border: 1px solid var(--cyan);
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: .72rem;
+      color: #8aadcf;
+      max-width: 420px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, .6);
+      line-height: 1.7;
+    }
+
+    #date-debug-banner strong {
+      color: var(--cyan);
+      display: block;
+      margin-bottom: .4rem;
+      font-size: .78rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    #date-debug-banner .dbg-row {
+      margin: .2rem 0;
+    }
+
+    #date-debug-banner .dbg-label {
+      color: var(--em);
+    }
+
+    #date-debug-banner .dbg-val {
+      color: var(--am);
+      word-break: break-all;
+    }
+
+    #date-debug-banner .dbg-close {
+      position: absolute;
+      top: .6rem;
+      right: .8rem;
+      cursor: pointer;
+      color: var(--muted);
+      font-size: .9rem;
+      background: none;
+      border: none;
+      font-family: inherit;
+    }
+
+    #date-debug-banner .dbg-close:hover {
+      color: var(--cyan);
+    }
+
+    #date-debug-banner .dbg-note {
+      margin-top: .6rem;
+      padding-top: .6rem;
+      border-top: 1px solid rgba(0, 212, 255, .12);
+      color: var(--muted);
+      font-size: .68rem;
     }
 
     /* CONTACT */
@@ -1537,6 +1599,12 @@
       section {
         padding: 4rem 1.25rem;
       }
+
+      #date-debug-banner {
+        max-width: calc(100vw - 2rem);
+        right: 1rem;
+        left: 1rem;
+      }
     }
   </style>
 </head>
@@ -1544,6 +1612,18 @@
 <body>
   <div id="scroll-bar" aria-hidden="true"></div>
   <canvas id="bg" aria-hidden="true"></canvas>
+
+  <!-- DEBUG BANNER — rendered by JS after fetch -->
+  <div id="date-debug-banner" style="display:none" role="status" aria-live="polite">
+    <button class="dbg-close" onclick="document.getElementById('date-debug-banner').style.display='none'"
+      aria-label="Close debug panel">✕</button>
+    <strong>🛠 Date Debug — rss2json</strong>
+    <div id="dbg-content">Fetching…</div>
+    <div class="dbg-note">
+      ℹ️ Copy the raw <code>pubDate</code> values above and share them to fix the fallback dates.<br>
+      Close this banner (✕) when done. Remove the debug block from the HTML before going live.
+    </div>
+  </div>
 
   <!-- NAV -->
   <nav role="navigation" aria-label="Main navigation">
@@ -1626,7 +1706,8 @@
             research through model training, containerized deployment, REST APIs, and CI/CD automation on AWS.</p>
           <p>Currently an M.S. student in Data Science &amp; AI at the University of Central Missouri with a
             <strong>perfect 4.0 GPA</strong>, I spend my time building production RAG pipelines, multimodal deep
-            learning systems, and real-time fraud detection APIs you can actually hit with a curl command.</p>
+            learning systems, and real-time fraud detection APIs you can actually hit with a curl command.
+          </p>
           <p>I'm looking for full-time &amp; internship roles in <strong>Data Science, ML Engineering, or Applied
               AI</strong> in the United States — available immediately.</p>
         </div>
@@ -1996,8 +2077,6 @@
           about the details.
         </p>
       </div>
-
-      <!-- Editorial article list — skeleton rows while fetching -->
       <div id="medium-articles-grid" class="article-list reveal">
         <div class="article-row article-row-skeleton" aria-hidden="true">
           <span class="skel skel-num"></span>
@@ -2012,7 +2091,6 @@
           <div></div>
         </div>
       </div>
-
       <div style="text-align:center;margin-top:2.5rem" class="reveal">
         <a href="https://srikanth2314.medium.com/" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
           Follow on Medium <i class="fab fa-medium" style="margin-left:.4rem"></i>
@@ -2224,9 +2302,6 @@
 
     /* ══════════════════════════════════════════════════════════════
        DYNAMIC MEDIUM ARTICLES
-       Uses rss2json — a free CORS-safe RSS-to-JSON proxy.
-       Any new article you publish on Medium appears here automatically.
-       On fetch failure, falls back silently to the two known articles.
        ══════════════════════════════════════════════════════════════ */
     (function fetchMediumArticles() {
       const USERNAME = 'srikanth2314';
@@ -2256,22 +2331,33 @@
       }
 
       /*
-       * UTC-safe date formatter.
+       * ── FIXED formatDate ──────────────────────────────────────────
        *
-       * rss2json returns dates as "YYYY-MM-DD HH:MM:SS" with no timezone info.
-       * Without a timezone, new Date() treats it as LOCAL time, which can shift
-       * the displayed date by +/- 1 day for visitors outside UTC.
-       * Fix: detect that format and append "Z" to force UTC interpretation.
-       * RFC 822 strings already contain offset info so Date() handles them fine.
+       * rss2json can return dates in several formats:
+       *   A) "YYYY-MM-DD HH:MM:SS"         ← no timezone → was wrongly
+       *      treated as local time by browsers outside UTC
+       *   B) "YYYY-MM-DDTHH:MM:SS"         ← ISO without tz
+       *   C) "YYYY-MM-DD HH:MM:SS.mmm"     ← with milliseconds
+       *   D) RFC 822 e.g. "Mon, 14 Apr 2025 12:00:00 +0000"
+       *      ← already carries offset, new Date() handles it correctly
+       *
+       * Fix: detect formats A/B/C via regex and append "Z" (= UTC).
+       * RFC 822 (format D) falls through untouched — Date() handles it.
        */
       function formatDate(s) {
         if (!s) return '';
         try {
-          const d = /^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$/.test(s.trim())
-            ? new Date(s.trim().replace(' ', 'T') + 'Z')
-            : new Date(s);
+          let iso = s.trim();
+          // Matches: "YYYY-MM-DD HH:MM:SS", "YYYY-MM-DDTHH:MM:SS",
+          //          and variants with optional milliseconds (.mmm)
+          if (/^\d{4}-\d{2}-\d{2}[T ]\d{2}:\d{2}:\d{2}(\.\d+)?$/.test(iso)) {
+            iso = iso.replace(' ', 'T').replace(/\.\d+$/, '') + 'Z';
+          }
+          const d = new Date(iso);
           if (isNaN(d.getTime())) return '';
-          return d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' });
+          return d.toLocaleDateString('en-US', {
+            year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC'
+          });
         } catch (e) { return ''; }
       }
 
@@ -2305,7 +2391,14 @@
         return a;
       }
 
-      /* Silent fallback — shown when fetch fails, no error message */
+      /*
+       * ── FALLBACK articles ─────────────────────────────────────────
+       * pubDate is now in ISO-with-Z format so formatDate() parses it
+       * correctly regardless of the visitor's timezone.
+       *
+       * ⚠️  UPDATE these pubDate values once you see the real ones
+       *     from the debug banner below.
+       */
       const FALLBACK = [
         {
           link: 'https://medium.com/@srikanth2314/why-optimizer-choice-matters-more-than-you-think-a-cnn-case-study-on-cifar-10-f05c6887cabf',
@@ -2313,7 +2406,7 @@
           description: 'An empirical deep-dive comparing SGD, Adam, RMSProp, and AdaGrad on a CNN trained over CIFAR-10 — showing how optimizer selection directly drives convergence speed, training stability, and final test accuracy beyond any hyperparameter tuning.',
           content: 'An empirical deep dive comparing SGD Adam RMSProp and AdaGrad on a CNN trained over CIFAR 10 showing how optimizer selection drives convergence speed training stability and final test accuracy beyond any hyperparameter tuning covering learning rate sensitivity adaptive gradient methods and practical recommendations for deep learning practitioners building production image classifiers.',
           categories: ['PyTorch', 'CNNs', 'CIFAR-10', 'Optimizers', 'Deep Learning'],
-          pubDate: '2025-04-01 00:00:00'
+          pubDate: '2025-04-01T00:00:00Z'   /* ⚠️ replace with real date from debug banner */
         },
         {
           link: 'https://medium.com/@srikanth2314/building-a-semantic-research-assistant-a-production-rag-pipeline-over-120-arxiv-papers-9ed3073da527',
@@ -2321,19 +2414,54 @@
           description: 'A production-grade walkthrough of designing and deploying a retrieval-augmented generation pipeline indexing 120+ arXiv ML papers — covering chunking strategy, embedding model selection, FAISS vector search, Gemini generation, and retrieval quality benchmarking.',
           content: 'A production grade walkthrough of designing and deploying a retrieval augmented generation pipeline indexing 120 arXiv ML papers covering chunking strategy embedding model selection FAISS vector search Gemini generation and retrieval quality benchmarking with MRR precision faithfulness and answer relevance metrics comparing BGE MPNet MiniLM and BM25 across multiple chunk sizes and retrieval configurations.',
           categories: ['RAG', 'FAISS', 'arXiv', 'Gemini', 'Production'],
-          pubDate: '2025-03-01 00:00:00'
+          pubDate: '2025-03-01T00:00:00Z'   /* ⚠️ replace with real date from debug banner */
         }
       ];
 
-      function render(items) {
+      /* ── DEBUG: show raw API response in on-page banner ── */
+      function showDebugBanner(items, source) {
+        const banner = document.getElementById('date-debug-banner');
+        const content = document.getElementById('dbg-content');
+        const rows = items.map((item, i) => `
+          <div class="dbg-row">
+            <span class="dbg-label">[${i + 1}] raw pubDate → </span>
+            <span class="dbg-val">"${item.pubDate || '(empty)'}"</span>
+          </div>
+          <div class="dbg-row" style="margin-bottom:.5rem">
+            <span class="dbg-label">&nbsp;&nbsp;&nbsp;&nbsp;parsed as → </span>
+            <span class="dbg-val" style="color:var(--em)">"${formatDate(item.pubDate)}"</span>
+          </div>`).join('');
+        content.innerHTML = `
+          <div class="dbg-row" style="margin-bottom:.4rem">
+            <span class="dbg-label">Source: </span>
+            <span class="dbg-val">${source}</span>
+          </div>
+          ${rows}`;
+        banner.style.display = 'block';
+        /* Also log to console for easy copy-paste */
+        console.group('%c[Medium Date Debug]', 'color:#00d4ff;font-weight:bold');
+        console.log('Source:', source);
+        items.forEach((item, i) => {
+          console.log(`[${i + 1}] "${item.title}"`);
+          console.log(`     raw pubDate  → "${item.pubDate}"`);
+          console.log(`     parsed as   → "${formatDate(item.pubDate)}"`);
+        });
+        console.groupEnd();
+      }
+
+      function render(items, source) {
         list.innerHTML = '';
         items.forEach((item, i) => list.appendChild(makeRow(item, i)));
+        showDebugBanner(items, source);   /* ← shows debug info on page + console */
       }
 
       fetch(API_URL)
         .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
-        .then(d => render(d.items && d.items.length ? d.items : FALLBACK))
-        .catch(() => render(FALLBACK));
+        .then(d => render(
+          d.items && d.items.length ? d.items : FALLBACK,
+          d.items && d.items.length ? 'rss2json API (live)' : 'FALLBACK (API returned empty)'
+        ))
+        .catch(err => render(FALLBACK, 'FALLBACK (fetch failed: ' + err.message + ')'));
     })();
   </script>
 </body>
