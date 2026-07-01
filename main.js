@@ -97,17 +97,16 @@
 })();
 
 /* Writing section: pulls latest Medium posts live and hides the whole section if none.
-   Set FEED to your exact Medium feed. Custom domain: https://srikanth2314.medium.com/feed
-   Handle form: https://medium.com/feed/@your-handle
-   Note: Medium RSS has no CORS headers, so this routes through a JSON proxy.
-   For production reliability, swap the proxy for your own /api/medium serverless endpoint. */
+   Posts come from our own serverless proxy (api/medium.js), so the site no longer
+   depends on a third-party public proxy. The endpoint returns the same shape rss2json
+   used: { status:"ok", items:[{title,link,pubDate,description,content}] }. */
 (function(){
-  var FEED='https://medium.com/feed/@srikanth2314';
+  var ENDPOINT='/api/medium';
   var sec=document.getElementById('writing'),grid=document.getElementById('mediumPosts'),allBtn=document.getElementById('mediumAll');
   if(!sec||!grid)return;
   function strip(h){var d=document.createElement('div');d.innerHTML=h||'';return (d.textContent||'').replace(/\s+/g,' ').trim();}
   function fmt(d){try{return new Date(d).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});}catch(e){return '';}}
-  fetch('https://api.rss2json.com/v1/api.json?rss_url='+encodeURIComponent(FEED))
+  fetch(ENDPOINT)
     .then(function(r){return r.json();})
     .then(function(d){
       if(!d||d.status!=='ok'||!d.items||!d.items.length)return;
