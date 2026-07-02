@@ -308,3 +308,49 @@
   .post-title{font-family:var(--disp);font-weight:600;font-size:17px;color:var(--text);margin-top:10px;line-height:1.3}
   .post-ex{color:var(--text-2);font-size:14px;margin-top:9px;flex:1}
   .post-cta{font-family:var(--mono);font-size:12px;color:var(--amber);margin-top:14px}
+
+  /* ===== Sri assistant — launcher dock ===== */
+  .sri-dock{position:fixed;right:26px;bottom:26px;z-index:90;display:flex;align-items:center;gap:12px}
+  .sri-dock.hidden{display:none}
+  .sri-nudge{font-family:var(--mono);font-size:12.5px;color:var(--text);background:var(--raise-2);border:1px solid var(--line-2);border-radius:100px;padding:9px 14px;white-space:nowrap;box-shadow:0 8px 24px rgba(0,0,0,.45);position:relative;animation:sriBob 2.6s ease-in-out infinite}
+  .sri-nudge::after{content:"";position:absolute;right:-5px;top:50%;width:9px;height:9px;background:var(--raise-2);border-right:1px solid var(--line-2);border-bottom:1px solid var(--line-2);transform:translateY(-50%) rotate(-45deg)}
+  @keyframes sriBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+  .sri-bubble{width:58px;height:58px;border-radius:50%;background:var(--amber);color:var(--ink);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:700;box-shadow:0 10px 34px rgba(0,0,0,.55);position:relative;transition:transform .18s}
+  .sri-bubble:hover{transform:scale(1.06)}
+  .sri-ring{position:absolute;inset:0;border-radius:50%;border:2px solid var(--amber);animation:sriRing 2.4s ease-out infinite;pointer-events:none}
+  @keyframes sriRing{0%{transform:scale(1);opacity:.6}100%{transform:scale(1.5);opacity:0}}
+
+  /* ===== Sri assistant — panel ===== */
+  .sri-panel{position:fixed;right:26px;bottom:26px;z-index:95;width:380px;max-width:calc(100vw - 32px);background:var(--raise);border:1px solid var(--line-2);border-radius:16px;overflow:hidden;box-shadow:0 24px 70px rgba(0,0,0,.6);display:flex;flex-direction:column;max-height:78vh;transform-origin:bottom right;transition:transform .26s cubic-bezier(.2,.8,.2,1),opacity .2s}
+  .sri-panel.hidden{transform:scale(.85) translateY(12px);opacity:0;pointer-events:none}
+  .sri-head{display:flex;align-items:center;gap:11px;padding:15px 16px;border-bottom:1px solid var(--line);background:var(--raise-2)}
+  .sri-avatar{width:34px;height:34px;border-radius:9px;background:var(--amber-dim);border:1px solid rgba(232,184,75,.4);display:flex;align-items:center;justify-content:center;color:var(--amber);font-family:var(--mono);font-weight:600;font-size:13px}
+  .sri-title{font-family:var(--disp);font-weight:600;font-size:15px;line-height:1.2}
+  .sri-sub{font-family:var(--mono);font-size:11px;color:var(--live);display:flex;align-items:center;gap:6px;margin-top:2px}
+  .sri-sub .d{width:6px;height:6px;border-radius:50%;background:var(--live);box-shadow:0 0 7px var(--live)}
+  .sri-x{margin-left:auto;color:var(--muted);background:none;border:none;font-size:20px;cursor:pointer;line-height:1;padding:0 4px}
+  .sri-x:hover{color:var(--text)}
+
+  .sri-body{padding:16px;overflow-y:auto;display:flex;flex-direction:column;gap:13px}
+  .sri-msg{max-width:88%;font-size:14px;line-height:1.55;white-space:pre-wrap;animation:sriPop .3s ease}
+  @keyframes sriPop{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .sri-msg.user{align-self:flex-end;background:var(--amber);color:var(--ink);font-weight:500;border-radius:13px 13px 4px 13px;padding:9px 13px}
+  .sri-msg.bot{align-self:flex-start;background:var(--raise-2);border:1px solid var(--line);border-radius:13px 13px 13px 4px;padding:11px 13px;color:var(--text)}
+  .sri-msg.bot b{color:var(--amber);font-weight:600}
+  .sri-cite{margin-top:9px;display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:11px;color:var(--text-2);background:var(--ink);border:1px solid var(--line);border-radius:6px;padding:5px 9px}
+  .sri-cite .tick{color:var(--live)}
+  .sri-typing{align-self:flex-start;display:flex;gap:4px;padding:12px 14px;background:var(--raise-2);border:1px solid var(--line);border-radius:13px}
+  .sri-typing span{width:6px;height:6px;border-radius:50%;background:var(--muted);animation:sriBlink 1.2s infinite}
+  .sri-typing span:nth-child(2){animation-delay:.2s}.sri-typing span:nth-child(3){animation-delay:.4s}
+  @keyframes sriBlink{0%,60%,100%{opacity:.3}30%{opacity:1}}
+
+  .sri-chips{display:flex;flex-wrap:wrap;gap:7px;padding:0 16px 12px}
+  .sri-chip{font-family:var(--mono);font-size:11.5px;color:var(--text-2);background:var(--ink);border:1px solid var(--line-2);border-radius:100px;padding:7px 12px;cursor:pointer;transition:.15s}
+  .sri-chip:hover{color:var(--amber);border-color:rgba(232,184,75,.4)}
+
+  .sri-input{display:flex;gap:8px;padding:12px 14px;border-top:1px solid var(--line);background:var(--raise-2)}
+  .sri-input input{flex:1;min-width:0;background:var(--ink);border:1px solid var(--line-2);border-radius:9px;color:var(--text);font-family:var(--body);font-size:14px;padding:10px 12px;outline:none}
+  .sri-input input:focus{border-color:rgba(232,184,75,.5)}
+  .sri-input input::placeholder{color:var(--muted)}
+  .sri-send{background:var(--amber);color:var(--ink);border:none;border-radius:9px;width:40px;font-size:16px;font-weight:700;cursor:pointer}
+  .sri-foot{font-family:var(--mono);font-size:10px;color:var(--muted);text-align:center;padding:0 0 11px;background:var(--raise-2)}

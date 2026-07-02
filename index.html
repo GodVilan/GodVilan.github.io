@@ -361,6 +361,38 @@
   </div>
 </div>
 
+<!-- ===================== SRI ASSISTANT ===================== -->
+<div class="sri-dock hidden" id="sriDock">
+  <span class="sri-nudge">Hi, I&rsquo;m Sri &mdash; ask me anything</span>
+  <button class="sri-bubble" id="sriBubble" aria-label="Open Sri, Srikanth&rsquo;s AI assistant">
+    <span class="sri-ring"></span>&#9889;
+  </button>
+</div>
+
+<div class="sri-panel hidden" id="sriPanel" role="dialog" aria-label="Sri — Srikanth&rsquo;s AI assistant">
+  <div class="sri-head">
+    <div class="sri-avatar">Sri</div>
+    <div>
+      <div class="sri-title">Sri</div>
+      <div class="sri-sub"><span class="d"></span> Srikanth&rsquo;s AI assistant</div>
+    </div>
+    <button class="sri-x" id="sriClose" aria-label="Close assistant">&times;</button>
+  </div>
+  <div class="sri-body" id="sriBody">
+    <div class="sri-msg bot">Hi, I&rsquo;m <b>Sri</b> &mdash; Srikanth&rsquo;s AI assistant. I&rsquo;m grounded on his resume, projects, and background, so ask me anything and I&rsquo;ll answer with a source.</div>
+  </div>
+  <div class="sri-chips">
+    <button class="sri-chip" data-q="Does he have production AWS experience?">Production AWS?</button>
+    <button class="sri-chip" data-q="What is his strongest agent project?">Best agent project?</button>
+    <button class="sri-chip" data-q="Is he available, and for what roles?">Is he available?</button>
+  </div>
+  <div class="sri-input">
+    <input type="text" id="sriField" placeholder="Ask about his work, skills, or background&hellip;" aria-label="Ask Sri a question" />
+    <button class="sri-send" id="sriSend" aria-label="Send">&rarr;</button>
+  </div>
+  <div class="sri-foot">answers only from Srikanth&rsquo;s documents &middot; declines anything off-topic</div>
+</div>
+
 <script src="main.js"></script>
 </body>
 </html>

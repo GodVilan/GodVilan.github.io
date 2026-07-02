@@ -45,7 +45,8 @@ function isRateLimited(ip) {
 const STOPWORDS = new Set(
   ("a an and are as at be by for from has have he in is it its of on that the to was were will with " +
     "this these those i you your his her their our they them my me we us about into over under out up " +
-    "or if then than so such can could would should do does did not no yes but also more most some any")
+    "or if then than so such can could would should do does did not no yes but also more most some any " +
+    "what when where who whom whose why how which tell give show does") // interrogatives + filler
     .split(" ")
 );
 

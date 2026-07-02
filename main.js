@@ -125,3 +125,84 @@
     })
     .catch(function(){/* leave section hidden */});
 })();
+
+/* Sri — grounded RAG assistant panel.
+   Real fetch() calls to /api/ask (Claude Haiku over /knowledge-base), renders the returned
+   source filenames as a citation under each answer, with typing indicator and quick-ask chips.
+   Auto-opens once per visitor (localStorage), then collapses to a bubble + "Ask me" nudge. */
+(function(){
+  var panel=document.getElementById('sriPanel'),dock=document.getElementById('sriDock'),
+      body=document.getElementById('sriBody'),field=document.getElementById('sriField');
+  if(!panel||!dock||!body||!field)return;
+  var busy=false;
+
+  function scroll(){body.scrollTop=body.scrollHeight;}
+  function openPanel(){panel.classList.remove('hidden');dock.classList.add('hidden');
+    setTimeout(function(){try{field.focus();}catch(e){}},260);}
+  function closePanel(){panel.classList.add('hidden');dock.classList.remove('hidden');}
+
+  function userMsg(txt){
+    var d=document.createElement('div');d.className='sri-msg user';d.textContent=txt;
+    body.appendChild(d);scroll();
+  }
+  function botMsg(text,sources){
+    var d=document.createElement('div');d.className='sri-msg bot';
+    d.textContent=text;                      // model output rendered as text — no HTML injection
+    if(sources&&sources.length){
+      var c=document.createElement('div');c.className='sri-cite';
+      var tick=document.createElement('span');tick.className='tick';tick.textContent='✓';
+      c.appendChild(tick);
+      c.appendChild(document.createTextNode(' source: '+sources.join(', ')));
+      d.appendChild(c);
+    }
+    body.appendChild(d);scroll();
+  }
+  function typing(){
+    var d=document.createElement('div');d.className='sri-typing';
+    d.innerHTML='<span></span><span></span><span></span>';
+    body.appendChild(d);scroll();return d;
+  }
+
+  function ask(q){
+    if(busy||!q)return;busy=true;
+    userMsg(q);var t=typing();
+    fetch('/api/ask',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({question:q})
+    })
+      .then(function(r){return r.json().then(function(j){return {ok:r.ok,status:r.status,data:j};},
+        function(){return {ok:false,status:r.status,data:null};});})
+      .then(function(res){
+        t.remove();
+        if(res.ok&&res.data&&typeof res.data.answer==='string'){
+          botMsg(res.data.answer,res.data.sources||[]);
+        }else if(res.status===429){
+          botMsg('I’m getting a lot of questions right now — give me a moment, then try again.',[]);
+        }else{
+          botMsg('Sorry, I couldn’t reach my knowledge base just now. Please try again, or contact Srikanth directly.',[]);
+        }
+      })
+      .catch(function(){t.remove();botMsg('Sorry, something went wrong on my end. Please try again shortly.',[]);})
+      .then(function(){busy=false;try{field.focus();}catch(e){}});
+  }
+  function send(){var v=field.value.trim();if(!v)return;field.value='';ask(v);}
+
+  document.getElementById('sriBubble').addEventListener('click',openPanel);
+  document.getElementById('sriClose').addEventListener('click',closePanel);
+  document.getElementById('sriSend').addEventListener('click',send);
+  field.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();send();}});
+  [].forEach.call(panel.querySelectorAll('.sri-chip'),function(ch){
+    ch.addEventListener('click',function(){ask(ch.getAttribute('data-q'));});
+  });
+
+  // Auto-open once per visitor; afterwards start collapsed as a bubble + nudge.
+  var seen=false;
+  try{seen=!!localStorage.getItem('sri_seen');}catch(e){}
+  if(!seen){
+    try{localStorage.setItem('sri_seen','1');}catch(e){}
+    setTimeout(openPanel,1400);   // after the intro overlay clears
+  }else{
+    dock.classList.remove('hidden');
+  }
+})();
