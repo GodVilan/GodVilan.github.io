@@ -1,7 +1,7 @@
   :root{
     --ink:#0B0E14;--raise:#12161F;--raise-2:#171C27;
     --line:#212836;--line-2:#2C3547;
-    --text:#E6EAF0;--text-2:#A3AEC0;--muted:#6E7A8C;
+    --text:#E6EAF0;--text-2:#A3AEC0;--muted:#808C9E;
     --amber:#E8B84B;--amber-dim:rgba(232,184,75,.12);--live:#5FD08B;
     --disp:'Space Grotesk',sans-serif;--body:'Hanken Grotesk',sans-serif;--mono:'JetBrains Mono',monospace;
     --maxw:1100px;

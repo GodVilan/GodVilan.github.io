@@ -135,6 +135,7 @@
       body=document.getElementById('sriBody'),field=document.getElementById('sriField');
   if(!panel||!dock||!body||!field)return;
   var busy=false;
+  var MAX_Q=1000; // must match MAX_QUESTION_CHARS in api/ask.js
 
   function scroll(){body.scrollTop=body.scrollHeight;}
   function openPanel(){panel.classList.remove('hidden');dock.classList.add('hidden');
@@ -178,15 +179,26 @@
         if(res.ok&&res.data&&typeof res.data.answer==='string'){
           botMsg(res.data.answer,res.data.sources||[]);
         }else if(res.status===429){
-          botMsg('I’m getting a lot of questions right now — give me a moment, then try again.',[]);
+          // friendly rate-limit message
+          botMsg('I’m getting a lot of questions right now — give me a minute, then try again.',[]);
+        }else if(res.status===400){
+          // backend rejected the input (e.g. too long / empty)
+          botMsg('That question is a bit too long for me — could you shorten it and try again?',[]);
         }else{
-          botMsg('Sorry, I couldn’t reach my knowledge base just now. Please try again, or contact Srikanth directly.',[]);
+          // backend-error fallback (network, 5xx, missing key)
+          botMsg('Sorry, I couldn’t reach my knowledge base just now. Please try again in a moment, or contact Srikanth directly.',[]);
         }
       })
       .catch(function(){t.remove();botMsg('Sorry, something went wrong on my end. Please try again shortly.',[]);})
       .then(function(){busy=false;try{field.focus();}catch(e){}});
   }
-  function send(){var v=field.value.trim();if(!v)return;field.value='';ask(v);}
+  function send(){
+    var v=field.value.trim();
+    if(!v)return;
+    if(v.length>MAX_Q)v=v.slice(0,MAX_Q); // input length cap (also enforced by maxlength + backend)
+    field.value='';
+    ask(v);
+  }
 
   document.getElementById('sriBubble').addEventListener('click',openPanel);
   document.getElementById('sriClose').addEventListener('click',closePanel);
