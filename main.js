@@ -163,9 +163,48 @@
     var d = document.createElement('div'); d.className = 'sri-msg user'; d.textContent = txt;
     body.appendChild(d); scroll();
   }
+  // safe markdown → DOM (no innerHTML on model text)
+  function sriInline(parent, str) {
+    var re = /(`[^`]+`|\*\*[^*]+\*\*|\*[^*]+\*)/g, last = 0, m;
+    while ((m = re.exec(str))) {
+      if (m.index > last) parent.appendChild(document.createTextNode(str.slice(last, m.index)));
+      var tok = m[0], el;
+      if (tok[0] === '`') { el = document.createElement('code'); el.textContent = tok.slice(1, -1); }
+      else if (tok.slice(0, 2) === '**') { el = document.createElement('strong'); el.textContent = tok.slice(2, -2); }
+      else { el = document.createElement('em'); el.textContent = tok.slice(1, -1); }
+      parent.appendChild(el); last = re.lastIndex;
+    }
+    if (last < str.length) parent.appendChild(document.createTextNode(str.slice(last)));
+  }
+  function sriRender(container, text) {
+    var lines = String(text).replace(/\r\n/g, '\n').split('\n'), i = 0;
+    while (i < lines.length) {
+      if (!lines[i].trim()) { i++; continue; }
+      if (/^\s*[-*]\s+/.test(lines[i])) {
+        var ul = document.createElement('ul');
+        while (i < lines.length && /^\s*[-*]\s+/.test(lines[i])) {
+          var li = document.createElement('li'); sriInline(li, lines[i].replace(/^\s*[-*]\s+/, '')); ul.appendChild(li); i++;
+        }
+        container.appendChild(ul); continue;
+      }
+      if (/^\s*\d+\.\s+/.test(lines[i])) {
+        var ol = document.createElement('ol');
+        while (i < lines.length && /^\s*\d+\.\s+/.test(lines[i])) {
+          var li = document.createElement('li'); sriInline(li, lines[i].replace(/^\s*\d+\.\s+/, '')); ol.appendChild(li); i++;
+        }
+        container.appendChild(ol); continue;
+      }
+      var p = document.createElement('p'), first = true;
+      while (i < lines.length && lines[i].trim() && !/^\s*([-*]|\d+\.)\s+/.test(lines[i])) {
+        if (!first) p.appendChild(document.createElement('br'));
+        sriInline(p, lines[i]); first = false; i++;
+      }
+      container.appendChild(p);
+    }
+  }
   function botMsg(text, sources) {
     var d = document.createElement('div'); d.className = 'sri-msg bot';
-    d.textContent = text;                      // model output rendered as text — no HTML injection
+    sriRender(d, text);   // markdown → real nodes; still no innerHTML on model output
     if (sources && sources.length) {
       var c = document.createElement('div'); c.className = 'sri-cite';
       var tick = document.createElement('span'); tick.className = 'tick'; tick.textContent = '✓';
@@ -243,5 +282,110 @@
     }
   } else {
     dock.classList.remove('hidden');
+  }
+})();
+/* ---- hero: live agent trace terminal ---- */
+(function () {
+  var body = document.getElementById('traceBody');
+  if (!body) return;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // scenarios grounded in the real knowledge base
+  var runs = [
+    {
+      q: 'does he have production MLOps?', steps: [
+        { l: 'planner', v: 'decompose · route' },
+        { l: 'retrieve', v: 'fraud-detection.md', file: true },
+        { l: 'critic', v: 'grounded · self-check' },
+        { l: 'answer', v: 'CI/CD → MLflow → FastAPI on EC2', ans: true }
+      ]
+    },
+    {
+      q: "what's his strongest agent project?", steps: [
+        { l: 'planner', v: 'decompose · route' },
+        { l: 'retrieve', v: 'evidence-review.md', file: true },
+        { l: 'tools', v: 'rank lookup' },
+        { l: 'answer', v: 'VLM adjudicator · top 1% (16 / 1,773)', ans: true }
+      ]
+    },
+    {
+      q: 'is he available to hire?', steps: [
+        { l: 'planner', v: 'route' },
+        { l: 'retrieve', v: 'status.md', file: true },
+        { l: 'answer', v: 'AI Engineer / ML · US · available now', ans: true }
+      ]
+    }
+  ];
+
+  var timers = [], running = false, idx = 0;
+  function after(ms, fn) { var t = setTimeout(fn, ms); timers.push(t); return t; }
+  function clearTimers() { timers.forEach(clearTimeout); timers = []; }
+
+  function stepLine(s) {
+    var d = document.createElement('div');
+    d.className = 'trace-line' + (s.ans ? ' answer' : '');
+    var val = s.file ? '<span class="file">' + s.v + '</span>' : '<span class="val">' + s.v + '</span>';
+    var ok = s.ans ? '  <span class="ok">✓ cited</span>' : '';
+    d.innerHTML = '<span class="lbl">' + s.l + '</span><span class="arw">▸ </span>' + val + ok; // author-constant content only
+    return d;
+  }
+
+  function renderStatic(run) {
+    body.innerHTML = '';
+    var q = document.createElement('div'); q.className = 'trace-line';
+    var head = document.createElement('span'); head.className = 'p'; head.textContent = '> visitor: ';
+    var qt = document.createElement('span'); qt.className = 'q'; qt.textContent = '"' + run.q + '"';
+    q.appendChild(head); q.appendChild(qt); body.appendChild(q);
+    run.steps.forEach(function (s) { body.appendChild(stepLine(s)); });
+  }
+
+  if (reduce) { renderStatic(runs[0]); return; }
+
+  function typeQuestion(run, done) {
+    body.innerHTML = '';
+    var line = document.createElement('div'); line.className = 'trace-line';
+    var head = document.createElement('span'); head.className = 'p'; head.textContent = '> visitor: ';
+    var q = document.createElement('span'); q.className = 'q';
+    var caret = document.createElement('span'); caret.className = 'trace-caret';
+    line.appendChild(head); line.appendChild(document.createTextNode('"'));
+    line.appendChild(q); line.appendChild(caret);
+    body.appendChild(line);
+    var txt = run.q, i = 0;
+    (function tick() {
+      if (!running) return;
+      if (i <= txt.length) { q.textContent = txt.slice(0, i); i++; after(30, tick); }
+      else { caret.remove(); line.appendChild(document.createTextNode('"')); after(360, done); }
+    })();
+  }
+
+  function revealSteps(run, done) {
+    var s = 0;
+    (function next() {
+      if (!running) return;
+      if (s < run.steps.length) {
+        var node = stepLine(run.steps[s]);
+        node.style.opacity = '0'; body.appendChild(node);
+        requestAnimationFrame(function () { node.style.transition = 'opacity .28s ease'; node.style.opacity = '1'; });
+        s++; after(520, next);
+      } else { after(2200, done); }
+    })();
+  }
+
+  function loop() {
+    if (!running) return;
+    var run = runs[idx % runs.length];
+    typeQuestion(run, function () { revealSteps(run, function () { idx++; loop(); }); });
+  }
+
+  running = true; loop();
+
+  // pause when scrolled out of view
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (ents) {
+      ents.forEach(function (e) {
+        if (e.isIntersecting && !running) { running = true; loop(); }
+        else if (!e.isIntersecting && running) { running = false; clearTimers(); }
+      });
+    }, { threshold: 0.1 }).observe(body);
   }
 })();

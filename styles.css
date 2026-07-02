@@ -41,6 +41,163 @@
   .btn.primary{background:var(--amber);color:var(--ink);border-color:var(--amber);font-weight:600}
   .btn.primary:hover{background:#f0c768}
 
+    /* hero two-column + live agent trace terminal */
+    .hero {
+      display: grid;
+      grid-template-columns: 1.08fr .92fr;
+      gap: 46px;
+      align-items: center
+    }
+  
+    .hero-left {
+      min-width: 0
+    }
+  
+    .hero .agentwrap {
+      grid-column: 1 / -1
+    }
+  
+    @media(max-width:880px) {
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 34px
+      }
+    }
+  
+    .trace {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--raise);
+      overflow: hidden;
+      box-shadow: 0 24px 56px -34px rgba(0, 0, 0, .85)
+    }
+  
+    .trace-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 11px 15px;
+      border-bottom: 1px solid var(--line);
+      background: var(--raise-2)
+    }
+  
+    .trace-head .dots {
+      display: inline-flex;
+      gap: 6px
+    }
+  
+    .trace-head .dots i {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--line-2)
+    }
+  
+    .trace-head .dots i:first-child {
+      background: #E8695B
+    }
+  
+    .trace-head .dots i:nth-child(2) {
+      background: var(--amber)
+    }
+  
+    .trace-head .dots i:nth-child(3) {
+      background: var(--live)
+    }
+  
+    .trace-head .trace-title {
+      font-family: var(--mono);
+      font-size: 11.5px;
+      color: var(--muted);
+      letter-spacing: .02em
+    }
+  
+    .trace-head .pill {
+      margin-left: auto;
+      color: var(--live);
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-family: var(--mono);
+      font-size: 11px
+    }
+  
+    .trace-head .pill .d {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--live);
+      box-shadow: 0 0 8px var(--live)
+    }
+  
+    .trace-body {
+      font-family: var(--mono);
+      font-size: 12.5px;
+      line-height: 1.9;
+      padding: 16px;
+      min-height: 200px
+    }
+  
+    .trace-line {
+      white-space: pre-wrap;
+      color: var(--text-2)
+    }
+  
+    .trace-line .p {
+      color: var(--muted)
+    }
+  
+    .trace-line .q {
+      color: var(--text)
+    }
+  
+    .trace-line .lbl {
+      display: inline-block;
+      min-width: 64px;
+      color: var(--text-2)
+    }
+  
+    .trace-line .arw {
+      color: var(--muted)
+    }
+  
+    .trace-line .val {
+      color: var(--text)
+    }
+  
+    .trace-line .file {
+      color: var(--amber)
+    }
+  
+    .trace-line.answer .lbl {
+      color: var(--amber)
+    }
+  
+    .trace-line .ok {
+      color: var(--live)
+    }
+  
+    .trace-caret {
+      display: inline-block;
+      width: 7px;
+      height: 14px;
+      margin-left: 1px;
+      background: var(--amber);
+      vertical-align: -2px;
+      animation: tcar 1s steps(1) infinite
+    }
+  
+    @keyframes tcar {
+      50% {
+        opacity: 0
+      }
+    }
+  
+    @media(prefers-reduced-motion:reduce) {
+      .trace-caret {
+        display: none
+      }
+    }
   .agentwrap{margin-top:50px;border:1px solid var(--line);border-radius:14px;background:var(--raise);position:relative;overflow:hidden}
   .agentwrap::before{content:"";position:absolute;left:50%;top:-30%;width:520px;height:320px;transform:translateX(-50%);
     background:radial-gradient(closest-side,rgba(232,184,75,.10),transparent);pointer-events:none}
@@ -336,7 +493,32 @@
   @keyframes sriPop{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
   .sri-msg.user{align-self:flex-end;background:var(--amber);color:var(--ink);font-weight:500;border-radius:13px 13px 4px 13px;padding:9px 13px}
   .sri-msg.bot{align-self:flex-start;background:var(--raise-2);border:1px solid var(--line);border-radius:13px 13px 13px 4px;padding:11px 13px;color:var(--text)}
-  .sri-msg.bot b{color:var(--amber);font-weight:600}
+  .sri-msg.bot b, .sri-msg.bot strong {color: var(--amber); font-weight: 600}
+    .sri-msg.bot p {
+      margin: 0 0 .5em
+    }
+  
+    .sri-msg.bot p:last-child {
+      margin-bottom: 0
+    }
+  
+    .sri-msg.bot ul,
+    .sri-msg.bot ol {
+      margin: .25em 0 .5em;
+      padding-left: 1.2em
+    }
+  
+    .sri-msg.bot li {
+      margin: .15em 0
+    }
+  
+    .sri-msg.bot code {
+      font-family: var(--mono);
+      font-size: .9em;
+      background: rgba(255, 255, 255, .06);
+      padding: .05em .35em;
+      border-radius: 4px
+    }
   .sri-cite{margin-top:9px;display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:11px;color:var(--text-2);background:var(--ink);border:1px solid var(--line);border-radius:6px;padding:5px 9px}
   .sri-cite .tick{color:var(--live)}
   .sri-typing{align-self:flex-start;display:flex;gap:4px;padding:12px 14px;background:var(--raise-2);border:1px solid var(--line);border-radius:13px}
