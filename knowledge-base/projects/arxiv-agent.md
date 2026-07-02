@@ -13,8 +13,9 @@ layout-aware (chunks tagged by scientific section) over a curated arXiv ML paper
 
 ## Key metrics (verified)
 - **MRR@5 = 0.990** and **Context Precision = 1.000** on 100 curated QA pairs.
-- **7.3× higher answer relevance than BM25** (0.912 vs 0.125) using **BGE-large-en** (1024-dim)
-  on FAISS IndexFlatIP.
+- **Precision@5 = 0.950** with **BGE-large-en** (1024-dim) on FAISS IndexFlatIP — the strongest
+  dense retriever benchmarked. BM25 remains a competitive sparse baseline on retrieval
+  (MRR@5 0.978), but scores far lower on generation answer relevance (0.125 vs BGE's 0.912).
 - Benchmarked against MiniLM and MPNet across **3 chunk sizes × 4 retrieval depths**; MiniLM is
   the best latency/quality trade-off (MRR@5 0.975 at ~6.8 ms).
 
@@ -24,4 +25,5 @@ Gemini for generation, Sentence Transformers, Streamlit. Evaluated with Recall@K
 MRR, Faithfulness, and Answer Relevance.
 
 ## Links
-- GitHub: https://github.com/GodVilan/arXiv-rag
+- GitHub (agent): https://github.com/GodVilan/arXiv-agent
+- GitHub (retrieval benchmark): https://github.com/GodVilan/arXiv-rag

@@ -202,7 +202,9 @@ function buildUserMessage(question, contexts) {
 
 // ---- handler ----
 module.exports = async function handler(req, res) {
-  const allowOrigin = process.env.ALLOWED_ORIGIN || "*";
+  // Default to the production origin so other sites can't embed this endpoint and
+  // spend the API budget. Override with ALLOWED_ORIGIN for previews/local dev.
+  const allowOrigin = process.env.ALLOWED_ORIGIN || "https://srikanthreddynandireddy.me";
   res.setHeader("Access-Control-Allow-Origin", allowOrigin);
   res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");

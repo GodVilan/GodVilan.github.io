@@ -14,8 +14,8 @@ Learning Path Curator, Study Plan Generator (Planner-Executor), Engagement Agent
 scheduling), Assessment Agent (Critic/Verifier), and Manager Insights Agent (privacy-safe fan-in).
 
 ## Key metrics (verified)
-- **100% classification accuracy** on learner readiness and risk levels across a **12-case
-  ground-truth set**.
+- **12/12 correct** on learner readiness and risk classification against the eval harness's
+  ground-truth set (small and synthetic by hackathon rule — cite the set size when quoting this).
 - **100% citation-grounding rate** — every cited resource grounded in a hybrid BM25 + TF-IDF RAG
   pipeline fused with a Microsoft Learn MCP client.
 - **All 36 generated practice questions** validated as grounded through a deterministic

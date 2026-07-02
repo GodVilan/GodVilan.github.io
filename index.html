@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<script>document.documentElement.classList.add("js")</script>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="google-site-verification" content="BnBinc93Ael_yrCM_cb11FwNfyOXU6LM2P7-bOzod1w" />
-<title>Srikanth Reddy Nandireddy — AI Engineer</title>
-<meta name="description" content="AI Engineer building LLM and multi-agent systems — ReAct pipelines, retrieval, MCP-grounded citations, and full MLOps. M.S. Data Science &amp; AI, University of Central Missouri · 4.0 GPA. Available immediately." />
-<meta name="keywords" content="AI Engineer, LLM, Multi-Agent Systems, ReAct, RAG, MCP, MLOps, Machine Learning Engineer, PyTorch, FastAPI, Python" />
-<meta name="author" content="Srikanth Reddy Nandireddy" />
-<meta name="robots" content="index, follow" />
-<link rel="canonical" href="https://srikanthreddynandireddy.me" />
-<meta property="og:title" content="Srikanth Reddy Nandireddy — AI Engineer" />
-<meta property="og:description" content="AI Engineer building LLM and multi-agent systems — ReAct pipelines, retrieval, MCP-grounded citations, and full MLOps. M.S. Data Science &amp; AI · 4.0 GPA · available immediately." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://srikanthreddynandireddy.me" />
-<meta property="og:image" content="https://srikanthreddynandireddy.me/og-image.png" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Srikanth Reddy Nandireddy — AI Engineer" />
-<meta name="twitter:description" content="LLM &amp; multi-agent systems · ReAct · RAG · MCP · MLOps" />
-<meta name="twitter:image" content="https://srikanthreddynandireddy.me/og-image.png" />
-<script type="application/ld+json">
+  <script>document.documentElement.classList.add("js")</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google-site-verification" content="BnBinc93Ael_yrCM_cb11FwNfyOXU6LM2P7-bOzod1w" />
+  <title>Srikanth Reddy Nandireddy — AI Engineer</title>
+  <meta name="description"
+    content="AI Engineer building LLM and multi-agent systems — ReAct pipelines, retrieval, MCP-grounded citations, and full MLOps. M.S. Data Science &amp; AI, University of Central Missouri · 4.0 GPA. Available immediately." />
+  <meta name="keywords"
+    content="AI Engineer, LLM, Multi-Agent Systems, ReAct, RAG, MCP, MLOps, Machine Learning Engineer, PyTorch, FastAPI, Python" />
+  <meta name="author" content="Srikanth Reddy Nandireddy" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://srikanthreddynandireddy.me" />
+  <meta property="og:title" content="Srikanth Reddy Nandireddy — AI Engineer" />
+  <meta property="og:description"
+    content="AI Engineer building LLM and multi-agent systems — ReAct pipelines, retrieval, MCP-grounded citations, and full MLOps. M.S. Data Science &amp; AI · 4.0 GPA · available immediately." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://srikanthreddynandireddy.me" />
+  <meta property="og:image" content="https://srikanthreddynandireddy.me/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Srikanth Reddy Nandireddy — AI Engineer" />
+  <meta name="twitter:description" content="LLM &amp; multi-agent systems · ReAct · RAG · MCP · MLOps" />
+  <meta name="twitter:image" content="https://srikanthreddynandireddy.me/og-image.png" />
+  <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
@@ -38,361 +42,939 @@
   "sameAs": ["https://www.linkedin.com/in/srikanth-reddy-nandireddy","https://github.com/GodVilan","https://srikanth2314.medium.com/"]
 }
 </script>
-<link rel="icon" href="images/favicon.ico" type="image/x-icon" />
-<link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
 
 
-<!-- intro overlay: name + role, ~2s, skippable, once per session -->
-<div class="intro" id="intro" role="dialog" aria-label="Intro">
-  <div class="intro-inner">
-    <div class="intro-cmd"><span class="prompt">&gt;</span> whoami<span class="caret"></span></div>
-    <div class="intro-name">SRIKANTH REDDY NANDIREDDY</div>
-    <div class="intro-role">AI Engineer <span class="dot">&middot;</span> LLM <span class="dot">&middot;</span> ML Systems</div>
-  </div>
-  <div class="intro-bar"><span></span></div>
-  <button class="intro-skip" id="introSkip">skip &rarr;</button>
-</div>
-
-<nav>
-  <div class="nav-in">
-    <a href="#top" class="brand">srikanth<b>.</b>reddy <span class="role">AI Engineer</span></a>
-    <div class="nav-links">
-      <a href="#work">work</a><a href="#stack">stack</a><a href="#about">about</a><a href="#experience">experience</a><a href="#education">education</a><a href="#writing">writing</a><a href="#contact">contact</a>
+  <!-- intro overlay: name + role, ~2s, skippable, once per session -->
+  <div class="intro" id="intro" role="dialog" aria-label="Intro">
+    <div class="intro-inner">
+      <div class="intro-cmd"><span class="prompt">&gt;</span> whoami<span class="caret"></span></div>
+      <div class="intro-name">SRIKANTH REDDY NANDIREDDY</div>
+      <div class="intro-role">AI Engineer <span class="dot">&middot;</span> LLM <span class="dot">&middot;</span> ML
+        Systems</div>
     </div>
-  </div>
-</nav>
-
-<header class="hero wrap" id="top">
-  <div class="kicker reveal">AI Engineer <span class="sep">/</span> LLM &amp; Multi-Agent Systems</div>
-  <h1 class="reveal d1">I build <span class="hl">AI agents</span> that reason, retrieve, and run in production.</h1>
-  <p class="lede reveal d2">
-    ReAct and multi-agent pipelines with retrieval, MCP-grounded citations, and full MLOps —
-    <b>built, evaluated, and deployed.</b> M.S. Data Science &amp; AI, UCM &middot; <b>4.0 GPA</b>.
-  </p>
-  <div class="cta-row reveal d3">
-    <a class="btn primary" href="#work">See the systems &rarr;</a>
-    <a class="btn" href="https://github.com/GodVilan" target="_blank" rel="noopener">GitHub</a>
-    <a class="btn" href="SRIKANTH_REDDY_NANDIREDDY.pdf" target="_blank" rel="noopener">Résumé &darr;</a>
+    <div class="intro-bar"><span></span></div>
+    <button class="intro-skip" id="introSkip">skip &rarr;</button>
   </div>
 
-  <div class="agentwrap reveal d4">
-    <div class="ag-head">
-      <span>how my agents think — a real ReAct + multi-agent loop</span>
-      <span class="pill"><span class="d"></span> running</span>
-    </div>
-    <svg class="ag-svg" viewBox="0 0 920 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="An AI agent pipeline: a user query is decomposed by a planner, which retrieves from a vector store and calls tools, then a critic self-checks before producing a cited answer, looping back to the planner when answers are weak.">
-      <path class="edge" d="M758,150 C758,228 360,238 285,172"/>
-      <path class="flow loop" d="M758,150 C758,228 360,238 285,172"/>
-      <path class="edge" d="M150,125 H214"/>
-      <path class="edge" d="M356,108 C404,108 404,72 452,72"/>
-      <path class="edge" d="M356,142 C404,142 404,180 452,180"/>
-      <path class="edge" d="M604,72 C650,72 650,125 690,125"/>
-      <path class="edge" d="M604,180 C650,180 650,125 690,125"/>
-      <path class="edge" d="M826,125 H872"/>
-      <path class="flow" d="M150,125 H214"/>
-      <path class="flow" d="M356,108 C404,108 404,72 452,72"/>
-      <path class="flow" d="M356,142 C404,142 404,180 452,180"/>
-      <path class="flow" d="M604,72 C650,72 650,125 690,125"/>
-      <path class="flow" d="M604,180 C650,180 650,125 690,125"/>
-      <path class="flow" d="M826,125 H872"/>
-      <g class="node"><rect x="40" y="106" width="110" height="40" rx="9"/><text x="95" y="123" text-anchor="middle">query</text><text x="95" y="137" text-anchor="middle" class="sub">user question</text></g>
-      <g class="node core"><rect x="214" y="99" width="142" height="52" rx="10"/><text x="285" y="121" text-anchor="middle">planner</text><text x="285" y="136" text-anchor="middle" class="sub">decompose &middot; route</text></g>
-      <g class="node"><rect x="452" y="52" width="152" height="40" rx="9"/><text x="528" y="69" text-anchor="middle">retrieve</text><text x="528" y="83" text-anchor="middle" class="sub">FAISS &middot; BGE-large</text></g>
-      <g class="node"><rect x="452" y="160" width="152" height="40" rx="9"/><text x="528" y="177" text-anchor="middle">tools</text><text x="528" y="191" text-anchor="middle" class="sub">arXiv &middot; BM25 &middot; MCP</text></g>
-      <g class="node"><rect x="690" y="105" width="136" height="40" rx="9"/><text x="758" y="122" text-anchor="middle">critic</text><text x="758" y="136" text-anchor="middle" class="sub">self-check</text></g>
-      <g class="node out"><rect x="872" y="103" width="44" height="44" rx="9"/><text x="894" y="121" text-anchor="middle">answer</text><text x="894" y="135" text-anchor="middle" class="sub" style="fill:var(--live);opacity:.7">cited</text></g>
-    </svg>
-    <div class="ag-foot">
-      <div class="m"><div class="v">0.990</div><div class="l">MRR@5 retrieval</div></div>
-      <div class="m"><div class="v">100<span class="u">%</span></div><div class="l">citation grounded</div></div>
-      <div class="m"><div class="v">7.3<span class="u">&times;</span></div><div class="l">vs BM25 baseline</div></div>
-      <div class="m"><div class="v">5</div><div class="l">coordinated agents</div></div>
-    </div>
-  </div>
-</header>
-
-<!-- ===================== WORK ===================== -->
-<section id="work" class="wrap">
-  <div class="eyebrow io">featured work</div>
-  <h2 class="sec-title io">Agentic systems, with the numbers to back them</h2>
-  <p class="sec-sub">Every project is laid out like a model card — what it does in plain terms, the metrics that matter, the stack, and where to read the code or hit it live.</p>
-
-  <div class="rail-hint"><span class="d">&#8596;</span> drag, swipe, or use the arrows &mdash; all 6 projects</div>
-  <div class="rail-wrap io">
-    <button class="rail-arrow prev" aria-label="Previous project">&#8249;</button>
-    <div class="cards" id="projectRail">
-    <article class="card feat" tabindex="0" role="button" aria-label="Multi-Modal Evidence Review — VLM Claim Adjudication — open details">
-      <div class="card-top"><span class="feat-flag">Featured</span><span class="track agentic">VLM Agent &middot; Injection-Safe</span></div>
-      <h3>Multi-Modal Evidence Review — VLM Claim Adjudication</h3>
-      <p class="teaser">Two-stage VLM agent for insurance claim adjudication, injection-safe by design.</p>
-      <div class="face-foot"><span class="face-metric">Top 1% &middot; 7/8 injections blocked</span><span class="view">View details &rarr;</span></div>
-      <div class="detail" hidden><div class="modal-top"><span class="feat-flag">Featured</span><span class="track agentic">VLM Agent &middot; Injection-Safe</span></div><h3 class="modal-title">Multi-Modal Evidence Review — VLM Claim Adjudication</h3><p class="modal-desc">A two-stage vision-language agent that adjudicates insurance damage claims from images, cross-referencing the claim conversation and user history. A channel-separation architecture makes prompt injection <b>structurally impossible</b> in the judgment stage — validated by an adversarial pixel-overlay + EXIF attack suite. Its <b>claim_status</b> accuracy (70%) sits a deliberate 5 points below the single-pass baseline&rsquo;s 75%: the baseline inflates that figure by over-flagging (90% recall at only 49% precision), while the shipped config trades it for far better-calibrated structural fields (severity +45&thinsp;pp, valid-image +35&thinsp;pp). Ranked 16 / 1,773 at HackerRank Orchestrate, June 2026.</p><div class="arch-label">Architecture</div><div class="arch"><svg viewBox="0 0 640 196" xmlns="http://www.w3.org/2000/svg" role="img"><path class="e" d="M112,98 L150,96"/><path class="f" d="M112,98 L150,96"/><path class="e" d="M300,96 L340,96"/><path class="f" d="M300,96 L340,96"/><path class="e" d="M490,96 L520,98"/><path class="f" d="M490,96 L520,98"/><path class="e" d="M572,120 L572,150"/><path class="f" d="M572,120 L572,150"/><path class="e" d="M415,150 L415,126"/><path class="f" d="M415,150 L415,126"/><g class="n "><rect x="16" y="74" width="96" height="48" rx="8"/><text x="64.0" y="99.0" text-anchor="middle">images</text></g><g class="n a"><rect x="150" y="66" width="150" height="60" rx="8"/><text x="225.0" y="92.0" text-anchor="middle">Stage 1 · Perception</text><text x="225.0" y="105.0" text-anchor="middle" class="s">claim-light</text></g><g class="n "><rect x="340" y="66" width="150" height="60" rx="8"/><text x="415.0" y="92.0" text-anchor="middle">Stage 2 · Reconcile</text><text x="415.0" y="105.0" text-anchor="middle" class="s">+ history / rules</text></g><g class="n "><rect x="520" y="74" width="104" height="48" rx="8"/><text x="572.0" y="94.0" text-anchor="middle">Verifier</text><text x="572.0" y="107.0" text-anchor="middle" class="s">schema</text></g><g class="n "><rect x="340" y="150" width="150" height="36" rx="8"/><text x="415.0" y="169.0" text-anchor="middle">user history + reqs</text></g><g class="n o"><rect x="520" y="150" width="104" height="40" rx="8"/><text x="572.0" y="171.0" text-anchor="middle">verdict.csv</text></g></svg></div><div class="rail"><div class="m"><div class="m-val">Top 1<span class=u>%</span></div><div class="m-lab">rank 16 / 1,773</div></div><div class="m"><div class="m-val">7/8</div><div class="m-lab">injections blocked</div></div><div class="m"><div class="m-val">+45<span class=u>pp</span></div><div class="m-lab">severity accuracy</div></div><div class="m"><div class="m-val">$0.017</div><div class="m-lab">per claim</div></div></div><div class="tags"><span class="tag-i">Claude Sonnet 4.6</span><span class="tag-i">VLM</span><span class="tag-i">Prompt-Injection Defense</span><span class="tag-i">Eval Harness</span><span class="tag-i">Prompt Caching</span><span class="tag-i">Deterministic Verifier</span></div><div class="links"><a class="lnk " href="https://github.com/GodVilan/HackerRank-Orchestrate-June-2026" target="_blank" rel="noopener">&#8599; GitHub</a><a class="lnk " href="https://www.hackerrank.com/contests/hackerrank-orchestrate-june26/challenges/multi-modal-review/leaderboard" target="_blank" rel="noopener">&#8599; Verify rank</a></div></div>
-    </article>
-    <article class="card feat" tabindex="0" role="button" aria-label="TalentFabric AI — Certification Readiness Platform — open details">
-      <div class="card-top"><span class="feat-flag">Featured</span><span class="track agentic">Multi-agent &middot; MCP</span></div>
-      <h3>TalentFabric AI — Certification Readiness Platform</h3>
-      <p class="teaser">5-agent Microsoft Agent Framework workflow with a Critic/Verifier loop and MCP citations.</p>
-      <div class="face-foot"><span class="face-metric">100% accuracy &middot; 5 agents</span><span class="view">View details &rarr;</span></div>
-      <div class="detail" hidden><div class="modal-top"><span class="feat-flag">Featured</span><span class="track agentic">Multi-agent &middot; MCP</span></div><h3 class="modal-title">TalentFabric AI — Certification Readiness Platform</h3><p class="modal-desc">A 5-agent Microsoft Agent Framework workflow with a Critic/Verifier loop that adjusts study plans on failure, grounded in a hybrid BM25 + TF-IDF retrieval pipeline fused with a Microsoft Learn MCP client. Agents League hackathon — Microsoft Reasoning Agents track.</p><div class="arch-label">Architecture</div><div class="arch"><svg viewBox="0 0 640 206" xmlns="http://www.w3.org/2000/svg" role="img"><path class="e" d="M96,100 L140,100"/><path class="f" d="M96,100 L140,100"/><path class="e" d="M300,100 L330,80"/><path class="f" d="M300,100 L330,80"/><path class="e" d="M300,100 L330,120"/><path class="f" d="M300,100 L330,120"/><path class="e" d="M470,80 L500,100"/><path class="f" d="M470,80 L500,100"/><path class="e" d="M470,120 L500,100"/><path class="f" d="M470,120 L500,100"/><path class="e" d="M624,100 L624,100"/><path class="e" d="M560,124 L300,160"/><path class="f" d="M560,124 L300,160"/><g class="n "><rect x="16" y="80" width="80" height="40" rx="8"/><text x="56.0" y="101.0" text-anchor="middle">intake</text></g><g class="n a"><rect x="140" y="74" width="160" height="52" rx="8"/><text x="220.0" y="96.0" text-anchor="middle">Planner</text><text x="220.0" y="109.0" text-anchor="middle" class="s">decompose · route</text></g><g class="n "><rect x="330" y="60" width="140" height="40" rx="8"/><text x="400.0" y="81.0" text-anchor="middle">Readiness + Risk</text></g><g class="n "><rect x="330" y="110" width="140" height="40" rx="8"/><text x="400.0" y="131.0" text-anchor="middle">Question-gen</text></g><g class="n "><rect x="500" y="74" width="140" height="52" rx="8"/><text x="570.0" y="96.0" text-anchor="middle">Critic / Verifier</text><text x="570.0" y="109.0" text-anchor="middle" class="s">loop on failure</text></g><g class="n "><rect x="300" y="150" width="150" height="34" rx="8"/><text x="375.0" y="168.0" text-anchor="middle">MCP + hybrid RAG</text></g></svg></div><div class="rail"><div class="m"><div class="m-val">100<span class=u>%</span></div><div class="m-lab">readiness accuracy</div></div><div class="m"><div class="m-val">100<span class=u>%</span></div><div class="m-lab">citation grounding</div></div><div class="m"><div class="m-val">5</div><div class="m-lab">coordinated agents</div></div><div class="m"><div class="m-val">36</div><div class="m-lab">questions gated</div></div></div><div class="tags"><span class="tag-i">Microsoft Agent Framework</span><span class="tag-i">MCP</span><span class="tag-i">Critic/Verifier</span><span class="tag-i">RAG</span><span class="tag-i">MLflow</span><span class="tag-i">Streamlit</span></div><div class="links"><a class="lnk " href="https://github.com/GodVilan/TalentFabric-AI" target="_blank" rel="noopener">&#8599; GitHub</a><a class="lnk live" href="https://youtu.be/Vq-X2NIaruo" target="_blank" rel="noopener">&#9654; Demo video</a></div></div>
-    </article>
-    <article class="card" tabindex="0" role="button" aria-label="arXiv Agent — ReAct Research Assistant — open details">
-      <div class="card-top"><span class="feat-flag" style="visibility:hidden">&middot;</span><span class="track agentic">Agentic &middot; RAG</span></div>
-      <h3>arXiv Agent — ReAct Research Assistant</h3>
-      <p class="teaser">ReAct research agent with multi-hop decomposition and a self-critique loop.</p>
-      <div class="face-foot"><span class="face-metric">MRR@5 0.990 &middot; 7.3&times; vs BM25</span><span class="view">View details &rarr;</span></div>
-      <div class="detail" hidden><div class="modal-top"><span class="feat-flag" style="visibility:hidden">&middot;</span><span class="track agentic">Agentic &middot; RAG</span></div><h3 class="modal-title">arXiv Agent — ReAct Research Assistant</h3><p class="modal-desc">A ReAct agent with multi-hop query decomposition, iterative retrieval, and a self-critique loop that refines weak answers before delivery. BGE-large-en (1024-dim) on FAISS, benchmarked against MiniLM and MPNet across 3 chunk sizes and 4 retrieval depths. Five tools, conversation memory, persistent notes.</p><div class="arch-label">Architecture</div><div class="arch"><svg viewBox="0 0 640 196" xmlns="http://www.w3.org/2000/svg" role="img"><path class="e" d="M96,96 L140,96"/><path class="f" d="M96,96 L140,96"/><path class="e" d="M300,96 L340,70"/><path class="f" d="M300,96 L340,70"/><path class="e" d="M300,96 L340,122"/><path class="f" d="M300,96 L340,122"/><path class="e" d="M492,70 L520,96"/><path class="f" d="M492,70 L520,96"/><path class="e" d="M492,122 L520,96"/><path class="f" d="M492,122 L520,96"/><path class="e" d="M560,120 L300,160"/><path class="f" d="M560,120 L300,160"/><g class="n "><rect x="16" y="72" width="80" height="48" rx="8"/><text x="56.0" y="97.0" text-anchor="middle">query</text></g><g class="n a"><rect x="140" y="68" width="160" height="56" rx="8"/><text x="220.0" y="92.0" text-anchor="middle">Planner</text><text x="220.0" y="105.0" text-anchor="middle" class="s">multi-hop</text></g><g class="n "><rect x="340" y="50" width="152" height="40" rx="8"/><text x="416.0" y="71.0" text-anchor="middle">Retrieve · FAISS</text></g><g class="n "><rect x="340" y="102" width="152" height="40" rx="8"/><text x="416.0" y="123.0" text-anchor="middle">Tools · arXiv/BM25</text></g><g class="n o"><rect x="520" y="72" width="104" height="48" rx="8"/><text x="572.0" y="92.0" text-anchor="middle">answer</text><text x="572.0" y="105.0" text-anchor="middle" class="s">cited</text></g><g class="n "><rect x="300" y="150" width="150" height="34" rx="8"/><text x="375.0" y="168.0" text-anchor="middle">critic · self-check</text></g></svg></div><div class="rail"><div class="m"><div class="m-val">0.990</div><div class="m-lab">MRR@5</div></div><div class="m"><div class="m-val">1.000</div><div class="m-lab">context precision</div></div><div class="m"><div class="m-val">7.3<span class=u>&times;</span></div><div class="m-lab">relevance vs BM25</div></div><div class="m"><div class="m-val">5</div><div class="m-lab">agent tools</div></div></div><div class="tags"><span class="tag-i">ReAct</span><span class="tag-i">BGE-large-en</span><span class="tag-i">FAISS</span><span class="tag-i">Gemini</span><span class="tag-i">Self-critique</span><span class="tag-i">Streamlit</span></div><div class="links"><a class="lnk " href="https://github.com/GodVilan/arXiv-rag" target="_blank" rel="noopener">&#8599; GitHub</a></div></div>
-    </article>
-    <article class="card" tabindex="0" role="button" aria-label="Real-Time Credit Card Fraud Detection — open details">
-      <div class="card-top"><span class="feat-flag" style="visibility:hidden">&middot;</span><span class="track">Production MLOps</span></div>
-      <h3>Real-Time Credit Card Fraud Detection</h3>
-      <p class="teaser">End-to-end MLOps: CI/CD → MLflow registry → Dockerized FastAPI on EC2.</p>
-      <div class="face-foot"><span class="face-metric">MLflow &middot; FastAPI on EC2</span><span class="view">View details &rarr;</span></div>
-      <div class="detail" hidden><div class="modal-top"><span class="feat-flag" style="visibility:hidden">&middot;</span><span class="track">Production MLOps</span></div><h3 class="modal-title">Real-Time Credit Card Fraud Detection</h3><p class="modal-desc">End-to-end MLOps: GitHub Actions CI/CD trains, evaluates, and promotes models to an MLflow Registry; a Dockerized FastAPI service behind Nginx on AWS EC2 serves real-time and batch scoring. Three experiments versioned with artifacts in S3 — the value is the pipeline, not one score.</p><div class="arch-label">Architecture</div><div class="arch"><svg viewBox="0 0 640 182" xmlns="http://www.w3.org/2000/svg" role="img"><path class="e" d="M96,92 L140,92"/><path class="f" d="M96,92 L140,92"/><path class="e" d="M288,92 L330,92"/><path class="f" d="M288,92 L330,92"/><path class="e" d="M470,92 L510,92"/><path class="f" d="M470,92 L510,92"/><path class="e" d="M300,120 L300,140"/><path class="f" d="M300,120 L300,140"/><g class="n "><rect x="16" y="68" width="80" height="48" rx="8"/><text x="56.0" y="93.0" text-anchor="middle">data</text></g><g class="n "><rect x="140" y="62" width="148" height="60" rx="8"/><text x="214.0" y="88.0" text-anchor="middle">Train · LR/RF/XGB</text><text x="214.0" y="101.0" text-anchor="middle" class="s">SMOTE</text></g><g class="n a"><rect x="330" y="68" width="140" height="48" rx="8"/><text x="400.0" y="93.0" text-anchor="middle">MLflow Registry</text></g><g class="n o"><rect x="510" y="68" width="114" height="48" rx="8"/><text x="567.0" y="93.0" text-anchor="middle">FastAPI · EC2</text></g><g class="n "><rect x="230" y="140" width="140" height="32" rx="8"/><text x="300.0" y="157.0" text-anchor="middle">artifacts → S3</text></g></svg></div><div class="rail"><div class="m"><div class="m-val">3</div><div class="m-lab">models tracked</div></div><div class="m"><div class="m-val">CI/CD</div><div class="m-lab">automated</div></div><div class="m"><div class="m-val">EC2</div><div class="m-lab">live API</div></div><div class="m"><div class="m-val">S3</div><div class="m-lab">artifact store</div></div></div><div class="tags"><span class="tag-i">XGBoost</span><span class="tag-i">MLflow</span><span class="tag-i">FastAPI</span><span class="tag-i">Docker</span><span class="tag-i">AWS EC2</span><span class="tag-i">GitHub Actions</span><span class="tag-i">Nginx</span></div><div class="links"><a class="lnk " href="https://github.com/GodVilan/Real-Time-CCFDS-With-MLOPs" target="_blank" rel="noopener">&#8599; GitHub</a></div></div>
-    </article>
-    <article class="card" tabindex="0" role="button" aria-label="Multimodal Emotion Recognition — Cross-Modal Transformers — open details">
-      <div class="card-top"><span class="feat-flag" style="visibility:hidden">&middot;</span><span class="track">Deep Learning &middot; Multimodal</span></div>
-      <h3>Multimodal Emotion Recognition — Cross-Modal Transformers</h3>
-      <p class="teaser">Cross-modal Transformer fusing text, audio, and video for emotion recognition.</p>
-      <div class="face-foot"><span class="face-metric">60.66% F1 &middot; 3 modalities</span><span class="view">View details &rarr;</span></div>
-      <div class="detail" hidden><div class="modal-top"><span class="feat-flag" style="visibility:hidden">&middot;</span><span class="track">Deep Learning &middot; Multimodal</span></div><h3 class="modal-title">Multimodal Emotion Recognition — Cross-Modal Transformers</h3><p class="modal-desc">A custom 4-layer, 8-head Transformer fusion encoder that aligns text (BERT), audio (Wav2Vec2), and video (ViT) for 7-class emotion classification on MELD. Mixed-precision AMP training, staged fine-tuning, cached tensor preprocessing, and class-weighted loss for minority-emotion handling.</p><div class="arch-label">Architecture</div><div class="arch"><svg viewBox="0 0 640 210" xmlns="http://www.w3.org/2000/svg" role="img"><path class="e" d="M176,50 L300,96"/><path class="f" d="M176,50 L300,96"/><path class="e" d="M176,100 L300,100"/><path class="f" d="M176,100 L300,100"/><path class="e" d="M176,150 L300,104"/><path class="f" d="M176,150 L300,104"/><path class="e" d="M452,100 L500,100"/><path class="f" d="M452,100 L500,100"/><g class="n "><rect x="16" y="34" width="160" height="32" rx="8"/><text x="96.0" y="51.0" text-anchor="middle">text → BERT</text></g><g class="n "><rect x="16" y="84" width="160" height="32" rx="8"/><text x="96.0" y="101.0" text-anchor="middle">audio → Wav2Vec2</text></g><g class="n "><rect x="16" y="134" width="160" height="32" rx="8"/><text x="96.0" y="151.0" text-anchor="middle">video → ViT</text></g><g class="n a"><rect x="300" y="72" width="152" height="56" rx="8"/><text x="376.0" y="96.0" text-anchor="middle">Fusion Transformer</text><text x="376.0" y="109.0" text-anchor="middle" class="s">4 layers · 8 heads</text></g><g class="n o"><rect x="500" y="76" width="124" height="48" rx="8"/><text x="562.0" y="101.0" text-anchor="middle">7-class emotion</text></g></svg></div><div class="rail"><div class="m"><div class="m-val">60.66<span class=u>%</span></div><div class="m-lab">weighted F1</div></div><div class="m"><div class="m-val">59.96<span class=u>%</span></div><div class="m-lab">accuracy</div></div><div class="m"><div class="m-val">3</div><div class="m-lab">modalities fused</div></div><div class="m"><div class="m-val">7</div><div class="m-lab">emotion classes</div></div></div><div class="tags"><span class="tag-i">PyTorch</span><span class="tag-i">BERT</span><span class="tag-i">Wav2Vec2</span><span class="tag-i">ViT</span><span class="tag-i">HuggingFace</span><span class="tag-i">AMP</span></div><div class="links"><a class="lnk " href="https://github.com/GodVilan/Multimodal-Emotion-Recognition-MELD-via-Cross-Modal-Transformers" target="_blank" rel="noopener">&#8599; GitHub</a></div></div>
-    </article>
-    <article class="card" tabindex="0" role="button" aria-label="US COVID-19 Mortality Forecasting System — open details">
-      <div class="card-top"><span class="feat-flag" style="visibility:hidden">&middot;</span><span class="track">Time Series &middot; Live</span></div>
-      <h3>US COVID-19 Mortality Forecasting System</h3>
-      <p class="teaser">Multi-model mortality forecasting with a live Plotly Dash dashboard.</p>
-      <div class="face-foot"><span class="face-metric">MAE 138 &middot; live dashboard</span><span class="view">View details &rarr;</span></div>
-      <div class="detail" hidden><div class="modal-top"><span class="feat-flag" style="visibility:hidden">&middot;</span><span class="track">Time Series &middot; Live</span></div><h3 class="modal-title">US COVID-19 Mortality Forecasting System</h3><p class="modal-desc">End-to-end forecasting: live JHU ingestion → feature engineering → multi-model benchmarking (SARIMAX, Prophet, XGBoost) → an interactive Plotly Dash dashboard with 30-day forecasts and 95% confidence bands. Seasonal SARIMAX wins with near-identical holdout and CV error — no overfitting.</p><div class="arch-label">Architecture</div><div class="arch"><svg viewBox="0 0 640 182" xmlns="http://www.w3.org/2000/svg" role="img"><path class="e" d="M112,92 L150,92"/><path class="f" d="M112,92 L150,92"/><path class="e" d="M300,92 L330,92"/><path class="f" d="M300,92 L330,92"/><path class="e" d="M470,92 L500,92"/><path class="f" d="M470,92 L500,92"/><g class="n "><rect x="16" y="68" width="96" height="48" rx="8"/><text x="64.0" y="93.0" text-anchor="middle">JHU ingest</text></g><g class="n "><rect x="150" y="62" width="150" height="60" rx="8"/><text x="225.0" y="88.0" text-anchor="middle">Feature eng.</text><text x="225.0" y="101.0" text-anchor="middle" class="s">lags · rolling · cal</text></g><g class="n a"><rect x="330" y="68" width="140" height="48" rx="8"/><text x="400.0" y="93.0" text-anchor="middle">SARIMAX/Prophet/XGB</text></g><g class="n o"><rect x="500" y="68" width="124" height="48" rx="8"/><text x="562.0" y="93.0" text-anchor="middle">Dash · 30d + CI</text></g></svg></div><div class="rail"><div class="m"><div class="m-val">138.1</div><div class="m-lab">holdout MAE</div></div><div class="m"><div class="m-val">137.9</div><div class="m-lab">CV MAE (5-fold)</div></div><div class="m"><div class="m-val">30d</div><div class="m-lab">forecast + 95% CI</div></div><div class="m"><div class="m-val">3.3k</div><div class="m-lab">records</div></div></div><div class="tags"><span class="tag-i">SARIMAX</span><span class="tag-i">Prophet</span><span class="tag-i">XGBoost</span><span class="tag-i">Plotly Dash</span><span class="tag-i">Statsmodels</span><span class="tag-i">Docker</span></div><div class="links"><a class="lnk " href="https://github.com/GodVilan/US-COVID-19-Mortality-Intelligence-Forecasting-System" target="_blank" rel="noopener">&#8599; GitHub</a><a class="lnk live" href="https://us-covid-19-mortality-intelligence.onrender.com/" target="_blank" rel="noopener">&#9679; Live dashboard</a></div></div>
-    </article>
-    </div>
-    <button class="rail-arrow next" aria-label="Next project">&#8250;</button>
-  </div>
-  <div class="rail-dots" id="railDots"></div>
-</section>
-
-<!-- ===================== STACK ===================== -->
-<section id="stack" class="wrap">
-  <div class="eyebrow io">stack</div>
-  <h2 class="sec-title io">What I build with</h2>
-  <p class="sec-sub">Grouped by what it does, not alphabetised — so you can read the shape of the work.</p>
-  <div class="cap-grid io">
-    <div class="cap-card primary">
-      <div class="cap-head"><span class="cap-name">GenAI &amp; LLM</span><span class="cap-count">12 tools</span></div>
-      <div class="cap-tags"><span class="tag-i">ReAct Agents</span><span class="tag-i">Multi-Agent Orchestration</span><span class="tag-i">RAG</span><span class="tag-i">MCP</span><span class="tag-i">Microsoft Agent Framework</span><span class="tag-i">Critic/Verifier Loops</span><span class="tag-i">FAISS</span><span class="tag-i">BGE</span><span class="tag-i">BM25</span><span class="tag-i">Sentence Transformers</span><span class="tag-i">Gemini API</span><span class="tag-i">Prompt Engineering</span></div>
-    </div>
-    <div class="cap-card">
-      <div class="cap-head"><span class="cap-name">Deep Learning &amp; NLP</span><span class="cap-count">12 tools</span></div>
-      <div class="cap-tags"><span class="tag-i">PyTorch</span><span class="tag-i">TensorFlow</span><span class="tag-i">Keras</span><span class="tag-i">Transformers</span><span class="tag-i">BERT</span><span class="tag-i">DistilBERT</span><span class="tag-i">Wav2Vec2</span><span class="tag-i">ViT</span><span class="tag-i">HuggingFace</span><span class="tag-i">CNNs</span><span class="tag-i">TF-IDF</span><span class="tag-i">Word Embeddings</span></div>
-    </div>
-    <div class="cap-card">
-      <div class="cap-head"><span class="cap-name">Machine Learning</span><span class="cap-count">8 tools</span></div>
-      <div class="cap-tags"><span class="tag-i">Scikit-learn</span><span class="tag-i">XGBoost</span><span class="tag-i">Random Forest</span><span class="tag-i">Logistic Regression</span><span class="tag-i">K-Means</span><span class="tag-i">SMOTE</span><span class="tag-i">Feature Engineering</span><span class="tag-i">Model Evaluation</span></div>
-    </div>
-    <div class="cap-card">
-      <div class="cap-head"><span class="cap-name">MLOps &amp; Cloud</span><span class="cap-count">13 tools</span></div>
-      <div class="cap-tags"><span class="tag-i">MLflow</span><span class="tag-i">FastAPI</span><span class="tag-i">Docker</span><span class="tag-i">GitHub Actions</span><span class="tag-i">CI/CD</span><span class="tag-i">REST APIs</span><span class="tag-i">AWS EC2</span><span class="tag-i">S3</span><span class="tag-i">SageMaker</span><span class="tag-i">Glue</span><span class="tag-i">Athena</span><span class="tag-i">Azure OpenAI</span><span class="tag-i">Microsoft Foundry</span></div>
-    </div>
-    <div class="cap-card">
-      <div class="cap-head"><span class="cap-name">Data &amp; Statistics</span><span class="cap-count">10 tools</span></div>
-      <div class="cap-tags"><span class="tag-i">Pandas</span><span class="tag-i">NumPy</span><span class="tag-i">SciPy</span><span class="tag-i">Statsmodels</span><span class="tag-i">SARIMAX</span><span class="tag-i">Prophet</span><span class="tag-i">EDA</span><span class="tag-i">Hypothesis Testing</span><span class="tag-i">A/B Testing</span><span class="tag-i">Time Series</span></div>
-    </div>
-    <div class="cap-card">
-      <div class="cap-head"><span class="cap-name">Languages &amp; Viz</span><span class="cap-count">10 tools</span></div>
-      <div class="cap-tags"><span class="tag-i">Python</span><span class="tag-i">SQL</span><span class="tag-i">R</span><span class="tag-i">C++</span><span class="tag-i">Java</span><span class="tag-i">Plotly</span><span class="tag-i">Dash</span><span class="tag-i">Streamlit</span><span class="tag-i">Matplotlib</span><span class="tag-i">Seaborn</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== ABOUT ===================== -->
-<section id="about" class="wrap">
-  <div class="eyebrow io">about</div>
-  <h2 class="sec-title io">Systems that are measured, not just demoed</h2>
-  <div class="about-stats io">
-    <div class="s"><div class="sv">6</div><div class="sl">systems shipped</div></div>
-    <div class="s"><div class="sv">Top 1<span class="u">%</span></div><div class="sl">16 / 1,773 best</div></div>
-    <div class="s"><div class="sv">4.0</div><div class="sl">GPA</div></div>
-    <div class="s"><div class="sv">255</div><div class="sl">day DSA streak</div></div>
-  </div>
-  <div class="about-grid">
-    <div>
-      <p>I'm an <b>AI Engineer</b> finishing an M.S. in Data Science &amp; AI at the University of Central Missouri (<b>4.0 GPA</b>, Graduate Student Achievement Award). I build LLM and multi-agent systems end to end — retrieval, agent orchestration, evaluation, and the MLOps to ship them.</p>
-      <p>My through-line is rigor: I don't trust a model I haven't benchmarked. That means <b>citation grounding, eval harnesses, holdout vs cross-validation checks, and reproducible pipelines</b> — the difference between a demo and a system someone can rely on.</p>
-      <p>Before grad school I shipped NLP and cloud-analytics work across three teams, and I keep my fundamentals sharp through competitive programming. Currently <b>open to AI Engineer and ML roles in the US — available immediately.</b></p>
-    </div>
-    <div class="about-side">
-      <div class="row"><span class="k">role</span><span class="vv">AI Engineer / ML</span></div>
-      <div class="row"><span class="k">degree</span><span class="vv">M.S. Data Science &amp; AI</span></div>
-      <div class="row"><span class="k">gpa</span><span class="vv">4.0 / 4.0</span></div>
-      <div class="row"><span class="k">focus</span><span class="vv">Agents &middot; RAG &middot; MLOps</span></div>
-      <div class="row"><span class="k">location</span><span class="vv">United States</span></div>
-      <div class="row"><span class="k">status</span><span class="vv on">available now</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== EXPERIENCE ===================== -->
-<section id="experience" class="wrap">
-  <div class="eyebrow io">experience</div>
-  <h2 class="sec-title io">Where I&rsquo;ve worked</h2>
-  <div class="timeline io">
-    <div class="tl-item">
-      <div class="tl-spine"><span class="tl-dot"></span></div>
-      <div class="tl-body">
-        <div class="tl-date">Feb 2025 — May 2026</div>
-        <div class="tl-role">Graduate Laboratory Assistant — Data Science</div>
-        <div class="tl-org">University of Central Missouri &middot; Warrensburg, MO</div>
-        <ul class="tl-list"><li>Designed and delivered 15+ ML lab sessions per semester for 40+ students — Python supervised learning, scikit-learn pipelines, and end-to-end evaluation from ingestion through prediction.</li><li>Coached students through EDA and visualization workflows with Pandas, NumPy, and Matplotlib while maintaining a 4.0 GPA across full-time graduate coursework and research.</li></ul>
+  <nav>
+    <div class="nav-in">
+      <a href="#top" class="brand">srikanth<b>.</b>reddy <span class="role">AI Engineer</span></a>
+      <div class="nav-links">
+        <a href="#work">work</a><a href="#stack">stack</a><a href="#about">about</a><a
+          href="#experience">experience</a><a href="#education">education</a><a href="#writing">writing</a><a
+          href="#contact">contact</a>
       </div>
     </div>
-    <div class="tl-item">
-      <div class="tl-spine"><span class="tl-dot"></span></div>
-      <div class="tl-body">
-        <div class="tl-date">May 2023 — Jul 2023</div>
-        <div class="tl-role">Data Analytics Virtual Intern</div>
-        <div class="tl-org">AICTE EduSkills &middot; supported by AWS Academy &middot; Remote</div>
-        <ul class="tl-list"><li>Engineered a cloud analytics pipeline — Amazon S3 storage, AWS Glue ETL, and Athena serverless SQL — with automated metadata management across 10K+ semi-structured records.</li><li>Built predictive models in Python and Amazon SageMaker to surface dataset trends, across a structured 10-week AWS Academy program.</li></ul>
-      </div>
-    </div>
-    <div class="tl-item">
-      <div class="tl-spine"><span class="tl-dot"></span></div>
-      <div class="tl-body">
-        <div class="tl-date">May 2022 — Jun 2022</div>
-        <div class="tl-role">Data Scientist Intern</div>
-        <div class="tl-org">Swecha &middot; Hyderabad, India</div>
-        <ul class="tl-list"><li>Containerized Telugu speech-recognition pipelines with Docker, eliminating environment-specific runtime failures during production handoff.</li><li>Fine-tuned speech-to-text models (PyTorch, TensorFlow, NLTK) on dialectally diverse Telugu audio spanning 5+ regional variants for an underserved language community.</li></ul>
-      </div>
-    </div>
-  </div>
-</section>
+  </nav>
 
-<!-- ===================== EDUCATION ===================== -->
-<section id="education" class="wrap">
-  <div class="eyebrow io">education</div>
-  <h2 class="sec-title io">Academic background</h2>
-  <div class="edu-grid io">
-    <div class="edu-card">
-      <div class="edu-top"><span class="edu-badge">M.S.</span><span class="edu-date">Aug 2024 — May 2026</span></div>
-      <div class="edu-deg">Data Science &amp; Artificial Intelligence</div>
-      <div class="edu-org">University of Central Missouri &middot; Warrensburg, MO</div>
-      <div class="edu-gpa">&#9733; GPA 4.0 / 4.0</div>
-      <div class="edu-clabel">Coursework</div>
-      <div class="tags"><span class="tag-i">Machine Learning</span><span class="tag-i">Artificial Intelligence</span><span class="tag-i">Neural Networks &amp; Deep Learning</span><span class="tag-i">NLP</span><span class="tag-i">Statistical Foundations</span><span class="tag-i">Advanced Data Visualization</span></div>
-    </div>
-    <div class="edu-card">
-      <div class="edu-top"><span class="edu-badge">B.Tech</span><span class="edu-date">Nov 2020 — Apr 2024</span></div>
-      <div class="edu-deg">Computer Science &amp; Engineering (Hons.)</div>
-      <div class="edu-org">CMR College of Engineering &amp; Technology &middot; Hyderabad, India</div>
-      <div class="edu-gpa">&#9733; GPA 9.06 / 10.0 &middot; First Class with Distinction</div>
-      <div class="edu-clabel">Note</div>
-      <div class="edu-note">Bronze Medal in Academics — ranked top 3 in the B.Tech program.</div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== CERTS + AWARDS ===================== -->
-<section class="wrap">
-  <div class="eyebrow io">credentials</div>
-  <h2 class="sec-title io">Certifications &amp; honors</h2>
-  <div class="two io">
-    <div class="col">
-      <h4>Certifications</h4>
-      <div class="cred-list">
-        <div class="cred"><span class="cred-iss">Anthropic</span><div class="cred-main">AI Fluency: Framework &amp; Foundations</div><div class="cred-date">Jun 2026</div></div>
-        <div class="cred"><span class="cred-iss">Anthropic</span><div class="cred-main">Introduction to Model Context Protocol</div><div class="cred-date">Apr 2026</div></div>
-        <div class="cred"><span class="cred-iss">Microsoft</span><div class="cred-main">Applied Skills — Developing Agents in Microsoft Foundry</div><div class="cred-date">Jun 2026</div></div>
-        <div class="cred"><span class="cred-iss">AWS</span><div class="cred-main">AWS Academy Graduate — Data Analytics &amp; Cloud Foundations</div><div class="cred-date">Jun 2023</div></div>
-        <div class="cred"><span class="cred-iss">Google</span><div class="cred-main">Foundations: Data, Data, Everywhere</div><div class="cred-date">Feb 2023</div></div>
-      </div>
-    </div>
-    <div class="col">
-      <h4>Honors &amp; Awards</h4>
-      <div class="cred-list">
-        <div class="award"><span class="st">&#9733;</span><div><div class="award-main">Graduate Student Achievement Award</div><div class="award-meta">University of Central Missouri &middot; 2025–2026</div></div></div>
-        <div class="award"><span class="st">&#9733;</span><div><div class="award-main">Finalist — IICC National Coding Competition</div><div class="award-meta">Top 1% of 100,000+ participants</div></div></div>
-        <div class="award"><span class="st">&#9733;</span><div><div class="award-main">5&#9733; HackerRank &middot; 4&#9733; CodeChef</div><div class="award-meta">Data Structures &amp; Algorithms</div></div></div>
-        <div class="award"><span class="st">&#9733;</span><div><div class="award-main">GeeksforGeeks POTD — 255-day streak</div><div class="award-meta">Consecutive days solving algorithmic problems</div></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== WRITING (Medium, dynamic) ===================== -->
-<section id="writing" class="wrap" hidden>
-  <div class="eyebrow io">writing</div>
-  <h2 class="sec-title io">Writing on Medium</h2>
-  <p class="sec-sub io">Notes on the systems I build — RAG, agents, evaluation, and MLOps. Pulled live from Medium.</p>
-  <div class="post-grid io" id="mediumPosts"></div>
-  <a class="btn" id="mediumAll" href="https://srikanth2314.medium.com/" target="_blank" rel="noopener" style="margin-top:22px;display:none">Read everything on Medium &rarr;</a>
-</section>
-
-<!-- ===================== CONTACT ===================== -->
-<section id="contact" class="wrap">
-  <div class="contact-box io">
-    <div class="contact-status"><span class="d"></span> available immediately &middot; open to AI Engineer / ML roles &middot; US</div>
-    <div class="contact-h">Let&rsquo;s build something that ships.</div>
-    <p class="contact-p">If you&rsquo;re hiring for AI Engineering, ML, or Applied AI and want systems that are evaluated and deployed — not just demoed — let&rsquo;s talk.</p>
-    <div class="contact-links">
-      <a class="btn primary" href="mailto:srikanthreddynandireddy@gmail.com">Email me</a>
-      <a class="btn" href="SRIKANTH_REDDY_NANDIREDDY.pdf" target="_blank" rel="noopener">Résumé &darr;</a>
-      <a class="btn" href="https://www.linkedin.com/in/srikanth-reddy-nandireddy" target="_blank" rel="noopener">LinkedIn</a>
+  <header class="hero wrap" id="top">
+    <div class="kicker reveal">AI Engineer <span class="sep">/</span> LLM &amp; Multi-Agent Systems</div>
+    <h1 class="reveal d1">I build <span class="hl">AI agents</span> that reason, retrieve, and run in production.</h1>
+    <p class="lede reveal d2">
+      ReAct and multi-agent pipelines with retrieval, MCP-grounded citations, and full MLOps —
+      <b>built, evaluated, and deployed.</b> M.S. Data Science &amp; AI, UCM &middot; <b>4.0 GPA</b>.
+    </p>
+    <div class="cta-row reveal d3">
+      <a class="btn primary" href="#work">See the systems &rarr;</a>
       <a class="btn" href="https://github.com/GodVilan" target="_blank" rel="noopener">GitHub</a>
-      <a class="btn" href="https://srikanth2314.medium.com/" target="_blank" rel="noopener">Medium</a>
+      <a class="btn" href="SRIKANTH_REDDY_NANDIREDDY.pdf" target="_blank" rel="noopener">Résumé &darr;</a>
+    </div>
+
+    <div class="agentwrap reveal d4">
+      <div class="ag-head">
+        <span>how my agents think — a real ReAct + multi-agent loop</span>
+        <span class="pill"><span class="d"></span> running</span>
+      </div>
+      <svg class="ag-svg" viewBox="0 0 920 250" xmlns="http://www.w3.org/2000/svg" role="img"
+        aria-label="An AI agent pipeline: a user query is decomposed by a planner, which retrieves from a vector store and calls tools, then a critic self-checks before producing a cited answer, looping back to the planner when answers are weak.">
+        <path class="edge" d="M758,150 C758,228 360,238 285,172" />
+        <path class="flow loop" d="M758,150 C758,228 360,238 285,172" />
+        <path class="edge" d="M150,125 H214" />
+        <path class="edge" d="M356,108 C404,108 404,72 452,72" />
+        <path class="edge" d="M356,142 C404,142 404,180 452,180" />
+        <path class="edge" d="M604,72 C650,72 650,125 690,125" />
+        <path class="edge" d="M604,180 C650,180 650,125 690,125" />
+        <path class="edge" d="M826,125 H872" />
+        <path class="flow" d="M150,125 H214" />
+        <path class="flow" d="M356,108 C404,108 404,72 452,72" />
+        <path class="flow" d="M356,142 C404,142 404,180 452,180" />
+        <path class="flow" d="M604,72 C650,72 650,125 690,125" />
+        <path class="flow" d="M604,180 C650,180 650,125 690,125" />
+        <path class="flow" d="M826,125 H872" />
+        <g class="node">
+          <rect x="40" y="106" width="110" height="40" rx="9" /><text x="95" y="123"
+            text-anchor="middle">query</text><text x="95" y="137" text-anchor="middle" class="sub">user question</text>
+        </g>
+        <g class="node core">
+          <rect x="214" y="99" width="142" height="52" rx="10" /><text x="285" y="121"
+            text-anchor="middle">planner</text><text x="285" y="136" text-anchor="middle" class="sub">decompose &middot;
+            route</text>
+        </g>
+        <g class="node">
+          <rect x="452" y="52" width="152" height="40" rx="9" /><text x="528" y="69"
+            text-anchor="middle">retrieve</text><text x="528" y="83" text-anchor="middle" class="sub">FAISS &middot;
+            BGE-large</text>
+        </g>
+        <g class="node">
+          <rect x="452" y="160" width="152" height="40" rx="9" /><text x="528" y="177"
+            text-anchor="middle">tools</text><text x="528" y="191" text-anchor="middle" class="sub">arXiv &middot; BM25
+            &middot; MCP</text>
+        </g>
+        <g class="node">
+          <rect x="690" y="105" width="136" height="40" rx="9" /><text x="758" y="122"
+            text-anchor="middle">critic</text><text x="758" y="136" text-anchor="middle" class="sub">self-check</text>
+        </g>
+        <g class="node out">
+          <rect x="872" y="103" width="44" height="44" rx="9" /><text x="894" y="121"
+            text-anchor="middle">answer</text><text x="894" y="135" text-anchor="middle" class="sub"
+            style="fill:var(--live);opacity:.7">cited</text>
+        </g>
+      </svg>
+      <div class="ag-foot">
+        <div class="m">
+          <div class="v">0.990</div>
+          <div class="l">MRR@5 retrieval</div>
+        </div>
+        <div class="m">
+          <div class="v">100<span class="u">%</span></div>
+          <div class="l">citation grounded</div>
+        </div>
+        <div class="m">
+          <div class="v">$0.017</div>
+          <div class="l">cost per claim adjudicated</div>
+        </div>
+        <div class="m">
+          <div class="v">5</div>
+          <div class="l">coordinated agents</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== WORK ===================== -->
+  <section id="work" class="wrap">
+    <div class="eyebrow io">featured work</div>
+    <h2 class="sec-title io">Agentic systems, with the numbers to back them</h2>
+    <p class="sec-sub">Every project is laid out like a model card — what it does in plain terms, the metrics that
+      matter, the stack, and where to read the code or hit it live.</p>
+
+    <div class="rail-hint"><span class="d">&#8596;</span> drag, swipe, or use the arrows &mdash; all 6 projects</div>
+    <div class="rail-wrap io">
+      <button class="rail-arrow prev" aria-label="Previous project">&#8249;</button>
+      <div class="cards" id="projectRail">
+        <article class="card feat" tabindex="0" role="button"
+          aria-label="Multi-Modal Evidence Review — VLM Claim Adjudication — open details">
+          <div class="card-top"><span class="feat-flag">Featured</span><span class="track agentic">VLM Agent &middot;
+              Injection-Safe</span></div>
+          <h3>Multi-Modal Evidence Review — VLM Claim Adjudication</h3>
+          <p class="teaser">Two-stage VLM agent for insurance claim adjudication, injection-safe by design.</p>
+          <div class="face-foot"><span class="face-metric">Top 1% &middot; 7/8 injections blocked</span><span
+              class="view">View details &rarr;</span></div>
+          <div class="detail" hidden>
+            <div class="modal-top"><span class="feat-flag">Featured</span><span class="track agentic">VLM Agent &middot;
+                Injection-Safe</span></div>
+            <h3 class="modal-title">Multi-Modal Evidence Review — VLM Claim Adjudication</h3>
+            <p class="modal-desc">A two-stage vision-language agent that adjudicates insurance damage claims from
+              images, cross-referencing the claim conversation and user history. A channel-separation architecture makes
+              prompt injection <b>structurally impossible</b> in the judgment stage — validated by an adversarial
+              pixel-overlay + EXIF attack suite. Its <b>claim_status</b> accuracy (70%) sits a deliberate 5 points below
+              the single-pass baseline&rsquo;s 75%: the baseline inflates that figure by over-flagging (90% recall at
+              only 49% precision), while the shipped config trades it for far better-calibrated structural fields
+              (severity +45&thinsp;pp, valid-image +35&thinsp;pp). Ranked 16 / 1,773 at HackerRank Orchestrate, June
+              2026.</p>
+            <div class="arch-label">Architecture</div>
+            <div class="arch"><svg viewBox="0 0 640 196" xmlns="http://www.w3.org/2000/svg" role="img">
+                <path class="e" d="M112,98 L150,96" />
+                <path class="f" d="M112,98 L150,96" />
+                <path class="e" d="M300,96 L340,96" />
+                <path class="f" d="M300,96 L340,96" />
+                <path class="e" d="M490,96 L520,98" />
+                <path class="f" d="M490,96 L520,98" />
+                <path class="e" d="M572,120 L572,150" />
+                <path class="f" d="M572,120 L572,150" />
+                <path class="e" d="M415,150 L415,126" />
+                <path class="f" d="M415,150 L415,126" />
+                <g class="n ">
+                  <rect x="16" y="74" width="96" height="48" rx="8" /><text x="64.0" y="99.0"
+                    text-anchor="middle">images</text>
+                </g>
+                <g class="n a">
+                  <rect x="150" y="66" width="150" height="60" rx="8" /><text x="225.0" y="92.0"
+                    text-anchor="middle">Stage 1 · Perception</text><text x="225.0" y="105.0" text-anchor="middle"
+                    class="s">claim-light</text>
+                </g>
+                <g class="n ">
+                  <rect x="340" y="66" width="150" height="60" rx="8" /><text x="415.0" y="92.0"
+                    text-anchor="middle">Stage 2 · Reconcile</text><text x="415.0" y="105.0" text-anchor="middle"
+                    class="s">+ history / rules</text>
+                </g>
+                <g class="n ">
+                  <rect x="520" y="74" width="104" height="48" rx="8" /><text x="572.0" y="94.0"
+                    text-anchor="middle">Verifier</text><text x="572.0" y="107.0" text-anchor="middle"
+                    class="s">schema</text>
+                </g>
+                <g class="n ">
+                  <rect x="340" y="150" width="150" height="36" rx="8" /><text x="415.0" y="169.0"
+                    text-anchor="middle">user history + reqs</text>
+                </g>
+                <g class="n o">
+                  <rect x="520" y="150" width="104" height="40" rx="8" /><text x="572.0" y="171.0"
+                    text-anchor="middle">verdict.csv</text>
+                </g>
+              </svg></div>
+            <div class="rail">
+              <div class="m">
+                <div class="m-val">Top 1<span class=u>%</span></div>
+                <div class="m-lab">rank 16 / 1,773</div>
+              </div>
+              <div class="m">
+                <div class="m-val">7/8</div>
+                <div class="m-lab">injections blocked</div>
+              </div>
+              <div class="m">
+                <div class="m-val">+45<span class=u>pp</span></div>
+                <div class="m-lab">severity accuracy</div>
+              </div>
+              <div class="m">
+                <div class="m-val">$0.017</div>
+                <div class="m-lab">per claim</div>
+              </div>
+            </div>
+            <div class="tags"><span class="tag-i">Claude Sonnet 4.6</span><span class="tag-i">VLM</span><span
+                class="tag-i">Prompt-Injection Defense</span><span class="tag-i">Eval Harness</span><span
+                class="tag-i">Prompt Caching</span><span class="tag-i">Deterministic Verifier</span></div>
+            <div class="links"><a class="lnk " href="https://github.com/GodVilan/HackerRank-Orchestrate-June-2026"
+                target="_blank" rel="noopener">&#8599; GitHub</a><a class="lnk "
+                href="https://www.hackerrank.com/contests/hackerrank-orchestrate-june26/challenges/multi-modal-review/leaderboard"
+                target="_blank" rel="noopener">&#8599; Verify rank</a></div>
+          </div>
+        </article>
+        <article class="card feat" tabindex="0" role="button"
+          aria-label="TalentFabric AI — Certification Readiness Platform — open details">
+          <div class="card-top"><span class="feat-flag">Featured</span><span class="track agentic">Multi-agent &middot;
+              MCP</span></div>
+          <h3>TalentFabric AI — Certification Readiness Platform</h3>
+          <p class="teaser">5-agent Microsoft Agent Framework workflow with a Critic/Verifier loop and MCP citations.
+          </p>
+          <div class="face-foot"><span class="face-metric">5 agents &middot; 3 IQ layers &middot; MCP-cited</span><span
+              class="view">View details &rarr;</span></div>
+          <div class="detail" hidden>
+            <div class="modal-top"><span class="feat-flag">Featured</span><span class="track agentic">Multi-agent
+                &middot; MCP</span></div>
+            <h3 class="modal-title">TalentFabric AI — Certification Readiness Platform</h3>
+            <p class="modal-desc">A 5-agent Microsoft Agent Framework workflow with a Critic/Verifier loop that adjusts
+              study plans on failure, grounded in a hybrid BM25 + TF-IDF retrieval pipeline fused with a Microsoft Learn
+              MCP client. Readiness and risk classification score 12/12 on the eval harness&rsquo;s ground-truth set — a
+              small, synthetic-by-rule benchmark, so the stronger claim is structural: every resource ships with a
+              provenance-tagged citation by construction. Agents League hackathon — Microsoft Reasoning Agents track.
+            </p>
+            <div class="arch-label">Architecture</div>
+            <div class="arch"><svg viewBox="0 0 640 206" xmlns="http://www.w3.org/2000/svg" role="img">
+                <path class="e" d="M96,100 L140,100" />
+                <path class="f" d="M96,100 L140,100" />
+                <path class="e" d="M300,100 L330,80" />
+                <path class="f" d="M300,100 L330,80" />
+                <path class="e" d="M300,100 L330,120" />
+                <path class="f" d="M300,100 L330,120" />
+                <path class="e" d="M470,80 L500,100" />
+                <path class="f" d="M470,80 L500,100" />
+                <path class="e" d="M470,120 L500,100" />
+                <path class="f" d="M470,120 L500,100" />
+                <path class="e" d="M624,100 L624,100" />
+                <path class="e" d="M560,124 L300,160" />
+                <path class="f" d="M560,124 L300,160" />
+                <g class="n ">
+                  <rect x="16" y="80" width="80" height="40" rx="8" /><text x="56.0" y="101.0"
+                    text-anchor="middle">intake</text>
+                </g>
+                <g class="n a">
+                  <rect x="140" y="74" width="160" height="52" rx="8" /><text x="220.0" y="96.0"
+                    text-anchor="middle">Planner</text><text x="220.0" y="109.0" text-anchor="middle"
+                    class="s">decompose · route</text>
+                </g>
+                <g class="n ">
+                  <rect x="330" y="60" width="140" height="40" rx="8" /><text x="400.0" y="81.0"
+                    text-anchor="middle">Readiness + Risk</text>
+                </g>
+                <g class="n ">
+                  <rect x="330" y="110" width="140" height="40" rx="8" /><text x="400.0" y="131.0"
+                    text-anchor="middle">Question-gen</text>
+                </g>
+                <g class="n ">
+                  <rect x="500" y="74" width="140" height="52" rx="8" /><text x="570.0" y="96.0"
+                    text-anchor="middle">Critic / Verifier</text><text x="570.0" y="109.0" text-anchor="middle"
+                    class="s">loop on failure</text>
+                </g>
+                <g class="n ">
+                  <rect x="300" y="150" width="150" height="34" rx="8" /><text x="375.0" y="168.0"
+                    text-anchor="middle">MCP + hybrid RAG</text>
+                </g>
+              </svg></div>
+            <div class="rail">
+              <div class="m">
+                <div class="m-val">12/12</div>
+                <div class="m-lab">readiness eval cases</div>
+              </div>
+              <div class="m">
+                <div class="m-val">100<span class=u>%</span></div>
+                <div class="m-lab">citations, by design</div>
+              </div>
+              <div class="m">
+                <div class="m-val">5</div>
+                <div class="m-lab">coordinated agents</div>
+              </div>
+              <div class="m">
+                <div class="m-val">36</div>
+                <div class="m-lab">questions gated</div>
+              </div>
+            </div>
+            <div class="tags"><span class="tag-i">Microsoft Agent Framework</span><span class="tag-i">MCP</span><span
+                class="tag-i">Critic/Verifier</span><span class="tag-i">RAG</span><span class="tag-i">MLflow</span><span
+                class="tag-i">Streamlit</span></div>
+            <div class="links"><a class="lnk " href="https://github.com/GodVilan/TalentFabric-AI" target="_blank"
+                rel="noopener">&#8599; GitHub</a><a class="lnk live" href="https://youtu.be/Vq-X2NIaruo" target="_blank"
+                rel="noopener">&#9654; Demo video</a></div>
+          </div>
+        </article>
+        <article class="card" tabindex="0" role="button"
+          aria-label="arXiv Agent — ReAct Research Assistant — open details">
+          <div class="card-top"><span class="feat-flag" style="visibility:hidden">&middot;</span><span
+              class="track agentic">Agentic &middot; RAG</span></div>
+          <h3>arXiv Agent — ReAct Research Assistant</h3>
+          <p class="teaser">ReAct research agent with multi-hop decomposition and a self-critique loop.</p>
+          <div class="face-foot"><span class="face-metric">MRR@5 0.990 &middot; Precision@5 0.950</span><span
+              class="view">View details &rarr;</span></div>
+          <div class="detail" hidden>
+            <div class="modal-top"><span class="feat-flag" style="visibility:hidden">&middot;</span><span
+                class="track agentic">Agentic &middot; RAG</span></div>
+            <h3 class="modal-title">arXiv Agent — ReAct Research Assistant</h3>
+            <p class="modal-desc">A ReAct agent with multi-hop query decomposition, iterative retrieval, and a
+              self-critique loop that refines weak answers before delivery. BGE-large-en (1024-dim) on FAISS,
+              benchmarked against MiniLM and MPNet across 3 chunk sizes and 4 retrieval depths. Five tools, conversation
+              memory, persistent notes.</p>
+            <div class="arch-label">Architecture</div>
+            <div class="arch"><svg viewBox="0 0 640 196" xmlns="http://www.w3.org/2000/svg" role="img">
+                <path class="e" d="M96,96 L140,96" />
+                <path class="f" d="M96,96 L140,96" />
+                <path class="e" d="M300,96 L340,70" />
+                <path class="f" d="M300,96 L340,70" />
+                <path class="e" d="M300,96 L340,122" />
+                <path class="f" d="M300,96 L340,122" />
+                <path class="e" d="M492,70 L520,96" />
+                <path class="f" d="M492,70 L520,96" />
+                <path class="e" d="M492,122 L520,96" />
+                <path class="f" d="M492,122 L520,96" />
+                <path class="e" d="M560,120 L300,160" />
+                <path class="f" d="M560,120 L300,160" />
+                <g class="n ">
+                  <rect x="16" y="72" width="80" height="48" rx="8" /><text x="56.0" y="97.0"
+                    text-anchor="middle">query</text>
+                </g>
+                <g class="n a">
+                  <rect x="140" y="68" width="160" height="56" rx="8" /><text x="220.0" y="92.0"
+                    text-anchor="middle">Planner</text><text x="220.0" y="105.0" text-anchor="middle"
+                    class="s">multi-hop</text>
+                </g>
+                <g class="n ">
+                  <rect x="340" y="50" width="152" height="40" rx="8" /><text x="416.0" y="71.0"
+                    text-anchor="middle">Retrieve · FAISS</text>
+                </g>
+                <g class="n ">
+                  <rect x="340" y="102" width="152" height="40" rx="8" /><text x="416.0" y="123.0"
+                    text-anchor="middle">Tools · arXiv/BM25</text>
+                </g>
+                <g class="n o">
+                  <rect x="520" y="72" width="104" height="48" rx="8" /><text x="572.0" y="92.0"
+                    text-anchor="middle">answer</text><text x="572.0" y="105.0" text-anchor="middle"
+                    class="s">cited</text>
+                </g>
+                <g class="n ">
+                  <rect x="300" y="150" width="150" height="34" rx="8" /><text x="375.0" y="168.0"
+                    text-anchor="middle">critic · self-check</text>
+                </g>
+              </svg></div>
+            <div class="rail">
+              <div class="m">
+                <div class="m-val">0.990</div>
+                <div class="m-lab">MRR@5</div>
+              </div>
+              <div class="m">
+                <div class="m-val">1.000</div>
+                <div class="m-lab">context precision</div>
+              </div>
+              <div class="m">
+                <div class="m-val">0.950</div>
+                <div class="m-lab">Precision@5</div>
+              </div>
+              <div class="m">
+                <div class="m-val">5</div>
+                <div class="m-lab">agent tools</div>
+              </div>
+            </div>
+            <div class="tags"><span class="tag-i">ReAct</span><span class="tag-i">BGE-large-en</span><span
+                class="tag-i">FAISS</span><span class="tag-i">Gemini</span><span class="tag-i">Self-critique</span><span
+                class="tag-i">Streamlit</span></div>
+            <div class="links"><a class="lnk " href="https://github.com/GodVilan/arXiv-agent" target="_blank"
+                rel="noopener">&#8599; Agent repo</a><a class="lnk " href="https://github.com/GodVilan/arXiv-rag"
+                target="_blank" rel="noopener">&#8599; Retrieval benchmark</a></div>
+          </div>
+        </article>
+        <article class="card" tabindex="0" role="button"
+          aria-label="Real-Time Credit Card Fraud Detection — open details">
+          <div class="card-top"><span class="feat-flag" style="visibility:hidden">&middot;</span><span
+              class="track">Production MLOps</span></div>
+          <h3>Real-Time Credit Card Fraud Detection</h3>
+          <p class="teaser">End-to-end MLOps: CI/CD → MLflow registry → Dockerized FastAPI on EC2.</p>
+          <div class="face-foot"><span class="face-metric">MLflow &middot; FastAPI on EC2</span><span class="view">View
+              details &rarr;</span></div>
+          <div class="detail" hidden>
+            <div class="modal-top"><span class="feat-flag" style="visibility:hidden">&middot;</span><span
+                class="track">Production MLOps</span></div>
+            <h3 class="modal-title">Real-Time Credit Card Fraud Detection</h3>
+            <p class="modal-desc">End-to-end MLOps: GitHub Actions CI/CD trains, evaluates, and promotes models to an
+              MLflow Registry; a Dockerized FastAPI service behind Nginx on AWS EC2 serves real-time and batch scoring.
+              Three experiments versioned with artifacts in S3 — the value is the pipeline, not one score.</p>
+            <div class="arch-label">Architecture</div>
+            <div class="arch"><svg viewBox="0 0 640 182" xmlns="http://www.w3.org/2000/svg" role="img">
+                <path class="e" d="M96,92 L140,92" />
+                <path class="f" d="M96,92 L140,92" />
+                <path class="e" d="M288,92 L330,92" />
+                <path class="f" d="M288,92 L330,92" />
+                <path class="e" d="M470,92 L510,92" />
+                <path class="f" d="M470,92 L510,92" />
+                <path class="e" d="M300,120 L300,140" />
+                <path class="f" d="M300,120 L300,140" />
+                <g class="n ">
+                  <rect x="16" y="68" width="80" height="48" rx="8" /><text x="56.0" y="93.0"
+                    text-anchor="middle">data</text>
+                </g>
+                <g class="n ">
+                  <rect x="140" y="62" width="148" height="60" rx="8" /><text x="214.0" y="88.0"
+                    text-anchor="middle">Train · LR/RF/XGB</text><text x="214.0" y="101.0" text-anchor="middle"
+                    class="s">SMOTE</text>
+                </g>
+                <g class="n a">
+                  <rect x="330" y="68" width="140" height="48" rx="8" /><text x="400.0" y="93.0"
+                    text-anchor="middle">MLflow Registry</text>
+                </g>
+                <g class="n o">
+                  <rect x="510" y="68" width="114" height="48" rx="8" /><text x="567.0" y="93.0"
+                    text-anchor="middle">FastAPI · EC2</text>
+                </g>
+                <g class="n ">
+                  <rect x="230" y="140" width="140" height="32" rx="8" /><text x="300.0" y="157.0"
+                    text-anchor="middle">artifacts → S3</text>
+                </g>
+              </svg></div>
+            <div class="rail">
+              <div class="m">
+                <div class="m-val">3</div>
+                <div class="m-lab">models tracked</div>
+              </div>
+              <div class="m">
+                <div class="m-val">CI/CD</div>
+                <div class="m-lab">automated</div>
+              </div>
+              <div class="m">
+                <div class="m-val">EC2</div>
+                <div class="m-lab">live API</div>
+              </div>
+              <div class="m">
+                <div class="m-val">S3</div>
+                <div class="m-lab">artifact store</div>
+              </div>
+            </div>
+            <div class="tags"><span class="tag-i">XGBoost</span><span class="tag-i">MLflow</span><span
+                class="tag-i">FastAPI</span><span class="tag-i">Docker</span><span class="tag-i">AWS EC2</span><span
+                class="tag-i">GitHub Actions</span><span class="tag-i">Nginx</span></div>
+            <div class="links"><a class="lnk " href="https://github.com/GodVilan/Real-Time-CCFDS-With-MLOPs"
+                target="_blank" rel="noopener">&#8599; GitHub</a></div>
+          </div>
+        </article>
+        <article class="card" tabindex="0" role="button"
+          aria-label="Multimodal Emotion Recognition — Cross-Modal Transformers — open details">
+          <div class="card-top"><span class="feat-flag" style="visibility:hidden">&middot;</span><span
+              class="track">Deep Learning &middot; Multimodal</span></div>
+          <h3>Multimodal Emotion Recognition — Cross-Modal Transformers</h3>
+          <p class="teaser">Cross-modal Transformer fusing text, audio, and video for emotion recognition.</p>
+          <div class="face-foot"><span class="face-metric">60.66% F1 &middot; 3 modalities</span><span class="view">View
+              details &rarr;</span></div>
+          <div class="detail" hidden>
+            <div class="modal-top"><span class="feat-flag" style="visibility:hidden">&middot;</span><span
+                class="track">Deep Learning &middot; Multimodal</span></div>
+            <h3 class="modal-title">Multimodal Emotion Recognition — Cross-Modal Transformers</h3>
+            <p class="modal-desc">A custom 4-layer, 8-head Transformer fusion encoder that aligns text (BERT), audio
+              (Wav2Vec2), and video (ViT) for 7-class emotion classification on MELD. Mixed-precision AMP training,
+              staged fine-tuning, cached tensor preprocessing, and class-weighted loss for minority-emotion handling.
+            </p>
+            <div class="arch-label">Architecture</div>
+            <div class="arch"><svg viewBox="0 0 640 210" xmlns="http://www.w3.org/2000/svg" role="img">
+                <path class="e" d="M176,50 L300,96" />
+                <path class="f" d="M176,50 L300,96" />
+                <path class="e" d="M176,100 L300,100" />
+                <path class="f" d="M176,100 L300,100" />
+                <path class="e" d="M176,150 L300,104" />
+                <path class="f" d="M176,150 L300,104" />
+                <path class="e" d="M452,100 L500,100" />
+                <path class="f" d="M452,100 L500,100" />
+                <g class="n ">
+                  <rect x="16" y="34" width="160" height="32" rx="8" /><text x="96.0" y="51.0" text-anchor="middle">text
+                    → BERT</text>
+                </g>
+                <g class="n ">
+                  <rect x="16" y="84" width="160" height="32" rx="8" /><text x="96.0" y="101.0"
+                    text-anchor="middle">audio → Wav2Vec2</text>
+                </g>
+                <g class="n ">
+                  <rect x="16" y="134" width="160" height="32" rx="8" /><text x="96.0" y="151.0"
+                    text-anchor="middle">video → ViT</text>
+                </g>
+                <g class="n a">
+                  <rect x="300" y="72" width="152" height="56" rx="8" /><text x="376.0" y="96.0"
+                    text-anchor="middle">Fusion Transformer</text><text x="376.0" y="109.0" text-anchor="middle"
+                    class="s">4 layers · 8 heads</text>
+                </g>
+                <g class="n o">
+                  <rect x="500" y="76" width="124" height="48" rx="8" /><text x="562.0" y="101.0"
+                    text-anchor="middle">7-class emotion</text>
+                </g>
+              </svg></div>
+            <div class="rail">
+              <div class="m">
+                <div class="m-val">60.66<span class=u>%</span></div>
+                <div class="m-lab">weighted F1</div>
+              </div>
+              <div class="m">
+                <div class="m-val">59.96<span class=u>%</span></div>
+                <div class="m-lab">accuracy</div>
+              </div>
+              <div class="m">
+                <div class="m-val">3</div>
+                <div class="m-lab">modalities fused</div>
+              </div>
+              <div class="m">
+                <div class="m-val">7</div>
+                <div class="m-lab">emotion classes</div>
+              </div>
+            </div>
+            <div class="tags"><span class="tag-i">PyTorch</span><span class="tag-i">BERT</span><span
+                class="tag-i">Wav2Vec2</span><span class="tag-i">ViT</span><span class="tag-i">HuggingFace</span><span
+                class="tag-i">AMP</span></div>
+            <div class="links"><a class="lnk "
+                href="https://github.com/GodVilan/Multimodal-Emotion-Recognition-MELD-via-Cross-Modal-Transformers"
+                target="_blank" rel="noopener">&#8599; GitHub</a></div>
+          </div>
+        </article>
+        <article class="card" tabindex="0" role="button"
+          aria-label="US COVID-19 Mortality Forecasting System — open details">
+          <div class="card-top"><span class="feat-flag" style="visibility:hidden">&middot;</span><span
+              class="track">Time Series &middot; Live</span></div>
+          <h3>US COVID-19 Mortality Forecasting System</h3>
+          <p class="teaser">Multi-model mortality forecasting with a live Plotly Dash dashboard.</p>
+          <div class="face-foot"><span class="face-metric">MAE 138 &middot; live dashboard</span><span class="view">View
+              details &rarr;</span></div>
+          <div class="detail" hidden>
+            <div class="modal-top"><span class="feat-flag" style="visibility:hidden">&middot;</span><span
+                class="track">Time Series &middot; Live</span></div>
+            <h3 class="modal-title">US COVID-19 Mortality Forecasting System</h3>
+            <p class="modal-desc">End-to-end forecasting: live JHU ingestion → feature engineering → multi-model
+              benchmarking (SARIMAX, Prophet, XGBoost) → an interactive Plotly Dash dashboard with 30-day forecasts and
+              95% confidence bands. Seasonal SARIMAX wins with near-identical holdout and CV error — no overfitting.</p>
+            <div class="arch-label">Architecture</div>
+            <div class="arch"><svg viewBox="0 0 640 182" xmlns="http://www.w3.org/2000/svg" role="img">
+                <path class="e" d="M112,92 L150,92" />
+                <path class="f" d="M112,92 L150,92" />
+                <path class="e" d="M300,92 L330,92" />
+                <path class="f" d="M300,92 L330,92" />
+                <path class="e" d="M470,92 L500,92" />
+                <path class="f" d="M470,92 L500,92" />
+                <g class="n ">
+                  <rect x="16" y="68" width="96" height="48" rx="8" /><text x="64.0" y="93.0" text-anchor="middle">JHU
+                    ingest</text>
+                </g>
+                <g class="n ">
+                  <rect x="150" y="62" width="150" height="60" rx="8" /><text x="225.0" y="88.0"
+                    text-anchor="middle">Feature eng.</text><text x="225.0" y="101.0" text-anchor="middle"
+                    class="s">lags · rolling · cal</text>
+                </g>
+                <g class="n a">
+                  <rect x="330" y="68" width="140" height="48" rx="8" /><text x="400.0" y="93.0"
+                    text-anchor="middle">SARIMAX/Prophet/XGB</text>
+                </g>
+                <g class="n o">
+                  <rect x="500" y="68" width="124" height="48" rx="8" /><text x="562.0" y="93.0"
+                    text-anchor="middle">Dash · 30d + CI</text>
+                </g>
+              </svg></div>
+            <div class="rail">
+              <div class="m">
+                <div class="m-val">138.1</div>
+                <div class="m-lab">holdout MAE</div>
+              </div>
+              <div class="m">
+                <div class="m-val">137.9</div>
+                <div class="m-lab">CV MAE (5-fold)</div>
+              </div>
+              <div class="m">
+                <div class="m-val">30d</div>
+                <div class="m-lab">forecast + 95% CI</div>
+              </div>
+              <div class="m">
+                <div class="m-val">3.3k</div>
+                <div class="m-lab">records</div>
+              </div>
+            </div>
+            <div class="tags"><span class="tag-i">SARIMAX</span><span class="tag-i">Prophet</span><span
+                class="tag-i">XGBoost</span><span class="tag-i">Plotly Dash</span><span
+                class="tag-i">Statsmodels</span><span class="tag-i">Docker</span></div>
+            <div class="links"><a class="lnk "
+                href="https://github.com/GodVilan/US-COVID-19-Mortality-Intelligence-Forecasting-System" target="_blank"
+                rel="noopener">&#8599; GitHub</a><a class="lnk live"
+                href="https://us-covid-19-mortality-intelligence.onrender.com/" target="_blank" rel="noopener">&#9679;
+                Live dashboard</a></div>
+          </div>
+        </article>
+      </div>
+      <button class="rail-arrow next" aria-label="Next project">&#8250;</button>
+    </div>
+    <div class="rail-dots" id="railDots"></div>
+  </section>
+
+  <!-- ===================== STACK ===================== -->
+  <section id="stack" class="wrap">
+    <div class="eyebrow io">stack</div>
+    <h2 class="sec-title io">What I build with</h2>
+    <p class="sec-sub">Grouped by what it does, not alphabetised — so you can read the shape of the work.</p>
+    <div class="cap-grid io">
+      <div class="cap-card primary">
+        <div class="cap-head"><span class="cap-name">GenAI &amp; LLM</span><span class="cap-count">12 tools</span></div>
+        <div class="cap-tags"><span class="tag-i">ReAct Agents</span><span class="tag-i">Multi-Agent
+            Orchestration</span><span class="tag-i">RAG</span><span class="tag-i">MCP</span><span
+            class="tag-i">Microsoft Agent Framework</span><span class="tag-i">Critic/Verifier Loops</span><span
+            class="tag-i">FAISS</span><span class="tag-i">BGE</span><span class="tag-i">BM25</span><span
+            class="tag-i">Sentence Transformers</span><span class="tag-i">Gemini API</span><span class="tag-i">Prompt
+            Engineering</span></div>
+      </div>
+      <div class="cap-card">
+        <div class="cap-head"><span class="cap-name">Deep Learning &amp; NLP</span><span class="cap-count">12
+            tools</span></div>
+        <div class="cap-tags"><span class="tag-i">PyTorch</span><span class="tag-i">TensorFlow</span><span
+            class="tag-i">Keras</span><span class="tag-i">Transformers</span><span class="tag-i">BERT</span><span
+            class="tag-i">DistilBERT</span><span class="tag-i">Wav2Vec2</span><span class="tag-i">ViT</span><span
+            class="tag-i">HuggingFace</span><span class="tag-i">CNNs</span><span class="tag-i">TF-IDF</span><span
+            class="tag-i">Word Embeddings</span></div>
+      </div>
+      <div class="cap-card">
+        <div class="cap-head"><span class="cap-name">Machine Learning</span><span class="cap-count">8 tools</span></div>
+        <div class="cap-tags"><span class="tag-i">Scikit-learn</span><span class="tag-i">XGBoost</span><span
+            class="tag-i">Random Forest</span><span class="tag-i">Logistic Regression</span><span
+            class="tag-i">K-Means</span><span class="tag-i">SMOTE</span><span class="tag-i">Feature
+            Engineering</span><span class="tag-i">Model Evaluation</span></div>
+      </div>
+      <div class="cap-card">
+        <div class="cap-head"><span class="cap-name">MLOps &amp; Cloud</span><span class="cap-count">13 tools</span>
+        </div>
+        <div class="cap-tags"><span class="tag-i">MLflow</span><span class="tag-i">FastAPI</span><span
+            class="tag-i">Docker</span><span class="tag-i">GitHub Actions</span><span class="tag-i">CI/CD</span><span
+            class="tag-i">REST APIs</span><span class="tag-i">AWS EC2</span><span class="tag-i">S3</span><span
+            class="tag-i">SageMaker</span><span class="tag-i">Glue</span><span class="tag-i">Athena</span><span
+            class="tag-i">Azure OpenAI</span><span class="tag-i">Microsoft Foundry</span></div>
+      </div>
+      <div class="cap-card">
+        <div class="cap-head"><span class="cap-name">Data &amp; Statistics</span><span class="cap-count">10 tools</span>
+        </div>
+        <div class="cap-tags"><span class="tag-i">Pandas</span><span class="tag-i">NumPy</span><span
+            class="tag-i">SciPy</span><span class="tag-i">Statsmodels</span><span class="tag-i">SARIMAX</span><span
+            class="tag-i">Prophet</span><span class="tag-i">EDA</span><span class="tag-i">Hypothesis Testing</span><span
+            class="tag-i">A/B Testing</span><span class="tag-i">Time Series</span></div>
+      </div>
+      <div class="cap-card">
+        <div class="cap-head"><span class="cap-name">Languages &amp; Viz</span><span class="cap-count">10 tools</span>
+        </div>
+        <div class="cap-tags"><span class="tag-i">Python</span><span class="tag-i">SQL</span><span
+            class="tag-i">R</span><span class="tag-i">C++</span><span class="tag-i">Java</span><span
+            class="tag-i">Plotly</span><span class="tag-i">Dash</span><span class="tag-i">Streamlit</span><span
+            class="tag-i">Matplotlib</span><span class="tag-i">Seaborn</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section id="about" class="wrap">
+    <div class="eyebrow io">about</div>
+    <h2 class="sec-title io">Systems that are measured, not just demoed</h2>
+    <div class="about-stats io">
+      <div class="s">
+        <div class="sv">6</div>
+        <div class="sl">systems shipped</div>
+      </div>
+      <div class="s">
+        <div class="sv">Top 1<span class="u">%</span></div>
+        <div class="sl">16 / 1,773 best</div>
+      </div>
+      <div class="s">
+        <div class="sv">4.0</div>
+        <div class="sl">GPA</div>
+      </div>
+      <div class="s">
+        <div class="sv">255</div>
+        <div class="sl">day DSA streak</div>
+      </div>
+    </div>
+    <div class="about-grid">
+      <div>
+        <p>I'm an <b>AI Engineer</b> finishing an M.S. in Data Science &amp; AI at the University of Central Missouri
+          (<b>4.0 GPA</b>, Graduate Student Achievement Award). I build LLM and multi-agent systems end to end —
+          retrieval, agent orchestration, evaluation, and the MLOps to ship them.</p>
+        <p>My through-line is rigor: I don't trust a model I haven't benchmarked. That means <b>citation grounding, eval
+            harnesses, holdout vs cross-validation checks, and reproducible pipelines</b> — the difference between a
+          demo and a system someone can rely on.</p>
+        <p>Before grad school I shipped NLP and cloud-analytics work across three teams, and I keep my fundamentals
+          sharp through competitive programming. Currently <b>open to AI Engineer and ML roles in the US — available
+            immediately.</b></p>
+      </div>
+      <div class="about-side">
+        <div class="row"><span class="k">role</span><span class="vv">AI Engineer / ML</span></div>
+        <div class="row"><span class="k">degree</span><span class="vv">M.S. Data Science &amp; AI</span></div>
+        <div class="row"><span class="k">gpa</span><span class="vv">4.0 / 4.0</span></div>
+        <div class="row"><span class="k">focus</span><span class="vv">Agents &middot; RAG &middot; MLOps</span></div>
+        <div class="row"><span class="k">location</span><span class="vv">United States</span></div>
+        <div class="row"><span class="k">status</span><span class="vv on">available now</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EXPERIENCE ===================== -->
+  <section id="experience" class="wrap">
+    <div class="eyebrow io">experience</div>
+    <h2 class="sec-title io">Where I&rsquo;ve worked</h2>
+    <div class="timeline io">
+      <div class="tl-item">
+        <div class="tl-spine"><span class="tl-dot"></span></div>
+        <div class="tl-body">
+          <div class="tl-date">Feb 2025 — May 2026</div>
+          <div class="tl-role">Graduate Laboratory Assistant — Data Science</div>
+          <div class="tl-org">University of Central Missouri &middot; Warrensburg, MO</div>
+          <ul class="tl-list">
+            <li>Designed and delivered 15+ ML lab sessions per semester for 40+ students — Python supervised learning,
+              scikit-learn pipelines, and end-to-end evaluation from ingestion through prediction.</li>
+            <li>Coached students through EDA and visualization workflows with Pandas, NumPy, and Matplotlib while
+              maintaining a 4.0 GPA across full-time graduate coursework and research.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-spine"><span class="tl-dot"></span></div>
+        <div class="tl-body">
+          <div class="tl-date">May 2023 — Jul 2023</div>
+          <div class="tl-role">Data Analytics Virtual Intern</div>
+          <div class="tl-org">AICTE EduSkills &middot; supported by AWS Academy &middot; Remote</div>
+          <ul class="tl-list">
+            <li>Engineered a cloud analytics pipeline — Amazon S3 storage, AWS Glue ETL, and Athena serverless SQL —
+              with automated metadata management across 10K+ semi-structured records.</li>
+            <li>Built predictive models in Python and Amazon SageMaker to surface dataset trends, across a structured
+              10-week AWS Academy program.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-spine"><span class="tl-dot"></span></div>
+        <div class="tl-body">
+          <div class="tl-date">May 2022 — Jun 2022</div>
+          <div class="tl-role">Data Scientist Intern</div>
+          <div class="tl-org">Swecha &middot; Hyderabad, India</div>
+          <ul class="tl-list">
+            <li>Containerized Telugu speech-recognition pipelines with Docker, eliminating environment-specific runtime
+              failures during production handoff.</li>
+            <li>Fine-tuned speech-to-text models (PyTorch, TensorFlow, NLTK) on dialectally diverse Telugu audio
+              spanning 5+ regional variants for an underserved language community.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EDUCATION ===================== -->
+  <section id="education" class="wrap">
+    <div class="eyebrow io">education</div>
+    <h2 class="sec-title io">Academic background</h2>
+    <div class="edu-grid io">
+      <div class="edu-card">
+        <div class="edu-top"><span class="edu-badge">M.S.</span><span class="edu-date">Aug 2024 — May 2026</span></div>
+        <div class="edu-deg">Data Science &amp; Artificial Intelligence</div>
+        <div class="edu-org">University of Central Missouri &middot; Warrensburg, MO</div>
+        <div class="edu-gpa">&#9733; GPA 4.0 / 4.0</div>
+        <div class="edu-clabel">Coursework</div>
+        <div class="tags"><span class="tag-i">Machine Learning</span><span class="tag-i">Artificial
+            Intelligence</span><span class="tag-i">Neural Networks &amp; Deep Learning</span><span
+            class="tag-i">NLP</span><span class="tag-i">Statistical Foundations</span><span class="tag-i">Advanced Data
+            Visualization</span></div>
+      </div>
+      <div class="edu-card">
+        <div class="edu-top"><span class="edu-badge">B.Tech</span><span class="edu-date">Nov 2020 — Apr 2024</span>
+        </div>
+        <div class="edu-deg">Computer Science &amp; Engineering (Hons.)</div>
+        <div class="edu-org">CMR College of Engineering &amp; Technology &middot; Hyderabad, India</div>
+        <div class="edu-gpa">&#9733; GPA 9.06 / 10.0 &middot; First Class with Distinction</div>
+        <div class="edu-clabel">Note</div>
+        <div class="edu-note">Bronze Medal in Academics — ranked top 3 in the B.Tech program.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CERTS + AWARDS ===================== -->
+  <section class="wrap">
+    <div class="eyebrow io">credentials</div>
+    <h2 class="sec-title io">Certifications &amp; honors</h2>
+    <div class="two io">
+      <div class="col">
+        <h4>Certifications</h4>
+        <div class="cred-list">
+          <div class="cred"><span class="cred-iss">Anthropic</span>
+            <div class="cred-main">AI Fluency: Framework &amp; Foundations</div>
+            <div class="cred-date">Jun 2026</div>
+          </div>
+          <div class="cred"><span class="cred-iss">Anthropic</span>
+            <div class="cred-main">Introduction to Model Context Protocol</div>
+            <div class="cred-date">Apr 2026</div>
+          </div>
+          <div class="cred"><span class="cred-iss">Microsoft</span>
+            <div class="cred-main">Applied Skills — Developing Agents in Microsoft Foundry</div>
+            <div class="cred-date">Jun 2026</div>
+          </div>
+          <div class="cred"><span class="cred-iss">AWS</span>
+            <div class="cred-main">AWS Academy Graduate — Data Analytics &amp; Cloud Foundations</div>
+            <div class="cred-date">Jun 2023</div>
+          </div>
+          <div class="cred"><span class="cred-iss">Google</span>
+            <div class="cred-main">Foundations: Data, Data, Everywhere</div>
+            <div class="cred-date">Feb 2023</div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <h4>Honors &amp; Awards</h4>
+        <div class="cred-list">
+          <div class="award"><span class="st">&#9733;</span>
+            <div>
+              <div class="award-main">Graduate Student Achievement Award</div>
+              <div class="award-meta">University of Central Missouri &middot; 2025–2026</div>
+            </div>
+          </div>
+          <div class="award"><span class="st">&#9733;</span>
+            <div>
+              <div class="award-main">Finalist — IICC National Coding Competition</div>
+              <div class="award-meta">Top 1% of 100,000+ participants</div>
+            </div>
+          </div>
+          <div class="award"><span class="st">&#9733;</span>
+            <div>
+              <div class="award-main">5&#9733; HackerRank &middot; 4&#9733; CodeChef</div>
+              <div class="award-meta">Data Structures &amp; Algorithms</div>
+            </div>
+          </div>
+          <div class="award"><span class="st">&#9733;</span>
+            <div>
+              <div class="award-main">GeeksforGeeks POTD — 255-day streak</div>
+              <div class="award-meta">Consecutive days solving algorithmic problems</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== WRITING (Medium, dynamic) ===================== -->
+  <section id="writing" class="wrap" hidden>
+    <div class="eyebrow io">writing</div>
+    <h2 class="sec-title io">Writing on Medium</h2>
+    <p class="sec-sub io">Notes on the systems I build — RAG, agents, evaluation, and MLOps. Pulled live from Medium.
+    </p>
+    <div class="post-grid io" id="mediumPosts"></div>
+    <a class="btn" id="mediumAll" href="https://srikanth2314.medium.com/" target="_blank" rel="noopener"
+      style="margin-top:22px;display:none">Read everything on Medium &rarr;</a>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section id="contact" class="wrap">
+    <div class="contact-box io">
+      <div class="contact-status"><span class="d"></span> available immediately &middot; open to AI Engineer / ML roles
+        &middot; US</div>
+      <div class="contact-h">Let&rsquo;s build something that ships.</div>
+      <p class="contact-p">If you&rsquo;re hiring for AI Engineering, ML, or Applied AI and want systems that are
+        evaluated and deployed — not just demoed — let&rsquo;s talk.</p>
+      <div class="contact-links">
+        <a class="btn primary" href="mailto:srikanthreddynandireddy@gmail.com">Email me</a>
+        <a class="btn" href="SRIKANTH_REDDY_NANDIREDDY.pdf" target="_blank" rel="noopener">Résumé &darr;</a>
+        <a class="btn" href="https://www.linkedin.com/in/srikanth-reddy-nandireddy" target="_blank"
+          rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/GodVilan" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="https://srikanth2314.medium.com/" target="_blank" rel="noopener">Medium</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="wrap">
+    <div class="foot-in">
+      <span>&copy; 2026 Srikanth Reddy Nandireddy</span>
+      <span>Designed &amp; built &middot; AI Engineer</span>
+    </div>
+  </footer>
+
+
+  <div class="modal-overlay" id="projModal" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-label="Project details">
+      <button class="modal-x" id="modalX" aria-label="Close">&times;</button>
+      <div class="modal-body" id="modalBody"></div>
     </div>
   </div>
-</section>
 
-<footer class="wrap">
-  <div class="foot-in">
-    <span>&copy; 2026 Srikanth Reddy Nandireddy</span>
-    <span>Designed &amp; built &middot; AI Engineer</span>
+  <!-- ===================== SRI ASSISTANT ===================== -->
+  <div class="sri-dock hidden" id="sriDock">
+    <span class="sri-nudge">Hi, I&rsquo;m Sri &mdash; ask me anything</span>
+    <button class="sri-bubble" id="sriBubble" aria-label="Open Sri, Srikanth&rsquo;s AI assistant">
+      <span class="sri-ring"></span>&#9889;
+    </button>
   </div>
-</footer>
 
-
-<div class="modal-overlay" id="projModal" hidden>
-  <div class="modal" role="dialog" aria-modal="true" aria-label="Project details">
-    <button class="modal-x" id="modalX" aria-label="Close">&times;</button>
-    <div class="modal-body" id="modalBody"></div>
-  </div>
-</div>
-
-<!-- ===================== SRI ASSISTANT ===================== -->
-<div class="sri-dock hidden" id="sriDock">
-  <span class="sri-nudge">Hi, I&rsquo;m Sri &mdash; ask me anything</span>
-  <button class="sri-bubble" id="sriBubble" aria-label="Open Sri, Srikanth&rsquo;s AI assistant">
-    <span class="sri-ring"></span>&#9889;
-  </button>
-</div>
-
-<div class="sri-panel hidden" id="sriPanel" role="dialog" aria-label="Sri — Srikanth&rsquo;s AI assistant">
-  <div class="sri-head">
-    <div class="sri-avatar">Sri</div>
-    <div>
-      <div class="sri-title">Sri</div>
-      <div class="sri-sub"><span class="d"></span> Srikanth&rsquo;s AI assistant</div>
+  <div class="sri-panel hidden" id="sriPanel" role="dialog" aria-label="Sri — Srikanth&rsquo;s AI assistant">
+    <div class="sri-head">
+      <div class="sri-avatar">Sri</div>
+      <div>
+        <div class="sri-title">Sri</div>
+        <div class="sri-sub"><span class="d"></span> Srikanth&rsquo;s AI assistant</div>
+      </div>
+      <button class="sri-x" id="sriClose" aria-label="Close assistant">&times;</button>
     </div>
-    <button class="sri-x" id="sriClose" aria-label="Close assistant">&times;</button>
+    <div class="sri-body" id="sriBody">
+      <div class="sri-msg bot">Hi, I&rsquo;m <b>Sri</b> &mdash; Srikanth&rsquo;s AI assistant. I&rsquo;m grounded on his
+        resume, projects, and background, so ask me anything and I&rsquo;ll answer with a source.</div>
+    </div>
+    <div class="sri-chips">
+      <button class="sri-chip" data-q="Does he have production AWS experience?">Production AWS?</button>
+      <button class="sri-chip" data-q="What is his strongest agent project?">Best agent project?</button>
+      <button class="sri-chip" data-q="Is he available, and for what roles?">Is he available?</button>
+    </div>
+    <div class="sri-input">
+      <input type="text" id="sriField" maxlength="1000" placeholder="Ask about his work, skills, or background&hellip;"
+        aria-label="Ask Sri a question" />
+      <button class="sri-send" id="sriSend" aria-label="Send">&rarr;</button>
+    </div>
+    <div class="sri-foot">answers only from Srikanth&rsquo;s documents &middot; declines anything off-topic</div>
   </div>
-  <div class="sri-body" id="sriBody">
-    <div class="sri-msg bot">Hi, I&rsquo;m <b>Sri</b> &mdash; Srikanth&rsquo;s AI assistant. I&rsquo;m grounded on his resume, projects, and background, so ask me anything and I&rsquo;ll answer with a source.</div>
-  </div>
-  <div class="sri-chips">
-    <button class="sri-chip" data-q="Does he have production AWS experience?">Production AWS?</button>
-    <button class="sri-chip" data-q="What is his strongest agent project?">Best agent project?</button>
-    <button class="sri-chip" data-q="Is he available, and for what roles?">Is he available?</button>
-  </div>
-  <div class="sri-input">
-    <input type="text" id="sriField" maxlength="1000" placeholder="Ask about his work, skills, or background&hellip;" aria-label="Ask Sri a question" />
-    <button class="sri-send" id="sriSend" aria-label="Send">&rarr;</button>
-  </div>
-  <div class="sri-foot">answers only from Srikanth&rsquo;s documents &middot; declines anything off-topic</div>
-</div>
 
-<script src="main.js"></script>
+  <script src="main.js"></script>
 </body>
+
 </html>

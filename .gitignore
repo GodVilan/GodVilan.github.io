@@ -12,3 +12,9 @@ node_modules/
 # os / logs
 .DS_Store
 npm-debug.log*
+
+files/
+files 2/
+files.zip
+portfolio-fixes.patch
+.claude/
