@@ -39,7 +39,7 @@
     { "@type": "CollegeOrUniversity", "name": "CMR College of Engineering & Technology" }
   ],
   "knowsAbout": ["AI Engineering","LLM Systems","Multi-Agent Systems","ReAct Agents","RAG Pipelines","Model Context Protocol","MLOps","Deep Learning","Natural Language Processing","PyTorch","AWS","MLflow","Docker","FastAPI"],
-  "sameAs": ["https://www.linkedin.com/in/srikanth-reddy-nandireddy","https://github.com/GodVilan","https://srikanth2314.medium.com/"]
+  "sameAs": ["https://www.linkedin.com/in/srikanth-reddy-nandireddy","https://github.com/GodVilan","https://srikanth2314.medium.com/","https://www.kaggle.com/godvillain24"]
 }
 </script>
   <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
@@ -181,7 +181,7 @@
     <p class="sec-sub">Every project is laid out like a model card — what it does in plain terms, the metrics that
       matter, the stack, and where to read the code or hit it live.</p>
 
-    <div class="rail-hint"><span class="d">&#8596;</span> drag, swipe, or use the arrows &mdash; all 6 projects</div>
+    <div class="rail-hint"><span class="d">&#8596;</span> drag, swipe, or use the arrows &mdash; all 7 projects</div>
     <div class="rail-wrap io">
       <button class="rail-arrow prev" aria-label="Previous project">&#8249;</button>
       <div class="cards" id="projectRail">
@@ -273,6 +273,97 @@
           </div>
         </article>
         <article class="card feat" tabindex="0" role="button"
+          aria-label="MedsGuard — LLM Medication Agent with a Safety Spine — open details">
+          <div class="card-top"><span class="feat-flag">Featured</span><span class="track agentic">Concierge Agent
+              &middot; Injection-Safe</span></div>
+          <h3>MedsGuard — LLM Medication Agent with a Safety Spine</h3>
+          <p class="teaser">Logs medications from natural language while making it structurally impossible for the LLM
+            to write an unauthorized dose.</p>
+          <div class="face-foot"><span class="face-metric">Kaggle Vibe Coding Agents &middot; Zero-trust
+              writes</span><span class="view">View details &rarr;</span></div>
+          <div class="detail" hidden>
+            <div class="modal-top"><span class="feat-flag">Featured</span><span class="track agentic">Concierge Agent
+                &middot; Injection-Safe</span></div>
+            <h3 class="modal-title">MedsGuard — LLM Medication Agent with a Safety Spine</h3>
+            <p class="modal-desc">A medication-logging agent that parses free-text input with an LLM
+              (<b>Gemini 3.1 Pro Preview</b>) yet treats the model as <b>untrusted</b> — deterministic code holds all
+              write authority. The parser forces unstructured input into <b>structured nulls</b>, then deterministic slot
+              resolution, a fail-closed &ldquo;semantic referee&rdquo; clarification gate, and a policy screen
+              (<b>policies.yaml</b>) validate the request. Only after an HMAC-signed session token and an explicit human
+              confirmation &mdash; gated by a 300&thinsp;s-TTL JWT &mdash; does a write reach SQLite, where a
+              <b>BEGIN&nbsp;IMMEDIATE</b> transaction dedups on a 4-part key. A compromised or hallucinating LLM
+              <b>cannot</b> insert a drug on its own. Built for Kaggle&rsquo;s Vibe Coding Agents capstone (Concierge
+              track), June 2026.</p>
+            <div class="arch-label">Architecture</div>
+            <div class="arch"><svg viewBox="0 0 640 196" xmlns="http://www.w3.org/2000/svg" role="img">
+                <path class="e" d="M96,60 L128,60" />
+                <path class="f" d="M96,60 L128,60" />
+                <path class="e" d="M268,60 L300,60" />
+                <path class="f" d="M268,60 L300,60" />
+                <path class="e" d="M440,60 L472,60" />
+                <path class="f" d="M440,60 L472,60" />
+                <path class="e" d="M524,84 L524,116" />
+                <path class="f" d="M524,84 L524,116" />
+                <path class="e" d="M168,116 L168,84" />
+                <path class="f" d="M168,116 L168,84" />
+                <g class="n ">
+                  <rect x="8" y="40" width="88" height="40" rx="8" /><text x="52.0" y="64.0"
+                    text-anchor="middle">free text</text>
+                </g>
+                <g class="n a">
+                  <rect x="128" y="34" width="140" height="52" rx="8" /><text x="198.0" y="56.0"
+                    text-anchor="middle">Parse</text><text x="198.0" y="70.0" text-anchor="middle"
+                    class="s">structured nulls</text>
+                </g>
+                <g class="n ">
+                  <rect x="300" y="34" width="140" height="52" rx="8" /><text x="370.0" y="56.0"
+                    text-anchor="middle">Clarify + Policy</text><text x="370.0" y="70.0" text-anchor="middle"
+                    class="s">fail-closed</text>
+                </g>
+                <g class="n ">
+                  <rect x="472" y="34" width="104" height="52" rx="8" /><text x="524.0" y="56.0"
+                    text-anchor="middle">Confirm</text><text x="524.0" y="70.0" text-anchor="middle"
+                    class="s">HMAC + JWT</text>
+                </g>
+                <g class="n o">
+                  <rect x="472" y="116" width="104" height="48" rx="8" /><text x="524.0" y="137.0"
+                    text-anchor="middle">SQLite</text><text x="524.0" y="150.0" text-anchor="middle"
+                    class="s">write</text>
+                </g>
+                <g class="n ">
+                  <rect x="98" y="116" width="140" height="48" rx="8" /><text x="168.0" y="137.0"
+                    text-anchor="middle">deterministic</text><text x="168.0" y="150.0" text-anchor="middle"
+                    class="s">slot resolver</text>
+                </g>
+              </svg></div>
+            <div class="rail">
+              <div class="m">
+                <div class="m-val">0</div>
+                <div class="m-lab">LLM write authority</div>
+              </div>
+              <div class="m">
+                <div class="m-val">6<span class=u>-stage</span></div>
+                <div class="m-lab">parse &rarr; write pipeline</div>
+              </div>
+              <div class="m">
+                <div class="m-val">300<span class=u>s</span></div>
+                <div class="m-lab">JWT write window</div>
+              </div>
+              <div class="m">
+                <div class="m-val">HMAC</div>
+                <div class="m-lab">per-request auth</div>
+              </div>
+            </div>
+            <div class="tags"><span class="tag-i">Gemini 3.1 Pro</span><span class="tag-i">MCP</span><span
+                class="tag-i">FastAPI</span><span class="tag-i">SQLite</span><span class="tag-i">HMAC / JWT</span><span
+                class="tag-i">Zero-Trust</span><span class="tag-i">Human-in-the-loop</span></div>
+            <div class="links"><a class="lnk " href="https://github.com/GodVilan/medsguard-agent" target="_blank"
+                rel="noopener">&#8599; GitHub</a><a class="lnk "
+                href="https://kaggle.com/competitions/vibecoding-agents-capstone-project/writeups/medsguard-an-llm-driven-medication-agent-with-a-d"
+                target="_blank" rel="noopener">&#8599; Kaggle writeup</a></div>
+          </div>
+        </article>
+        <article class="card feat" tabindex="0" role="button"
           aria-label="TalentFabric AI — Certification Readiness Platform — open details">
           <div class="card-top"><span class="feat-flag">Featured</span><span class="track agentic">Multi-agent &middot;
               MCP</span></div>
@@ -292,44 +383,43 @@
               provenance-tagged citation by construction. Agents League hackathon — Microsoft Reasoning Agents track.
             </p>
             <div class="arch-label">Architecture</div>
-            <div class="arch"><svg viewBox="0 0 640 206" xmlns="http://www.w3.org/2000/svg" role="img">
-                <path class="e" d="M96,100 L140,100" />
-                <path class="f" d="M96,100 L140,100" />
-                <path class="e" d="M300,100 L330,80" />
-                <path class="f" d="M300,100 L330,80" />
-                <path class="e" d="M300,100 L330,120" />
-                <path class="f" d="M300,100 L330,120" />
-                <path class="e" d="M470,80 L500,100" />
-                <path class="f" d="M470,80 L500,100" />
-                <path class="e" d="M470,120 L500,100" />
-                <path class="f" d="M470,120 L500,100" />
-                <path class="e" d="M624,100 L624,100" />
-                <path class="e" d="M560,124 L300,160" />
-                <path class="f" d="M560,124 L300,160" />
+            <div class="arch"><svg viewBox="0 0 700 250" xmlns="http://www.w3.org/2000/svg" role="img">
+                <path class="e" d="M102,110 L138,110" />
+                <path class="f" d="M102,110 L138,110" />
+                <path class="e" d="M294,110 L336,77" />
+                <path class="f" d="M294,110 L336,77" />
+                <path class="e" d="M294,110 L336,143" />
+                <path class="f" d="M294,110 L336,143" />
+                <path class="e" d="M494,77 L530,110" />
+                <path class="f" d="M494,77 L530,110" />
+                <path class="e" d="M494,143 L530,110" />
+                <path class="f" d="M494,143 L530,110" />
+                <path class="e" d="M600,138 L440,204" />
+                <path class="f" d="M600,138 L440,204" />
                 <g class="n ">
-                  <rect x="16" y="80" width="80" height="40" rx="8" /><text x="56.0" y="101.0"
+                  <rect x="16" y="88" width="86" height="44" rx="8" /><text x="59.0" y="110.0"
                     text-anchor="middle">intake</text>
                 </g>
                 <g class="n a">
-                  <rect x="140" y="74" width="160" height="52" rx="8" /><text x="220.0" y="96.0"
-                    text-anchor="middle">Planner</text><text x="220.0" y="109.0" text-anchor="middle"
+                  <rect x="138" y="82" width="156" height="56" rx="8" /><text x="216.0" y="104.0"
+                    text-anchor="middle">Planner</text><text x="216.0" y="118.0" text-anchor="middle"
                     class="s">decompose · route</text>
                 </g>
                 <g class="n ">
-                  <rect x="330" y="60" width="140" height="40" rx="8" /><text x="400.0" y="81.0"
+                  <rect x="336" y="54" width="158" height="46" rx="8" /><text x="415.0" y="77.0"
                     text-anchor="middle">Readiness + Risk</text>
                 </g>
                 <g class="n ">
-                  <rect x="330" y="110" width="140" height="40" rx="8" /><text x="400.0" y="131.0"
+                  <rect x="336" y="120" width="158" height="46" rx="8" /><text x="415.0" y="143.0"
                     text-anchor="middle">Question-gen</text>
                 </g>
                 <g class="n ">
-                  <rect x="500" y="74" width="140" height="52" rx="8" /><text x="570.0" y="96.0"
-                    text-anchor="middle">Critic / Verifier</text><text x="570.0" y="109.0" text-anchor="middle"
+                  <rect x="530" y="82" width="156" height="56" rx="8" /><text x="608.0" y="104.0"
+                    text-anchor="middle">Critic / Verifier</text><text x="608.0" y="118.0" text-anchor="middle"
                     class="s">loop on failure</text>
                 </g>
                 <g class="n ">
-                  <rect x="300" y="150" width="150" height="34" rx="8" /><text x="375.0" y="168.0"
+                  <rect x="280" y="200" width="200" height="42" rx="8" /><text x="380.0" y="221.0"
                     text-anchor="middle">MCP + hybrid RAG</text>
                 </g>
               </svg></div>
@@ -376,43 +466,43 @@
               benchmarked against MiniLM and MPNet across 3 chunk sizes and 4 retrieval depths. Five tools, conversation
               memory, persistent notes.</p>
             <div class="arch-label">Architecture</div>
-            <div class="arch"><svg viewBox="0 0 640 196" xmlns="http://www.w3.org/2000/svg" role="img">
-                <path class="e" d="M96,96 L140,96" />
-                <path class="f" d="M96,96 L140,96" />
-                <path class="e" d="M300,96 L340,70" />
-                <path class="f" d="M300,96 L340,70" />
-                <path class="e" d="M300,96 L340,122" />
-                <path class="f" d="M300,96 L340,122" />
-                <path class="e" d="M492,70 L520,96" />
-                <path class="f" d="M492,70 L520,96" />
-                <path class="e" d="M492,122 L520,96" />
-                <path class="f" d="M492,122 L520,96" />
-                <path class="e" d="M560,120 L300,160" />
-                <path class="f" d="M560,120 L300,160" />
+            <div class="arch"><svg viewBox="0 0 700 250" xmlns="http://www.w3.org/2000/svg" role="img">
+                <path class="e" d="M102,110 L138,110" />
+                <path class="f" d="M102,110 L138,110" />
+                <path class="e" d="M294,110 L336,77" />
+                <path class="f" d="M294,110 L336,77" />
+                <path class="e" d="M294,110 L336,143" />
+                <path class="f" d="M294,110 L336,143" />
+                <path class="e" d="M498,77 L534,110" />
+                <path class="f" d="M498,77 L534,110" />
+                <path class="e" d="M498,143 L534,110" />
+                <path class="f" d="M498,143 L534,110" />
+                <path class="e" d="M600,138 L440,204" />
+                <path class="f" d="M600,138 L440,204" />
                 <g class="n ">
-                  <rect x="16" y="72" width="80" height="48" rx="8" /><text x="56.0" y="97.0"
+                  <rect x="16" y="88" width="86" height="44" rx="8" /><text x="59.0" y="110.0"
                     text-anchor="middle">query</text>
                 </g>
                 <g class="n a">
-                  <rect x="140" y="68" width="160" height="56" rx="8" /><text x="220.0" y="92.0"
-                    text-anchor="middle">Planner</text><text x="220.0" y="105.0" text-anchor="middle"
+                  <rect x="138" y="82" width="156" height="56" rx="8" /><text x="216.0" y="104.0"
+                    text-anchor="middle">Planner</text><text x="216.0" y="118.0" text-anchor="middle"
                     class="s">multi-hop</text>
                 </g>
                 <g class="n ">
-                  <rect x="340" y="50" width="152" height="40" rx="8" /><text x="416.0" y="71.0"
+                  <rect x="336" y="54" width="162" height="46" rx="8" /><text x="417.0" y="77.0"
                     text-anchor="middle">Retrieve · FAISS</text>
                 </g>
                 <g class="n ">
-                  <rect x="340" y="102" width="152" height="40" rx="8" /><text x="416.0" y="123.0"
+                  <rect x="336" y="120" width="162" height="46" rx="8" /><text x="417.0" y="143.0"
                     text-anchor="middle">Tools · arXiv/BM25</text>
                 </g>
                 <g class="n o">
-                  <rect x="520" y="72" width="104" height="48" rx="8" /><text x="572.0" y="92.0"
-                    text-anchor="middle">answer</text><text x="572.0" y="105.0" text-anchor="middle"
+                  <rect x="534" y="82" width="150" height="56" rx="8" /><text x="609.0" y="104.0"
+                    text-anchor="middle">answer</text><text x="609.0" y="118.0" text-anchor="middle"
                     class="s">cited</text>
                 </g>
                 <g class="n ">
-                  <rect x="300" y="150" width="150" height="34" rx="8" /><text x="375.0" y="168.0"
+                  <rect x="280" y="200" width="200" height="42" rx="8" /><text x="380.0" y="221.0"
                     text-anchor="middle">critic · self-check</text>
                 </g>
               </svg></div>
@@ -933,6 +1023,7 @@
           rel="noopener">LinkedIn</a>
         <a class="btn" href="https://github.com/GodVilan" target="_blank" rel="noopener">GitHub</a>
         <a class="btn" href="https://srikanth2314.medium.com/" target="_blank" rel="noopener">Medium</a>
+        <a class="btn" href="https://www.kaggle.com/godvillain24" target="_blank" rel="noopener">Kaggle</a>
       </div>
     </div>
   </section>
